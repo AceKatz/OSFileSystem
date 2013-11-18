@@ -1,0 +1,1 @@
+cmd_/root/Desktop/Shared/finalProject/fuse-2.6.3/kernel/fuse.ko := ld -m elf_i386 -m elf_i386 -r -o /root/Desktop/Shared/finalProject/fuse-2.6.3/kernel/fuse.ko /root/Desktop/Shared/finalProject/fuse-2.6.3/kernel/fuse.o /root/Desktop/Shared/finalProject/fuse-2.6.3/kernel/fuse.mod.o
