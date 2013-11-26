@@ -1,4 +1,5 @@
-## This is the makefile Brannon used for making his code.  It made automake angry, so I renamed it.
+## This is the makefile Brannon used for making his code. 
+## It made automake angry, so I renamed it.
 
 CC=gcc
 CFLAGS= -g -Wall

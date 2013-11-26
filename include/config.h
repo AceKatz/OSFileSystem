@@ -61,7 +61,7 @@
 /* Define as const if the declaration of iconv() needs const. */
 #define ICONV_CONST 
 
-/* Don't update /etc/mtab */
+/* Don\'t update /etc/mtab */
 /* #undef IGNORE_MTAB */
 
 /* Define to the sub-directory in which libtool stores uninstalled libraries.
