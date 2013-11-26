@@ -4,11 +4,8 @@
 #include <config.h>
 #endif
 
-#ifdef linux
-/* For pread()/pwrite()/utimensat() */
-#define _XOPEN_SOURCE 700
-#endif
 
+#define _XOPEN_SOURCE 700
 #include <fuse.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -19,9 +16,12 @@
 #include <dirent.h>
 #include <errno.h>
 #include <sys/time.h>
+
 #ifdef HAVE_SETXATTR
 #include <sys/xattr.h>
 #endif
+
+#include "shadowTree.h"
 
 struct sh_state {
   char *rootdir;
@@ -105,7 +105,7 @@ static int sh_mknod(const char *path, mode_t mode, dev_t rdev) {
 
 static int sh_mkdir(const char *path, mode_t mode) {
 	int res;
-
+	
 	res = mkdir(path, mode);
 	if (res == -1)
 		return -errno;
@@ -276,7 +276,7 @@ static int sh_fsync(const char *path, int isdatasync,
 		     struct fuse_file_info *fi) {
 	/* Just a stub.	 This method is optional and can safely be left
 	   unimplemented */
-
+  
 	(void) path;
 	(void) isdatasync;
 	(void) fi;
