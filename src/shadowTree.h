@@ -9,13 +9,13 @@ struct user{
   struct user *next;
 
   char username[8];
-  char hash[13];
-  int dsc;
-  int dcc;
-  int dmc;
-  int dw;
-  int de;
-  int dd;
+  char hash[13]; 
+  int dsc;     // days since the password has been changed (since POSIX time)
+  int dcc;     // days until the password is allowed to be changed (default 0)
+  int dmc;     // days until the password must change (99999 represents never)
+  int dw;      // days before deactivation to warn the user
+  int de;      // days after failing to change password to deactivate the account
+  int dd;      // days since an account has been deactivated
   void* reserved;
 };
 
@@ -100,6 +100,16 @@ int update_username(struct sf_root *sf, char* username, char* newname){
   }else return -1;
 }
 
+int update_hash(struct sf_root *sf, char* username, char* newhash){
+  struct user* cuser;
+  if(cuser = (struct user*)find_user(sf,username)){
+    if(strlen(newhash)>16) return -1;
+    strcpy(cuser->hash, newhash);
+    return 0;
+  }else return -1;
+
+}
+
 int update_daysSinceChanged(struct sf_root *sf, char* username, int dsc){
   struct user* cuser;
   if(cuser = (struct user*)find_user(sf, username)){
@@ -146,4 +156,13 @@ int update_daysSinceDeactivation(struct sf_root *sf, char* username, int dd){
     cuser->dd = dd;
     return 0;
   }else return -1;
+}
+
+int update_reserved(struct sf_root *sf, char *username, char *res){
+  struct user* cuser;
+  if(cuser = (struct user*)find_user(sf, username)){
+    strcpy(cuser->reserved, res);
+    return 0;
+  } else return -1;
+
 }
