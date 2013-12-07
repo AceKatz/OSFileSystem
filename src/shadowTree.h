@@ -38,9 +38,19 @@ int sf_tree_destroy(struct sf_root *sf){
   return 0;
 }
 
+void* find_user(struct sf_root *sf, char* username){
+  struct user *current = sf->head;
+  while(current){
+    if(strcmp(current->username, username)==0) return (void*)current;
+    current = current->next;
+  }
+  return (void*)NULL;
+}
+
+
 int sf_tree_add_user(struct sf_root *sf, char* username){
   struct user *u, *temp;
-  if(finduser(sf, username) != NULL){
+  if(find_user(sf, username) != NULL){
     return -3; //user already exists
   }
   u = (struct user *)malloc(sizeof(struct user));
@@ -84,14 +94,6 @@ int sf_tree_delete_user(struct sf_root *sf, char* username){
     del = del->next;
   }
   return -1; // not found
-}
-void* find_user(struct sf_root *sf, char* username){
-  struct user *current = sf->head;
-  while(current){
-    if(strcmp(current->username, username)==0) return (void*)current;
-    current = current->next;
-  }
-  return (void*)NULL;
 }
 
 int update_username(struct sf_root *sf, char* username, char* newname){
