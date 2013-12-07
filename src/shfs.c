@@ -11,9 +11,24 @@
 
 struct sf_root* root;
 
+//extracts username from path, returns length of username
+int user_from_path(const char *path, char *uname) {
+    int i;
+    for(i=1; i<10; i++) {
+        if(path[i] == '/') break;
+	uname[i-1] = path[i];
+    }
+    uname[i-1] = '\0';
+    return i-1;
+}
+
 static int sh_getattr(const char *path, struct stat *stbuf) {
     int res = 0;
     struct user* user = find_user(root, path+1);
+    
+    char uname[9];
+    user_from_path(path, uname);
+    struct user* user2 = find_user(root, uname);
     
     printf("getattr\n");
     memset(stbuf, 0, sizeof(struct stat));
@@ -24,13 +39,13 @@ static int sh_getattr(const char *path, struct stat *stbuf) {
     } else if(user != NULL) {
         stbuf->st_mode = S_IFDIR | 0755;
 	stbuf->st_nlink = 1;
-    } else {
+    } else if(user2 != NULL) {
         stbuf->st_mode = S_IFREG | 0444;
 	stbuf->st_nlink = 1;
 	stbuf->st_size = 15;
-    }
-    //res = -ENOENT;
-    //NEED CASE FOR WRONG PATH INPUT
+    } else
+        res = -ENOENT;
+    
     return res;
 }
 
@@ -92,12 +107,13 @@ static int sh_read(const char *path, char *buf, size_t size, off_t offset,
     if(user != NULL || strcmp(path, "/") == 0)
         return -ENOENT;
     
-    int i;
-    for(i=1; i<10; i++) {
+    int i = user_from_path(path, uname);
+    /*for(i=1; i<10; i++) {
         if(path[i] == '/') break;
 	uname[i-1] = path[i];
     }
-    uname[i-1] = '\0';
+    uname[i-1] = '\0';*/
+    //printf("%d %s\n", i, uname);
     user = find_user(root, uname);
     i++;
     
@@ -114,15 +130,39 @@ static int sh_read(const char *path, char *buf, size_t size, off_t offset,
 	sprintf(s, "%d\n", user->dsc);
 	memcpy(buf, s + offset, sizeof(int));
     }
-    
+    //need to add rest of user attr stuff
     return size;
 }
+
+//creates a user
+static int sh_mkdir(const char *path, mode_t mode) {
+  //if(strcmp(path, "/") != 0)
+  //    return -ENOENT;
+    
+    int x = sf_tree_add_user(root, path+1);
+    /*  
+    if(x < 0)
+        return -EEXIST;
+    */
+    return 0;
+}
+/*
+static int sh_rmdir(const char *path) {
+    struct user* user = find_user(root, path+1);
+    
+    if(user == NULL)
+        return = -EONENT;
+    
+    
+	}*/
 
 static struct fuse_operations sh_oper = {
   .getattr	= sh_getattr,
   .readdir	= sh_readdir,
   .open		= sh_open,
   .read		= sh_read,
+  .mkdir        = sh_mkdir,
+  //.rmdir        = sh_rmdir,
 };
 
 
