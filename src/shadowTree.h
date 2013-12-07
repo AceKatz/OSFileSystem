@@ -8,15 +8,15 @@ struct sf_root{
 struct user{
   struct user *next;
 
-  char username[8];
-  char hash[13]; 
+  char username[16];
+  char hash[16]; 
   int dsc;     // days since the password has been changed (since POSIX time)
   int dcc;     // days until the password is allowed to be changed (default 0)
   int dmc;     // days until the password must change (99999 represents never)
   int dw;      // days before deactivation to warn the user
   int de;      // days after failing to change password to deactivate the account
   int dd;      // days since an account has been deactivated
-  void* reserved;
+  char* reserved;
 };
 
 struct sf_root* sf_tree_init(char *path){
@@ -40,6 +40,9 @@ int sf_tree_destroy(struct sf_root *sf){
 
 int sf_tree_add_user(struct sf_root *sf, char* username){
   struct user *u, *temp;
+  if(finduser(sf, username) != NULL){
+    return -3; //user already exists
+  }
   u = (struct user *)malloc(sizeof(struct user));
   if(u==NULL) return -1; // not able to allocate memory
   if(strlen(username)>8) return -2; // name too long 
@@ -53,9 +56,9 @@ int sf_tree_add_user(struct sf_root *sf, char* username){
     temp = sf->head;
     while(temp->next){
       temp = temp->next;
-      return 0;
     }
     temp->next = u;
+    return 0;
   }else{
     sf->head = u;
     return 0;
@@ -161,8 +164,9 @@ int update_daysSinceDeactivation(struct sf_root *sf, char* username, int dd){
 int update_reserved(struct sf_root *sf, char *username, char *res){
   struct user* cuser;
   if(cuser = (struct user*)find_user(sf, username)){
-    strcpy(cuser->reserved, res);
+    cuser->reserved = res;
     return 0;
   } else return -1;
 
 }
+
