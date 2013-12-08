@@ -61,7 +61,8 @@ int sf_tree_add_user(struct sf_root *sf, char* username){
   u->dcc = 0;
   u->dmc = 99999;
   u->dw = 7;
-
+  u->next = NULL;
+  
   if(sf->head){
     temp = sf->head;
     while(temp->next){
