@@ -125,8 +125,7 @@ static int sh_read(const char *path, char *buf, size_t size, off_t offset,
     
     //printf("%s\n", path+i);
     if(strcmp(path+i, "hash") == 0) {
-        strcpy(user->hash, "test");   //TODO:  remove later
-	memcpy(buf, user->hash + offset, size);
+        memcpy(buf, user->hash + offset, size);
     }
     else if(strcmp(path+i, "days_since_changed") == 0) {
         char s[10];
@@ -169,6 +168,51 @@ static int sh_read(const char *path, char *buf, size_t size, off_t offset,
     return size;
 }
 
+static int sh_write(const char *path, char *buf, size_t size, off_t offset,
+		    struct fuse_file_info *fi) {
+    struct user* user = find_user(root, path+1);
+    char uname[9];
+    
+    if(user != NULL || strcmp(path, "/") == 0)
+        return -ENOENT;
+    
+    int i = user_from_path(path, uname);
+    user = find_user(root, uname);
+    i+=2;
+    
+    if(user == NULL)
+        return -ENOENT;
+    
+    if(strcmp(path+i, "hash") == 0) {
+        strcpy(user->hash, buf);
+    }
+    else if(strcmp(path+i, "days_since_changed") == 0) {
+        user->dsc = atoi(buf);
+    }
+    else if(strcmp(path+i, "days_until_can_change") == 0) {
+        user->dcc = atoi(buf);
+    }
+    else if(strcmp(path+i, "days_until_must_change") == 0) {
+        user->dmc = atoi(buf);
+    }
+    else if(strcmp(path+i, "days_before_deactivation") == 0) {
+        user->dw = atoi(buf);
+    }
+    else if(strcmp(path+i, "days_since_failed_to_change_pw") == 0) {
+        user->de = atoi(buf);
+    }
+    else if(strcmp(path+i, "days_since_account_deactivated") == 0) {
+        user->dd = atoi(buf);
+    }
+    else{}
+
+    return size;
+}
+
+static int sh_truncate(const char *path, off_t size) {
+    return 0;
+}
+
 //creates a user
 static int sh_mkdir(const char *path, mode_t mode) {
   //figure out way to check if not in root directory
@@ -197,6 +241,8 @@ static struct fuse_operations sh_oper = {
     .readdir	= sh_readdir,
     .open	= sh_open,
     .read	= sh_read,
+    .write      = sh_write,
+    .truncate   = sh_truncate,
     .mkdir      = sh_mkdir,
     .rmdir      = sh_rmdir,
 };
