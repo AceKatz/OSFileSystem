@@ -8,6 +8,7 @@
 #include <errno.h>
 #include <fcntl.h>
 #include "shadowTree.h"
+#include "parse.h"
 
 struct sf_root* root;
 
@@ -136,6 +137,7 @@ static int sh_read(const char *path, char *buf, size_t size, off_t offset,
 
 //creates a user
 static int sh_mkdir(const char *path, mode_t mode) {
+  //figure out way to check if not in root directory
   //if(strcmp(path, "/") != 0)
   //    return -ENOENT;
     
@@ -146,33 +148,35 @@ static int sh_mkdir(const char *path, mode_t mode) {
     */
     return 0;
 }
-/*
+
 static int sh_rmdir(const char *path) {
     struct user* user = find_user(root, path+1);
     
     if(user == NULL)
-        return = -EONENT;
+        return -ENOENT;
     
-    
-	}*/
-
+    return sf_tree_delete_user(root, path+1);
+}
+	
 static struct fuse_operations sh_oper = {
-  .getattr	= sh_getattr,
-  .readdir	= sh_readdir,
-  .open		= sh_open,
-  .read		= sh_read,
-  .mkdir        = sh_mkdir,
-  //.rmdir        = sh_rmdir,
+    .getattr	= sh_getattr,
+    .readdir	= sh_readdir,
+    .open	= sh_open,
+    .read	= sh_read,
+    .mkdir      = sh_mkdir,
+    .rmdir      = sh_rmdir,
 };
 
-
-
 int main(int argc, char *argv[]) {
-  root = sf_tree_init("blank");
-  
-  int a = sf_tree_add_user(root, "jack");
-  strcpy(root->head->hash, "test");
-  root->head->dsc = 5;
-  
-  return fuse_main(argc, argv, &sh_oper, NULL);
+    root = init_parse(argv[argc-2], "blank");
+    
+    argv[argc-2] = argv[argc-1];
+    argv[argc-1] = NULL;
+    argc--;
+    
+    int f = fuse_main(argc, argv, &sh_oper, NULL);
+    
+    int d = sf_deparse(root, "shadow.out");
+    
+    return f;
 }
