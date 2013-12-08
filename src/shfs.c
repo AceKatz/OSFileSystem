@@ -79,7 +79,9 @@ static int sh_readdir(const char *path, void *buf, fuse_fill_dir_t filler,
 	filler(buf, "days_since_changed", NULL, 0);
 	filler(buf, "days_until_can_change", NULL, 0);
 	filler(buf, "days_until_must_change", NULL, 0);
-	//finish user attr/info here
+	filler(buf, "days_before_deactivation", NULL, 0);
+	filler(buf, "days_since_failed_to_change_pw", NULL, 0);
+	filler(buf, "days_since_account_deactivated", NULL, 0);
     }
     
     return 0;
@@ -101,7 +103,7 @@ static int sh_read(const char *path, char *buf, size_t size, off_t offset,
     printf("read\n");
     size_t len;
     (void) fi;
-    printf("path = %s\n\n", path);
+    //printf("path = %s\n\n", path);
     struct user* user = find_user(root, path+1);
     char uname[9];
     
@@ -116,22 +118,54 @@ static int sh_read(const char *path, char *buf, size_t size, off_t offset,
     uname[i-1] = '\0';*/
     //printf("%d %s\n", i, uname);
     user = find_user(root, uname);
-    i++;
+    i+=2;
     
     if(user == NULL)
         return -ENOENT;
     
-    printf("%s\n", user->hash);
-
+    //printf("%s\n", path+i);
     if(strcmp(path+i, "hash") == 0) {
-        memcpy(buf, user->hash + offset, size);
+        strcpy(user->hash, "test");   //TODO:  remove later
+	memcpy(buf, user->hash + offset, size);
     }
     else if(strcmp(path+i, "days_since_changed") == 0) {
         char s[10];
-	sprintf(s, "%d\n", user->dsc);
+	//user->dsc = 5;
+	sprintf(s, "%d", user->dsc);
 	memcpy(buf, s + offset, sizeof(int));
     }
-    //need to add rest of user attr stuff
+    else if(strcmp(path+i, "days_until_can_change") == 0) {
+        char s[10];
+	//user->dsc = 5;
+	sprintf(s, "%d", user->dcc);
+	memcpy(buf, s + offset, sizeof(int));
+    }
+    else if(strcmp(path+i, "days_until_must_change") == 0) {
+        char s[10];
+	//user->dsc = 5;
+	sprintf(s, "%d", user->dmc);
+	memcpy(buf, s + offset, sizeof(int));
+    }
+    else if(strcmp(path+i, "days_before_deactivation") == 0) {
+        char s[10];
+	//user->dsc = 5;
+	sprintf(s, "%d", user->dw);
+	memcpy(buf, s + offset, sizeof(int));
+    }
+    else if(strcmp(path+i, "days_since_failed_to_change_pw") == 0) {
+        char s[10];
+	//user->dsc = 5;
+	sprintf(s, "%d", user->de);
+	memcpy(buf, s + offset, sizeof(int));
+    }
+    else if(strcmp(path+i, "days_since_account_deactivated") == 0) {
+        char s[10];
+	//user->dsc = 5;
+	sprintf(s, "%d", user->dd);
+	memcpy(buf, s + offset, sizeof(int));
+    }
+    else{}
+    //TODO:  add reserved functionality
     return size;
 }
 
