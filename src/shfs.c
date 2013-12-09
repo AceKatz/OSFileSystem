@@ -86,8 +86,8 @@ static int sh_readdir(const char *path, void *buf, fuse_fill_dir_t filler,
 	filler(buf, "days_since_changed", NULL, 0);
 	filler(buf, "days_until_can_change", NULL, 0);
 	filler(buf, "days_until_must_change", NULL, 0);
-	filler(buf, "days_before_deactivation", NULL, 0);
-	filler(buf, "days_since_failed_to_change_pw", NULL, 0);
+	filler(buf, "days_before_warning", NULL, 0);
+	filler(buf, "days_until_expiration", NULL, 0);
 	filler(buf, "days_since_account_deactivated", NULL, 0);
 	if(user->reserved != NULL)
 	    filler(buf, "reserved", NULL, 0);
@@ -149,13 +149,13 @@ static int sh_read(const char *path, char *buf, size_t size, off_t offset,
 	memcpy(buf, s + offset, sizeof(int));
 	size = sizeof(int);
     }
-    else if(strcmp(path+i, "days_before_deactivation") == 0) {
+    else if(strcmp(path+i, "days_before_warning") == 0) {
         char s[10];
 	sprintf(s, "%d", user->dw);
 	memcpy(buf, s + offset, sizeof(int));
 	size = sizeof(int);
     }
-    else if(strcmp(path+i, "days_since_failed_to_change_pw") == 0) {
+    else if(strcmp(path+i, "days_until_expiration") == 0) {
         char s[10];
 	sprintf(s, "%d", user->de);
 	memcpy(buf, s + offset, sizeof(int));
@@ -178,7 +178,7 @@ static int sh_write(const char *path, char *buf, size_t size, off_t offset,
 		    struct fuse_file_info *fi) {
     struct user* user = find_user(root, path+1);
     char uname[9];
-    
+    printf("write\n");
     if(user != NULL || strcmp(path, "/") == 0)
         return -ENOENT;
     
@@ -190,34 +190,36 @@ static int sh_write(const char *path, char *buf, size_t size, off_t offset,
         return -ENOENT;
     
     if(strcmp(path+i, "hash") == 0) {
-        strcpy(user->hash, buf);
+      //strcpy(user->hash, buf);
+	update_hash(root, uname, buf);
     }
     else if(strcmp(path+i, "days_since_changed") == 0) {
-        user->dsc = atoi(buf);
-	size = sizeof(int);
+      //user->dsc = atoi(buf);
+	update_daysSinceChanged(root, uname, atoi(buf));
     }
     else if(strcmp(path+i, "days_until_can_change") == 0) {
-        user->dcc = atoi(buf);
-	size = sizeof(int);
+      //user->dcc = atoi(buf);
+	update_daysUntilCanChange(root, uname, atoi(buf));
     }
     else if(strcmp(path+i, "days_until_must_change") == 0) {
-        user->dmc = atoi(buf);
-	size = sizeof(int);
+      //user->dmc = atoi(buf);
+      update_daysUntilMustChange(root, uname, atoi(buf));
     }
-    else if(strcmp(path+i, "days_before_deactivation") == 0) {
-        user->dw = atoi(buf);
-	size = sizeof(int);
+    else if(strcmp(path+i, "days_before_warning") == 0) {
+      //user->dw = atoi(buf);
+	update_daysBeforeWarning(root, uname, atoi(buf));
     }
-    else if(strcmp(path+i, "days_since_failed_to_change_pw") == 0) {
-        user->de = atoi(buf);
-	size = sizeof(int);
+    else if(strcmp(path+i, "days_until_expiration") == 0) {
+      //user->de = atoi(buf);
+	update_daysUntilExpiration(root, uname, atoi(buf));
     }
     else if(strcmp(path+i, "days_since_account_deactivated") == 0) {
-        user->dd = atoi(buf);
-	size = sizeof(int);
+      //user->dd = atoi(buf);
+	update_daysSinceDeactivation(root, uname, atoi(buf));
     }
     else if(strcmp(path+i, "reserved") == 0) {
-        strcpy(user->reserved, buf);
+      //strcpy(user->reserved, buf);
+	update_reserved(root, uname, atoi(buf));
     }
     return size;
 }
@@ -285,10 +287,10 @@ static int sh_unlink(const char *path) {
     else if(strcmp(path+i, "days_until_must_change") == 0) {
         user->dmc = 99999;
     }
-    else if(strcmp(path+i, "days_before_deactivation") == 0) {
+    else if(strcmp(path+i, "days_before_warning") == 0) {
         user->dw = 7;
     }
-    else if(strcmp(path+i, "days_since_failed_to_change_pw") == 0) {
+    else if(strcmp(path+i, "days_until_expiration") == 0) {
         user->de = 0;
     }
     else if(strcmp(path+i, "days_since_account_deactivated") == 0) {
