@@ -190,8 +190,9 @@ static int sh_write(const char *path, char *buf, size_t size, off_t offset,
         return -ENOENT;
     
     if(strcmp(path+i, "hash") == 0) {
-      //strcpy(user->hash, buf);
-	update_hash(root, uname, buf);
+		char* hashed = hashword(buf);
+		update_hash(root, uname, hashed);
+
     }
     else if(strcmp(path+i, "days_since_changed") == 0) {
       //user->dsc = atoi(buf);
