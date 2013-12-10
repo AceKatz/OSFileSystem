@@ -64,7 +64,7 @@ int is_attr(char *str, struct user *user) {
    }
    else if(strcmp(str, "reserved") == 0) {
        if(user->reserved)
-	   return strlen(user->reserved);
+	   return strlen(user->reserved) + 1;
        else return 0;
    }
    return -1;
@@ -235,8 +235,11 @@ static int sh_read(const char *path, char *buf, size_t size, off_t offset,
 	memcpy(buf, s + offset, size);
     }
     else if(strcmp(path+i, "reserved") == 0) {
-        if(user->reserved != NULL)
-	    memcpy(buf, user->reserved + offset, size);
+        if(user->reserved != NULL) {
+	    char s[40];
+	    sprintf(s, "%s\n", user->reserved);
+	    memcpy(buf, user->s + offset, size);
+	}
     }
     return size;
 }
@@ -402,23 +405,19 @@ int main(int argc, char *argv[]) {
         return 0;
     }
     int flag=(argc==4)?1:0;
-
     
     filename = malloc(strlen(argv[argc-1-flag]));
 
     strcpy(filename, argv[argc-1-flag]);
-    printf("%s\n", filename);
     root = init_parse(filename, backing_path);
     
     char *ptr = realpath(filename, backing_path);
-    //printf("%s\n", backing_path);
+    
     if(argc==4){
       argv[argc-2] = argv[argc-1];
     }
     argv[argc-1] = NULL;
     argc--;
-    
-    
     
     int f = fuse_main(argc, argv, &sh_oper, NULL);
     int d = sf_deparse(root, filename, 1);
