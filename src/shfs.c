@@ -238,7 +238,7 @@ static int sh_read(const char *path, char *buf, size_t size, off_t offset,
         if(user->reserved != NULL) {
 	    char s[40];
 	    sprintf(s, "%s\n", user->reserved);
-	    memcpy(buf, user->s + offset, size);
+	    memcpy(buf, s + offset, size);
 	}
     }
     return size;
