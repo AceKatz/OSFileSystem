@@ -11,6 +11,7 @@
 #include "shadowTree.h"
 #include "parse.h"
 #include "md5.h"
+#include "shadow_time.h"
 
 struct sf_root* root;
 char backing_path[PATH_MAX];
@@ -228,7 +229,7 @@ static int sh_read(const char *path, char *buf, size_t size, off_t offset,
     else if(strcmp(path+i, "days_since_account_deactivated") == 0) {
         char s[10];
 	sprintf(s, "%d\n", user->dd);
-	size = strlen(size);
+	size = strlen(s);
 	memcpy(buf, s + offset, size);
     }
     else if(strcmp(path+i, "reserved") == 0) {
@@ -255,7 +256,7 @@ static int sh_write(const char *path, char *buf, size_t size, off_t offset,
     
     if(strcmp(path+i, "password-hash") == 0) {
         char *hashed = hashword(buf);
-	printf("%s\n", hashed);
+	printf("%s", hashed);
 	update_hash(root, uname, hashed);
     }
     else if(strcmp(path+i, "days_since_changed") == 0) {
@@ -334,28 +335,28 @@ static int sh_unlink(const char *path) {
         return -ENOENT;
     
     if(strcmp(path+i, "password-hash") == 0) {
-        strcpy(user->hash, "");
+        update_hash(root, uname, "");
     }
     else if(strcmp(path+i, "days_since_changed") == 0) {
-        user->dsc = 0;
+        update_daysSinceChanged(root, uname, shadow_time());
     }
     else if(strcmp(path+i, "days_until_can_change") == 0) {
-        user->dcc = 0;
+        update_daysUntilCanChange(root, uname, 0);
     }
     else if(strcmp(path+i, "days_until_must_change") == 0) {
-        user->dmc = 99999;
+        update_daysUntilMustChange(root, uname, 99999);
     }
     else if(strcmp(path+i, "days_before_warning") == 0) {
-        user->dw = 7;
+        update_daysBeforeWarning(root, uname, 7);
     }
     else if(strcmp(path+i, "days_until_expiration") == 0) {
-        user->de = 0;
+        update_daysUntilExpiration(root, uname, 0);
     }
     else if(strcmp(path+i, "days_since_account_deactivated") == 0) {
-        user->dd = 0;
+        update_daysSinceDeactivation(root, uname, 0);
     }
     else if(strcmp(path+i, "reserved") == 0) {
-        user->reserved = NULL;
+        update_reserved(root, uname, NULL);
     }
     return 0;
 }
