@@ -29,25 +29,37 @@ int user_from_path(const char *path, char *uname) {
 
 int is_attr(char *str, struct user *user) {
    if(strcmp(str, "password-hash") == 0) {
-       return 32;
+       return 33;
    }
    else if(strcmp(str, "days_since_changed") == 0) {
-       return sizeof(int);
+       char s[10];
+       sprintf(s, "%d\n", user->dsc);
+       return strlen(s);
    }
    else if(strcmp(str, "days_until_can_change") == 0) {
-       return sizeof(int);
+       char s[10];
+       sprintf(s, "%d\n", user->dcc);
+       return strlen(s);
    }
    else if(strcmp(str, "days_until_must_change") == 0) {
-       return sizeof(int);
+       char s[10];
+       sprintf(s, "%d\n", user->dmc);
+       return strlen(s);
    }
    else if(strcmp(str, "days_before_warning") == 0) {
-       return sizeof(int);
+       char s[10];
+       sprintf(s, "%d\n", user->dw);
+       return strlen(s);
    }
    else if(strcmp(str, "days_until_expiration") == 0) {
-       return sizeof(int);
+       char s[10];
+       sprintf(s, "%d\n", user->de);
+       return strlen(s);
    }
    else if(strcmp(str, "days_since_account_deactivated") == 0) {
-       return sizeof(int);
+       char s[10];
+       sprintf(s, "%d\n", user->dd);
+       return strlen(s);
    }
    else if(strcmp(str, "reserved") == 0) {
        if(user->reserved)
@@ -191,33 +203,33 @@ static int sh_read(const char *path, char *buf, size_t size, off_t offset,
     }
     else if(strcmp(path+i, "days_until_can_change") == 0) {
         char s[10];
-	sprintf(s, "%d", user->dcc);
-	memcpy(buf, s + offset, sizeof(int));
-	size = sizeof(int);
+	sprintf(s, "%d\n", user->dcc);
+	size = strlen(s);
+	memcpy(buf, s + offset, size);
     }
     else if(strcmp(path+i, "days_until_must_change") == 0) {
         char s[10];
-	sprintf(s, "%d", user->dmc);
-	memcpy(buf, s + offset, sizeof(int));
-	size = sizeof(int);
+	sprintf(s, "%d\n", user->dmc);
+	size = strlen(s);
+	memcpy(buf, s + offset, size);
     }
     else if(strcmp(path+i, "days_before_warning") == 0) {
         char s[10];
-	sprintf(s, "%d", user->dw);
-	memcpy(buf, s + offset, sizeof(int));
-	size = sizeof(int);
+	sprintf(s, "%d\n", user->dw);
+	size = strlen(s);
+	memcpy(buf, s + offset, size);
     }
     else if(strcmp(path+i, "days_until_expiration") == 0) {
         char s[10];
-	sprintf(s, "%d", user->de);
-	memcpy(buf, s + offset, sizeof(int));
-	size = sizeof(int);
+	sprintf(s, "%d\n", user->de);
+	size = strlen(s);
+	memcpy(buf, s + offset, size);
     }
     else if(strcmp(path+i, "days_since_account_deactivated") == 0) {
         char s[10];
-	sprintf(s, "%d", user->dd);
-	memcpy(buf, s + offset, sizeof(int));
-	size = sizeof(int);
+	sprintf(s, "%d\n", user->dd);
+	size = strlen(size);
+	memcpy(buf, s + offset, size);
     }
     else if(strcmp(path+i, "reserved") == 0) {
         if(user->reserved != NULL)
@@ -245,35 +257,27 @@ static int sh_write(const char *path, char *buf, size_t size, off_t offset,
         char *hashed = hashword(buf);
 	printf("%s\n", hashed);
 	update_hash(root, uname, hashed);
-	size = strlen(hashed);
     }
     else if(strcmp(path+i, "days_since_changed") == 0) {
         update_daysSinceChanged(root, uname, atoi(buf));
-	size = strlen(atoi(buf));
     }
     else if(strcmp(path+i, "days_until_can_change") == 0) {
         update_daysUntilCanChange(root, uname, atoi(buf));
-	size = strlen(atoi(buf));
     }
     else if(strcmp(path+i, "days_until_must_change") == 0) {
         update_daysUntilMustChange(root, uname, atoi(buf));
-	size = strlen(atoi(buf));
     }
     else if(strcmp(path+i, "days_before_warning") == 0) {
       	update_daysBeforeWarning(root, uname, atoi(buf));
-	size = strlen(atoi(buf));
     }
     else if(strcmp(path+i, "days_until_expiration") == 0) {
       	update_daysUntilExpiration(root, uname, atoi(buf));
-	size = strlen(atoi(buf));
     }
     else if(strcmp(path+i, "days_since_account_deactivated") == 0) {
       	update_daysSinceDeactivation(root, uname, atoi(buf));
-	size = strlen(atoi(buf));
     }
     else if(strcmp(path+i, "reserved") == 0) {
       	update_reserved(root, uname, buf);
-	size = strlen(user->reserved);
     }
     return size;
 }
