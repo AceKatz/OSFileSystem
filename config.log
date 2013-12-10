@@ -41,41 +41,41 @@ PATH: /usr/games
 ## Core tests. ##
 ## ----------- ##
 
-configure:2219: checking build system type
-configure:2233: result: i686-pc-linux-gnu
-configure:2253: checking host system type
-configure:2266: result: i686-pc-linux-gnu
-configure:2286: checking target system type
-configure:2299: result: i686-pc-linux-gnu
-configure:2341: checking for a BSD-compatible install
-configure:2409: result: /usr/bin/install -c
-configure:2420: checking whether build environment is sane
-configure:2470: result: yes
-configure:2611: checking for a thread-safe mkdir -p
-configure:2650: result: /bin/mkdir -p
-configure:2663: checking for gawk
-configure:2693: result: no
-configure:2663: checking for mawk
-configure:2679: found /usr/bin/mawk
-configure:2690: result: mawk
-configure:2701: checking whether make sets $(MAKE)
-configure:2723: result: yes
-configure:2849: checking how to print strings
-configure:2876: result: printf
-configure:2909: checking for style of include used by make
-configure:2937: result: GNU
-configure:3008: checking for gcc
-configure:3024: found /usr/bin/gcc
-configure:3035: result: gcc
-configure:3264: checking for C compiler version
-configure:3273: gcc --version >&5
+configure:2552: checking build system type
+configure:2566: result: i686-pc-linux-gnu
+configure:2586: checking host system type
+configure:2599: result: i686-pc-linux-gnu
+configure:2619: checking target system type
+configure:2632: result: i686-pc-linux-gnu
+configure:2674: checking for a BSD-compatible install
+configure:2742: result: /usr/bin/install -c
+configure:2753: checking whether build environment is sane
+configure:2803: result: yes
+configure:2944: checking for a thread-safe mkdir -p
+configure:2983: result: /bin/mkdir -p
+configure:2996: checking for gawk
+configure:3026: result: no
+configure:2996: checking for mawk
+configure:3012: found /usr/bin/mawk
+configure:3023: result: mawk
+configure:3034: checking whether make sets $(MAKE)
+configure:3056: result: yes
+configure:3182: checking how to print strings
+configure:3209: result: printf
+configure:3242: checking for style of include used by make
+configure:3270: result: GNU
+configure:3341: checking for gcc
+configure:3357: found /usr/bin/gcc
+configure:3368: result: gcc
+configure:3597: checking for C compiler version
+configure:3606: gcc --version >&5
 gcc (Ubuntu/Linaro 4.6.3-1ubuntu5) 4.6.3
 Copyright (C) 2011 Free Software Foundation, Inc.
 This is free software; see the source for copying conditions.  There is NO
 warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 
-configure:3284: $? = 0
-configure:3273: gcc -v >&5
+configure:3617: $? = 0
+configure:3606: gcc -v >&5
 Using built-in specs.
 COLLECT_GCC=gcc
 COLLECT_LTO_WRAPPER=/usr/lib/gcc/i686-linux-gnu/4.6/lto-wrapper
@@ -83,135 +83,135 @@ Target: i686-linux-gnu
 Configured with: ../src/configure -v --with-pkgversion='Ubuntu/Linaro 4.6.3-1ubuntu5' --with-bugurl=file:///usr/share/doc/gcc-4.6/README.Bugs --enable-languages=c,c++,fortran,objc,obj-c++ --prefix=/usr --program-suffix=-4.6 --enable-shared --enable-linker-build-id --with-system-zlib --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --with-gxx-include-dir=/usr/include/c++/4.6 --libdir=/usr/lib --enable-nls --with-sysroot=/ --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --enable-gnu-unique-object --enable-plugin --enable-objc-gc --enable-targets=all --disable-werror --with-arch-32=i686 --with-tune=generic --enable-checking=release --build=i686-linux-gnu --host=i686-linux-gnu --target=i686-linux-gnu
 Thread model: posix
 gcc version 4.6.3 (Ubuntu/Linaro 4.6.3-1ubuntu5) 
-configure:3284: $? = 0
-configure:3273: gcc -V >&5
+configure:3617: $? = 0
+configure:3606: gcc -V >&5
 gcc: error: unrecognized option '-V'
 gcc: fatal error: no input files
 compilation terminated.
-configure:3284: $? = 4
-configure:3273: gcc -qversion >&5
+configure:3617: $? = 4
+configure:3606: gcc -qversion >&5
 gcc: error: unrecognized option '-qversion'
 gcc: fatal error: no input files
 compilation terminated.
-configure:3284: $? = 4
-configure:3304: checking whether the C compiler works
-configure:3326: gcc    conftest.c  >&5
-configure:3330: $? = 0
-configure:3378: result: yes
-configure:3381: checking for C compiler default output file name
-configure:3383: result: a.out
-configure:3389: checking for suffix of executables
-configure:3396: gcc -o conftest    conftest.c  >&5
-configure:3400: $? = 0
-configure:3422: result: 
-configure:3444: checking whether we are cross compiling
-configure:3452: gcc -o conftest    conftest.c  >&5
-configure:3456: $? = 0
-configure:3463: ./conftest
-configure:3467: $? = 0
-configure:3482: result: no
-configure:3487: checking for suffix of object files
-configure:3509: gcc -c   conftest.c >&5
-configure:3513: $? = 0
-configure:3534: result: o
-configure:3538: checking whether we are using the GNU C compiler
-configure:3557: gcc -c   conftest.c >&5
-configure:3557: $? = 0
-configure:3566: result: yes
-configure:3575: checking whether gcc accepts -g
-configure:3595: gcc -c -g  conftest.c >&5
-configure:3595: $? = 0
-configure:3636: result: yes
-configure:3653: checking for gcc option to accept ISO C89
-configure:3717: gcc  -c -g -O2  conftest.c >&5
-configure:3717: $? = 0
-configure:3730: result: none needed
-configure:3752: checking dependency style of gcc
-configure:3863: result: gcc3
-configure:3878: checking for a sed that does not truncate output
-configure:3942: result: /bin/sed
-configure:3960: checking for grep that handles long lines and -e
-configure:4018: result: /bin/grep
-configure:4023: checking for egrep
-configure:4085: result: /bin/grep -E
-configure:4090: checking for fgrep
-configure:4152: result: /bin/grep -F
-configure:4187: checking for ld used by gcc
-configure:4254: result: /usr/bin/ld
-configure:4261: checking if the linker (/usr/bin/ld) is GNU ld
-configure:4276: result: yes
-configure:4288: checking for BSD- or MS-compatible name lister (nm)
-configure:4337: result: /usr/bin/nm -B
-configure:4467: checking the name lister (/usr/bin/nm -B) interface
-configure:4474: gcc -c -g -O2  conftest.c >&5
-configure:4477: /usr/bin/nm -B "conftest.o"
-configure:4480: output
+configure:3617: $? = 4
+configure:3637: checking whether the C compiler works
+configure:3659: gcc    conftest.c  >&5
+configure:3663: $? = 0
+configure:3711: result: yes
+configure:3714: checking for C compiler default output file name
+configure:3716: result: a.out
+configure:3722: checking for suffix of executables
+configure:3729: gcc -o conftest    conftest.c  >&5
+configure:3733: $? = 0
+configure:3755: result: 
+configure:3777: checking whether we are cross compiling
+configure:3785: gcc -o conftest    conftest.c  >&5
+configure:3789: $? = 0
+configure:3796: ./conftest
+configure:3800: $? = 0
+configure:3815: result: no
+configure:3820: checking for suffix of object files
+configure:3842: gcc -c   conftest.c >&5
+configure:3846: $? = 0
+configure:3867: result: o
+configure:3871: checking whether we are using the GNU C compiler
+configure:3890: gcc -c   conftest.c >&5
+configure:3890: $? = 0
+configure:3899: result: yes
+configure:3908: checking whether gcc accepts -g
+configure:3928: gcc -c -g  conftest.c >&5
+configure:3928: $? = 0
+configure:3969: result: yes
+configure:3986: checking for gcc option to accept ISO C89
+configure:4050: gcc  -c -g -O2  conftest.c >&5
+configure:4050: $? = 0
+configure:4063: result: none needed
+configure:4085: checking dependency style of gcc
+configure:4196: result: gcc3
+configure:4211: checking for a sed that does not truncate output
+configure:4275: result: /bin/sed
+configure:4293: checking for grep that handles long lines and -e
+configure:4351: result: /bin/grep
+configure:4356: checking for egrep
+configure:4418: result: /bin/grep -E
+configure:4423: checking for fgrep
+configure:4485: result: /bin/grep -F
+configure:4520: checking for ld used by gcc
+configure:4587: result: /usr/bin/ld
+configure:4594: checking if the linker (/usr/bin/ld) is GNU ld
+configure:4609: result: yes
+configure:4621: checking for BSD- or MS-compatible name lister (nm)
+configure:4670: result: /usr/bin/nm -B
+configure:4800: checking the name lister (/usr/bin/nm -B) interface
+configure:4807: gcc -c -g -O2  conftest.c >&5
+configure:4810: /usr/bin/nm -B "conftest.o"
+configure:4813: output
 00000000 B some_variable
-configure:4487: result: BSD nm
-configure:4490: checking whether ln -s works
-configure:4494: result: yes
-configure:4502: checking the maximum length of command line arguments
-configure:4632: result: 1572864
-configure:4649: checking whether the shell understands some XSI constructs
-configure:4659: result: yes
-configure:4663: checking whether the shell understands "+="
-configure:4669: result: yes
-configure:4704: checking how to convert i686-pc-linux-gnu file names to i686-pc-linux-gnu format
-configure:4744: result: func_convert_file_noop
-configure:4751: checking how to convert i686-pc-linux-gnu file names to toolchain format
-configure:4771: result: func_convert_file_noop
-configure:4778: checking for /usr/bin/ld option to reload object files
-configure:4785: result: -r
-configure:4859: checking for objdump
-configure:4875: found /usr/bin/objdump
-configure:4886: result: objdump
-configure:4918: checking how to recognize dependent libraries
-configure:5120: result: pass_all
-configure:5205: checking for dlltool
-configure:5235: result: no
-configure:5265: checking how to associate runtime and link libraries
-configure:5292: result: printf %s\n
-configure:5353: checking for ar
-configure:5369: found /usr/bin/ar
-configure:5380: result: ar
-configure:5417: checking for archiver @FILE support
-configure:5434: gcc -c -g -O2  conftest.c >&5
-configure:5434: $? = 0
-configure:5437: ar cru libconftest.a @conftest.lst >&5
-configure:5440: $? = 0
-configure:5445: ar cru libconftest.a @conftest.lst >&5
+configure:4820: result: BSD nm
+configure:4823: checking whether ln -s works
+configure:4827: result: yes
+configure:4835: checking the maximum length of command line arguments
+configure:4965: result: 1572864
+configure:4982: checking whether the shell understands some XSI constructs
+configure:4992: result: yes
+configure:4996: checking whether the shell understands "+="
+configure:5002: result: yes
+configure:5037: checking how to convert i686-pc-linux-gnu file names to i686-pc-linux-gnu format
+configure:5077: result: func_convert_file_noop
+configure:5084: checking how to convert i686-pc-linux-gnu file names to toolchain format
+configure:5104: result: func_convert_file_noop
+configure:5111: checking for /usr/bin/ld option to reload object files
+configure:5118: result: -r
+configure:5192: checking for objdump
+configure:5208: found /usr/bin/objdump
+configure:5219: result: objdump
+configure:5251: checking how to recognize dependent libraries
+configure:5453: result: pass_all
+configure:5538: checking for dlltool
+configure:5568: result: no
+configure:5598: checking how to associate runtime and link libraries
+configure:5625: result: printf %s\n
+configure:5686: checking for ar
+configure:5702: found /usr/bin/ar
+configure:5713: result: ar
+configure:5750: checking for archiver @FILE support
+configure:5767: gcc -c -g -O2  conftest.c >&5
+configure:5767: $? = 0
+configure:5770: ar cru libconftest.a @conftest.lst >&5
+configure:5773: $? = 0
+configure:5778: ar cru libconftest.a @conftest.lst >&5
 ar: conftest.o: No such file or directory
-configure:5448: $? = 1
-configure:5460: result: @
-configure:5518: checking for strip
-configure:5534: found /usr/bin/strip
-configure:5545: result: strip
-configure:5617: checking for ranlib
-configure:5633: found /usr/bin/ranlib
-configure:5644: result: ranlib
-configure:5746: checking command to parse /usr/bin/nm -B output from gcc object
-configure:5866: gcc -c -g -O2  conftest.c >&5
-configure:5869: $? = 0
-configure:5873: /usr/bin/nm -B conftest.o \| sed -n -e 's/^.*[ ]\([ABCDGIRSTW][ABCDGIRSTW]*\)[ ][ ]*\([_A-Za-z][_A-Za-z0-9]*\)$/\1 \2 \2/p' | sed '/ __gnu_lto/d' \> conftest.nm
-configure:5876: $? = 0
-configure:5942: gcc -o conftest -g -O2   conftest.c conftstm.o >&5
-configure:5945: $? = 0
-configure:5983: result: ok
-configure:6020: checking for sysroot
-configure:6050: result: no
-configure:6306: checking for mt
-configure:6322: found /bin/mt
-configure:6333: result: mt
-configure:6356: checking if mt is a manifest tool
-configure:6362: mt '-?'
-configure:6370: result: no
-configure:7012: checking how to run the C preprocessor
-configure:7043: gcc -E  conftest.c
-configure:7043: $? = 0
-configure:7057: gcc -E  conftest.c
+configure:5781: $? = 1
+configure:5793: result: @
+configure:5851: checking for strip
+configure:5867: found /usr/bin/strip
+configure:5878: result: strip
+configure:5950: checking for ranlib
+configure:5966: found /usr/bin/ranlib
+configure:5977: result: ranlib
+configure:6079: checking command to parse /usr/bin/nm -B output from gcc object
+configure:6199: gcc -c -g -O2  conftest.c >&5
+configure:6202: $? = 0
+configure:6206: /usr/bin/nm -B conftest.o \| sed -n -e 's/^.*[ ]\([ABCDGIRSTW][ABCDGIRSTW]*\)[ ][ ]*\([_A-Za-z][_A-Za-z0-9]*\)$/\1 \2 \2/p' | sed '/ __gnu_lto/d' \> conftest.nm
+configure:6209: $? = 0
+configure:6275: gcc -o conftest -g -O2   conftest.c conftstm.o >&5
+configure:6278: $? = 0
+configure:6316: result: ok
+configure:6353: checking for sysroot
+configure:6383: result: no
+configure:6639: checking for mt
+configure:6655: found /bin/mt
+configure:6666: result: mt
+configure:6689: checking if mt is a manifest tool
+configure:6695: mt '-?'
+configure:6703: result: no
+configure:7345: checking how to run the C preprocessor
+configure:7376: gcc -E  conftest.c
+configure:7376: $? = 0
+configure:7390: gcc -E  conftest.c
 conftest.c:11:28: fatal error: ac_nonexistent.h: No such file or directory
 compilation terminated.
-configure:7057: $? = 1
+configure:7390: $? = 1
 configure: failed program was:
 | /* confdefs.h */
 | #define PACKAGE_NAME "fuse"
@@ -224,13 +224,13 @@ configure: failed program was:
 | #define VERSION "2.9.0"
 | /* end confdefs.h.  */
 | #include <ac_nonexistent.h>
-configure:7082: result: gcc -E
-configure:7102: gcc -E  conftest.c
-configure:7102: $? = 0
-configure:7116: gcc -E  conftest.c
+configure:7415: result: gcc -E
+configure:7435: gcc -E  conftest.c
+configure:7435: $? = 0
+configure:7449: gcc -E  conftest.c
 conftest.c:11:28: fatal error: ac_nonexistent.h: No such file or directory
 compilation terminated.
-configure:7116: $? = 1
+configure:7449: $? = 1
 configure: failed program was:
 | /* confdefs.h */
 | #define PACKAGE_NAME "fuse"
@@ -243,110 +243,110 @@ configure: failed program was:
 | #define VERSION "2.9.0"
 | /* end confdefs.h.  */
 | #include <ac_nonexistent.h>
-configure:7145: checking for ANSI C header files
-configure:7165: gcc -c -g -O2  conftest.c >&5
-configure:7165: $? = 0
-configure:7238: gcc -o conftest -g -O2   conftest.c  >&5
-configure:7238: $? = 0
-configure:7238: ./conftest
-configure:7238: $? = 0
-configure:7249: result: yes
-configure:7262: checking for sys/types.h
-configure:7262: gcc -c -g -O2  conftest.c >&5
-configure:7262: $? = 0
-configure:7262: result: yes
-configure:7262: checking for sys/stat.h
-configure:7262: gcc -c -g -O2  conftest.c >&5
-configure:7262: $? = 0
-configure:7262: result: yes
-configure:7262: checking for stdlib.h
-configure:7262: gcc -c -g -O2  conftest.c >&5
-configure:7262: $? = 0
-configure:7262: result: yes
-configure:7262: checking for string.h
-configure:7262: gcc -c -g -O2  conftest.c >&5
-configure:7262: $? = 0
-configure:7262: result: yes
-configure:7262: checking for memory.h
-configure:7262: gcc -c -g -O2  conftest.c >&5
-configure:7262: $? = 0
-configure:7262: result: yes
-configure:7262: checking for strings.h
-configure:7262: gcc -c -g -O2  conftest.c >&5
-configure:7262: $? = 0
-configure:7262: result: yes
-configure:7262: checking for inttypes.h
-configure:7262: gcc -c -g -O2  conftest.c >&5
-configure:7262: $? = 0
-configure:7262: result: yes
-configure:7262: checking for stdint.h
-configure:7262: gcc -c -g -O2  conftest.c >&5
-configure:7262: $? = 0
-configure:7262: result: yes
-configure:7262: checking for unistd.h
-configure:7262: gcc -c -g -O2  conftest.c >&5
-configure:7262: $? = 0
-configure:7262: result: yes
-configure:7276: checking for dlfcn.h
-configure:7276: gcc -c -g -O2  conftest.c >&5
-configure:7276: $? = 0
-configure:7276: result: yes
-configure:7482: checking for objdir
-configure:7497: result: .libs
-configure:7768: checking if gcc supports -fno-rtti -fno-exceptions
-configure:7786: gcc -c -g -O2  -fno-rtti -fno-exceptions conftest.c >&5
+configure:7478: checking for ANSI C header files
+configure:7498: gcc -c -g -O2  conftest.c >&5
+configure:7498: $? = 0
+configure:7571: gcc -o conftest -g -O2   conftest.c  >&5
+configure:7571: $? = 0
+configure:7571: ./conftest
+configure:7571: $? = 0
+configure:7582: result: yes
+configure:7595: checking for sys/types.h
+configure:7595: gcc -c -g -O2  conftest.c >&5
+configure:7595: $? = 0
+configure:7595: result: yes
+configure:7595: checking for sys/stat.h
+configure:7595: gcc -c -g -O2  conftest.c >&5
+configure:7595: $? = 0
+configure:7595: result: yes
+configure:7595: checking for stdlib.h
+configure:7595: gcc -c -g -O2  conftest.c >&5
+configure:7595: $? = 0
+configure:7595: result: yes
+configure:7595: checking for string.h
+configure:7595: gcc -c -g -O2  conftest.c >&5
+configure:7595: $? = 0
+configure:7595: result: yes
+configure:7595: checking for memory.h
+configure:7595: gcc -c -g -O2  conftest.c >&5
+configure:7595: $? = 0
+configure:7595: result: yes
+configure:7595: checking for strings.h
+configure:7595: gcc -c -g -O2  conftest.c >&5
+configure:7595: $? = 0
+configure:7595: result: yes
+configure:7595: checking for inttypes.h
+configure:7595: gcc -c -g -O2  conftest.c >&5
+configure:7595: $? = 0
+configure:7595: result: yes
+configure:7595: checking for stdint.h
+configure:7595: gcc -c -g -O2  conftest.c >&5
+configure:7595: $? = 0
+configure:7595: result: yes
+configure:7595: checking for unistd.h
+configure:7595: gcc -c -g -O2  conftest.c >&5
+configure:7595: $? = 0
+configure:7595: result: yes
+configure:7609: checking for dlfcn.h
+configure:7609: gcc -c -g -O2  conftest.c >&5
+configure:7609: $? = 0
+configure:7609: result: yes
+configure:7815: checking for objdir
+configure:7830: result: .libs
+configure:8101: checking if gcc supports -fno-rtti -fno-exceptions
+configure:8119: gcc -c -g -O2  -fno-rtti -fno-exceptions conftest.c >&5
 cc1: warning: command line option '-fno-rtti' is valid for C++/ObjC++ but not for C [enabled by default]
-configure:7790: $? = 0
-configure:7803: result: no
-configure:8130: checking for gcc option to produce PIC
-configure:8137: result: -fPIC -DPIC
-configure:8145: checking if gcc PIC flag -fPIC -DPIC works
-configure:8163: gcc -c -g -O2  -fPIC -DPIC -DPIC conftest.c >&5
-configure:8167: $? = 0
-configure:8180: result: yes
-configure:8209: checking if gcc static flag -static works
-configure:8237: result: yes
-configure:8252: checking if gcc supports -c -o file.o
-configure:8273: gcc -c -g -O2  -o out/conftest2.o conftest.c >&5
-configure:8277: $? = 0
-configure:8299: result: yes
-configure:8307: checking if gcc supports -c -o file.o
-configure:8354: result: yes
-configure:8387: checking whether the gcc linker (/usr/bin/ld) supports shared libraries
-configure:9544: result: yes
-configure:9581: checking whether -lc should be explicitly linked in
-configure:9589: gcc -c -g -O2  conftest.c >&5
-configure:9592: $? = 0
-configure:9607: gcc -shared  -fPIC -DPIC conftest.o  -v -Wl,-soname -Wl,conftest -o conftest 2\>\&1 \| /bin/grep  -lc  \>/dev/null 2\>\&1
-configure:9610: $? = 0
-configure:9624: result: no
-configure:9784: checking dynamic linker characteristics
-configure:10295: gcc -o conftest -g -O2   -Wl,-rpath -Wl,/foo conftest.c  >&5
-configure:10295: $? = 0
-configure:10529: result: GNU/Linux ld.so
-configure:10636: checking how to hardcode library paths into programs
-configure:10661: result: immediate
-configure:11201: checking whether stripping libraries is possible
-configure:11206: result: yes
-configure:11241: checking if libtool supports shared libraries
-configure:11243: result: yes
-configure:11246: checking whether to build shared libraries
-configure:11267: result: yes
-configure:11270: checking whether to build static libraries
-configure:11274: result: yes
-configure:11324: checking whether make supports nested variables
-configure:11341: result: yes
-configure:11404: checking for gcc
-configure:11431: result: gcc
-configure:11660: checking for C compiler version
-configure:11669: gcc --version >&5
+configure:8123: $? = 0
+configure:8136: result: no
+configure:8463: checking for gcc option to produce PIC
+configure:8470: result: -fPIC -DPIC
+configure:8478: checking if gcc PIC flag -fPIC -DPIC works
+configure:8496: gcc -c -g -O2  -fPIC -DPIC -DPIC conftest.c >&5
+configure:8500: $? = 0
+configure:8513: result: yes
+configure:8542: checking if gcc static flag -static works
+configure:8570: result: yes
+configure:8585: checking if gcc supports -c -o file.o
+configure:8606: gcc -c -g -O2  -o out/conftest2.o conftest.c >&5
+configure:8610: $? = 0
+configure:8632: result: yes
+configure:8640: checking if gcc supports -c -o file.o
+configure:8687: result: yes
+configure:8720: checking whether the gcc linker (/usr/bin/ld) supports shared libraries
+configure:9877: result: yes
+configure:9914: checking whether -lc should be explicitly linked in
+configure:9922: gcc -c -g -O2  conftest.c >&5
+configure:9925: $? = 0
+configure:9940: gcc -shared  -fPIC -DPIC conftest.o  -v -Wl,-soname -Wl,conftest -o conftest 2\>\&1 \| /bin/grep  -lc  \>/dev/null 2\>\&1
+configure:9943: $? = 0
+configure:9957: result: no
+configure:10117: checking dynamic linker characteristics
+configure:10628: gcc -o conftest -g -O2   -Wl,-rpath -Wl,/foo conftest.c  >&5
+configure:10628: $? = 0
+configure:10862: result: GNU/Linux ld.so
+configure:10969: checking how to hardcode library paths into programs
+configure:10994: result: immediate
+configure:11534: checking whether stripping libraries is possible
+configure:11539: result: yes
+configure:11574: checking if libtool supports shared libraries
+configure:11576: result: yes
+configure:11579: checking whether to build shared libraries
+configure:11600: result: yes
+configure:11603: checking whether to build static libraries
+configure:11607: result: yes
+configure:11657: checking whether make supports nested variables
+configure:11674: result: yes
+configure:11737: checking for gcc
+configure:11764: result: gcc
+configure:11993: checking for C compiler version
+configure:12002: gcc --version >&5
 gcc (Ubuntu/Linaro 4.6.3-1ubuntu5) 4.6.3
 Copyright (C) 2011 Free Software Foundation, Inc.
 This is free software; see the source for copying conditions.  There is NO
 warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 
-configure:11680: $? = 0
-configure:11669: gcc -v >&5
+configure:12013: $? = 0
+configure:12002: gcc -v >&5
 Using built-in specs.
 COLLECT_GCC=gcc
 COLLECT_LTO_WRAPPER=/usr/lib/gcc/i686-linux-gnu/4.6/lto-wrapper
@@ -354,81 +354,81 @@ Target: i686-linux-gnu
 Configured with: ../src/configure -v --with-pkgversion='Ubuntu/Linaro 4.6.3-1ubuntu5' --with-bugurl=file:///usr/share/doc/gcc-4.6/README.Bugs --enable-languages=c,c++,fortran,objc,obj-c++ --prefix=/usr --program-suffix=-4.6 --enable-shared --enable-linker-build-id --with-system-zlib --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --with-gxx-include-dir=/usr/include/c++/4.6 --libdir=/usr/lib --enable-nls --with-sysroot=/ --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --enable-gnu-unique-object --enable-plugin --enable-objc-gc --enable-targets=all --disable-werror --with-arch-32=i686 --with-tune=generic --enable-checking=release --build=i686-linux-gnu --host=i686-linux-gnu --target=i686-linux-gnu
 Thread model: posix
 gcc version 4.6.3 (Ubuntu/Linaro 4.6.3-1ubuntu5) 
-configure:11680: $? = 0
-configure:11669: gcc -V >&5
+configure:12013: $? = 0
+configure:12002: gcc -V >&5
 gcc: error: unrecognized option '-V'
 gcc: fatal error: no input files
 compilation terminated.
-configure:11680: $? = 4
-configure:11669: gcc -qversion >&5
+configure:12013: $? = 4
+configure:12002: gcc -qversion >&5
 gcc: error: unrecognized option '-qversion'
 gcc: fatal error: no input files
 compilation terminated.
-configure:11680: $? = 4
-configure:11684: checking whether we are using the GNU C compiler
-configure:11712: result: yes
-configure:11721: checking whether gcc accepts -g
-configure:11782: result: yes
-configure:11799: checking for gcc option to accept ISO C89
-configure:11876: result: none needed
-configure:11898: checking dependency style of gcc
-configure:12009: result: gcc3
-configure:12025: checking whether gcc and cc understand -c and -o together
-configure:12056: gcc -c conftest.c -o conftest2.o >&5
-configure:12060: $? = 0
-configure:12066: gcc -c conftest.c -o conftest2.o >&5
-configure:12070: $? = 0
-configure:12081: cc -c conftest.c >&5
-configure:12085: $? = 0
-configure:12093: cc -c conftest.c -o conftest2.o >&5
-configure:12097: $? = 0
-configure:12103: cc -c conftest.c -o conftest2.o >&5
-configure:12107: $? = 0
-configure:12125: result: yes
-configure:12219: checking for fork
-configure:12219: gcc -o conftest -Wall -W -Wno-sign-compare -Wstrict-prototypes -Wmissing-declarations -Wwrite-strings -g -O2 -fno-strict-aliasing   conftest.c  >&5
+configure:12013: $? = 4
+configure:12017: checking whether we are using the GNU C compiler
+configure:12045: result: yes
+configure:12054: checking whether gcc accepts -g
+configure:12115: result: yes
+configure:12132: checking for gcc option to accept ISO C89
+configure:12209: result: none needed
+configure:12231: checking dependency style of gcc
+configure:12342: result: gcc3
+configure:12358: checking whether gcc and cc understand -c and -o together
+configure:12389: gcc -c conftest.c -o conftest2.o >&5
+configure:12393: $? = 0
+configure:12399: gcc -c conftest.c -o conftest2.o >&5
+configure:12403: $? = 0
+configure:12414: cc -c conftest.c >&5
+configure:12418: $? = 0
+configure:12426: cc -c conftest.c -o conftest2.o >&5
+configure:12430: $? = 0
+configure:12436: cc -c conftest.c -o conftest2.o >&5
+configure:12440: $? = 0
+configure:12458: result: yes
+configure:12552: checking for fork
+configure:12552: gcc -o conftest -Wall -W -Wno-sign-compare -Wstrict-prototypes -Wmissing-declarations -Wwrite-strings -g -O2 -fno-strict-aliasing   conftest.c  >&5
 conftest.c:46:1: warning: function declaration isn't a prototype [-Wstrict-prototypes]
 conftest.c:46:6: warning: conflicting types for built-in function 'fork' [enabled by default]
 conftest.c:55:1: warning: function declaration isn't a prototype [-Wstrict-prototypes]
-configure:12219: $? = 0
-configure:12219: result: yes
-configure:12219: checking for setxattr
-configure:12219: gcc -o conftest -Wall -W -Wno-sign-compare -Wstrict-prototypes -Wmissing-declarations -Wwrite-strings -g -O2 -fno-strict-aliasing   conftest.c  >&5
+configure:12552: $? = 0
+configure:12552: result: yes
+configure:12552: checking for setxattr
+configure:12552: gcc -o conftest -Wall -W -Wno-sign-compare -Wstrict-prototypes -Wmissing-declarations -Wwrite-strings -g -O2 -fno-strict-aliasing   conftest.c  >&5
 conftest.c:47:1: warning: function declaration isn't a prototype [-Wstrict-prototypes]
 conftest.c:56:1: warning: function declaration isn't a prototype [-Wstrict-prototypes]
-configure:12219: $? = 0
-configure:12219: result: yes
-configure:12219: checking for fdatasync
-configure:12219: gcc -o conftest -Wall -W -Wno-sign-compare -Wstrict-prototypes -Wmissing-declarations -Wwrite-strings -g -O2 -fno-strict-aliasing   conftest.c  >&5
+configure:12552: $? = 0
+configure:12552: result: yes
+configure:12552: checking for fdatasync
+configure:12552: gcc -o conftest -Wall -W -Wno-sign-compare -Wstrict-prototypes -Wmissing-declarations -Wwrite-strings -g -O2 -fno-strict-aliasing   conftest.c  >&5
 conftest.c:48:1: warning: function declaration isn't a prototype [-Wstrict-prototypes]
 conftest.c:57:1: warning: function declaration isn't a prototype [-Wstrict-prototypes]
-configure:12219: $? = 0
-configure:12219: result: yes
-configure:12219: checking for splice
-configure:12219: gcc -o conftest -Wall -W -Wno-sign-compare -Wstrict-prototypes -Wmissing-declarations -Wwrite-strings -g -O2 -fno-strict-aliasing   conftest.c  >&5
+configure:12552: $? = 0
+configure:12552: result: yes
+configure:12552: checking for splice
+configure:12552: gcc -o conftest -Wall -W -Wno-sign-compare -Wstrict-prototypes -Wmissing-declarations -Wwrite-strings -g -O2 -fno-strict-aliasing   conftest.c  >&5
 conftest.c:49:1: warning: function declaration isn't a prototype [-Wstrict-prototypes]
 conftest.c:58:1: warning: function declaration isn't a prototype [-Wstrict-prototypes]
-configure:12219: $? = 0
-configure:12219: result: yes
-configure:12219: checking for vmsplice
-configure:12219: gcc -o conftest -Wall -W -Wno-sign-compare -Wstrict-prototypes -Wmissing-declarations -Wwrite-strings -g -O2 -fno-strict-aliasing   conftest.c  >&5
+configure:12552: $? = 0
+configure:12552: result: yes
+configure:12552: checking for vmsplice
+configure:12552: gcc -o conftest -Wall -W -Wno-sign-compare -Wstrict-prototypes -Wmissing-declarations -Wwrite-strings -g -O2 -fno-strict-aliasing   conftest.c  >&5
 conftest.c:50:1: warning: function declaration isn't a prototype [-Wstrict-prototypes]
 conftest.c:59:1: warning: function declaration isn't a prototype [-Wstrict-prototypes]
-configure:12219: $? = 0
-configure:12219: result: yes
-configure:12219: checking for utimensat
-configure:12219: gcc -o conftest -Wall -W -Wno-sign-compare -Wstrict-prototypes -Wmissing-declarations -Wwrite-strings -g -O2 -fno-strict-aliasing   conftest.c  >&5
+configure:12552: $? = 0
+configure:12552: result: yes
+configure:12552: checking for utimensat
+configure:12552: gcc -o conftest -Wall -W -Wno-sign-compare -Wstrict-prototypes -Wmissing-declarations -Wwrite-strings -g -O2 -fno-strict-aliasing   conftest.c  >&5
 conftest.c:51:1: warning: function declaration isn't a prototype [-Wstrict-prototypes]
 conftest.c:60:1: warning: function declaration isn't a prototype [-Wstrict-prototypes]
-configure:12219: $? = 0
-configure:12219: result: yes
-configure:12228: checking for struct stat.st_atim
-configure:12228: gcc -c -Wall -W -Wno-sign-compare -Wstrict-prototypes -Wmissing-declarations -Wwrite-strings -g -O2 -fno-strict-aliasing  conftest.c >&5
+configure:12552: $? = 0
+configure:12552: result: yes
+configure:12561: checking for struct stat.st_atim
+configure:12561: gcc -c -Wall -W -Wno-sign-compare -Wstrict-prototypes -Wmissing-declarations -Wwrite-strings -g -O2 -fno-strict-aliasing  conftest.c >&5
 conftest.c:63:1: warning: function declaration isn't a prototype [-Wstrict-prototypes]
 conftest.c: In function 'main':
 conftest.c:66:5: error: used struct type value where scalar is required
 conftest.c:65:20: warning: variable 'ac_aggr' set but not used [-Wunused-but-set-variable]
-configure:12228: $? = 1
+configure:12561: $? = 1
 configure: failed program was:
 | /* confdefs.h */
 | #define PACKAGE_NAME "fuse"
@@ -500,17 +500,17 @@ configure: failed program was:
 |   ;
 |   return 0;
 | }
-configure:12228: gcc -c -Wall -W -Wno-sign-compare -Wstrict-prototypes -Wmissing-declarations -Wwrite-strings -g -O2 -fno-strict-aliasing  conftest.c >&5
+configure:12561: gcc -c -Wall -W -Wno-sign-compare -Wstrict-prototypes -Wmissing-declarations -Wwrite-strings -g -O2 -fno-strict-aliasing  conftest.c >&5
 conftest.c:63:1: warning: function declaration isn't a prototype [-Wstrict-prototypes]
-configure:12228: $? = 0
-configure:12228: result: yes
-configure:12238: checking for struct stat.st_atimespec
-configure:12238: gcc -c -Wall -W -Wno-sign-compare -Wstrict-prototypes -Wmissing-declarations -Wwrite-strings -g -O2 -fno-strict-aliasing  conftest.c >&5
+configure:12561: $? = 0
+configure:12561: result: yes
+configure:12571: checking for struct stat.st_atimespec
+configure:12571: gcc -c -Wall -W -Wno-sign-compare -Wstrict-prototypes -Wmissing-declarations -Wwrite-strings -g -O2 -fno-strict-aliasing  conftest.c >&5
 conftest.c:64:1: warning: function declaration isn't a prototype [-Wstrict-prototypes]
 conftest.c: In function 'main':
 conftest.c:67:12: error: 'struct stat' has no member named 'st_atimespec'
 conftest.c:66:20: warning: variable 'ac_aggr' set but not used [-Wunused-but-set-variable]
-configure:12238: $? = 1
+configure:12571: $? = 1
 configure: failed program was:
 | /* confdefs.h */
 | #define PACKAGE_NAME "fuse"
@@ -583,12 +583,12 @@ configure: failed program was:
 |   ;
 |   return 0;
 | }
-configure:12238: gcc -c -Wall -W -Wno-sign-compare -Wstrict-prototypes -Wmissing-declarations -Wwrite-strings -g -O2 -fno-strict-aliasing  conftest.c >&5
+configure:12571: gcc -c -Wall -W -Wno-sign-compare -Wstrict-prototypes -Wmissing-declarations -Wwrite-strings -g -O2 -fno-strict-aliasing  conftest.c >&5
 conftest.c:64:1: warning: function declaration isn't a prototype [-Wstrict-prototypes]
 conftest.c: In function 'main':
 conftest.c:67:19: error: 'struct stat' has no member named 'st_atimespec'
 conftest.c:66:20: warning: variable 'ac_aggr' set but not used [-Wunused-but-set-variable]
-configure:12238: $? = 1
+configure:12571: $? = 1
 configure: failed program was:
 | /* confdefs.h */
 | #define PACKAGE_NAME "fuse"
@@ -661,15 +661,15 @@ configure: failed program was:
 |   ;
 |   return 0;
 | }
-configure:12238: result: no
-configure:12251: checking for library containing dlopen
-configure:12282: gcc -o conftest -Wall -W -Wno-sign-compare -Wstrict-prototypes -Wmissing-declarations -Wwrite-strings -g -O2 -fno-strict-aliasing   conftest.c  >&5
+configure:12571: result: no
+configure:12584: checking for library containing dlopen
+configure:12615: gcc -o conftest -Wall -W -Wno-sign-compare -Wstrict-prototypes -Wmissing-declarations -Wwrite-strings -g -O2 -fno-strict-aliasing   conftest.c  >&5
 conftest.c:37:1: warning: function declaration isn't a prototype [-Wstrict-prototypes]
 conftest.c:39:1: warning: function declaration isn't a prototype [-Wstrict-prototypes]
-/tmp/cc48g4go.o: In function `main':
+/tmp/ccSe2R1V.o: In function `main':
 /mnt/hgfs/cs3411/final_project/OSFileSystem/conftest.c:41: undefined reference to `dlopen'
 collect2: ld returned 1 exit status
-configure:12282: $? = 1
+configure:12615: $? = 1
 configure: failed program was:
 | /* confdefs.h */
 | #define PACKAGE_NAME "fuse"
@@ -715,19 +715,19 @@ configure: failed program was:
 |   ;
 |   return 0;
 | }
-configure:12282: gcc -o conftest -Wall -W -Wno-sign-compare -Wstrict-prototypes -Wmissing-declarations -Wwrite-strings -g -O2 -fno-strict-aliasing   conftest.c -ldl   >&5
+configure:12615: gcc -o conftest -Wall -W -Wno-sign-compare -Wstrict-prototypes -Wmissing-declarations -Wwrite-strings -g -O2 -fno-strict-aliasing   conftest.c -ldl   >&5
 conftest.c:37:1: warning: function declaration isn't a prototype [-Wstrict-prototypes]
 conftest.c:39:1: warning: function declaration isn't a prototype [-Wstrict-prototypes]
-configure:12282: $? = 0
-configure:12299: result: -ldl
-configure:12307: checking for library containing clock_gettime
-configure:12338: gcc -o conftest -Wall -W -Wno-sign-compare -Wstrict-prototypes -Wmissing-declarations -Wwrite-strings -g -O2 -fno-strict-aliasing   conftest.c -ldl  >&5
+configure:12615: $? = 0
+configure:12632: result: -ldl
+configure:12640: checking for library containing clock_gettime
+configure:12671: gcc -o conftest -Wall -W -Wno-sign-compare -Wstrict-prototypes -Wmissing-declarations -Wwrite-strings -g -O2 -fno-strict-aliasing   conftest.c -ldl  >&5
 conftest.c:37:1: warning: function declaration isn't a prototype [-Wstrict-prototypes]
 conftest.c:39:1: warning: function declaration isn't a prototype [-Wstrict-prototypes]
-/tmp/ccswJV1I.o: In function `main':
+/tmp/ccUbA684.o: In function `main':
 /mnt/hgfs/cs3411/final_project/OSFileSystem/conftest.c:41: undefined reference to `clock_gettime'
 collect2: ld returned 1 exit status
-configure:12338: $? = 1
+configure:12671: $? = 1
 configure: failed program was:
 | /* confdefs.h */
 | #define PACKAGE_NAME "fuse"
@@ -773,38 +773,1896 @@ configure: failed program was:
 |   ;
 |   return 0;
 | }
-configure:12338: gcc -o conftest -Wall -W -Wno-sign-compare -Wstrict-prototypes -Wmissing-declarations -Wwrite-strings -g -O2 -fno-strict-aliasing   conftest.c -lrt  -ldl  >&5
+configure:12671: gcc -o conftest -Wall -W -Wno-sign-compare -Wstrict-prototypes -Wmissing-declarations -Wwrite-strings -g -O2 -fno-strict-aliasing   conftest.c -lrt  -ldl  >&5
 conftest.c:37:1: warning: function declaration isn't a prototype [-Wstrict-prototypes]
 conftest.c:39:1: warning: function declaration isn't a prototype [-Wstrict-prototypes]
-configure:12338: $? = 0
-configure:12355: result: -lrt
-configure:12416: checking for ld used by GCC
-configure:12480: result: /usr/bin/ld
-configure:12487: checking if the linker (/usr/bin/ld) is GNU ld
-configure:12500: result: yes
-configure:12507: checking for shared library run path origin
-configure:12520: result: done
-configure:13098: checking for iconv
-configure:13120: gcc -o conftest -Wall -W -Wno-sign-compare -Wstrict-prototypes -Wmissing-declarations -Wwrite-strings -g -O2 -fno-strict-aliasing   conftest.c  >&5
+configure:12671: $? = 0
+configure:12688: result: -lrt
+configure:12749: checking for ld used by GCC
+configure:12813: result: /usr/bin/ld
+configure:12820: checking if the linker (/usr/bin/ld) is GNU ld
+configure:12833: result: yes
+configure:12840: checking for shared library run path origin
+configure:12853: result: done
+configure:13431: checking for iconv
+configure:13453: gcc -o conftest -Wall -W -Wno-sign-compare -Wstrict-prototypes -Wmissing-declarations -Wwrite-strings -g -O2 -fno-strict-aliasing   conftest.c  >&5
 conftest.c:33:1: warning: function declaration isn't a prototype [-Wstrict-prototypes]
-configure:13120: $? = 0
-configure:13152: result: yes
-configure:13155: checking for working iconv
-configure:13250: gcc -o conftest -Wall -W -Wno-sign-compare -Wstrict-prototypes -Wmissing-declarations -Wwrite-strings -g -O2 -fno-strict-aliasing   conftest.c  >&5
+configure:13453: $? = 0
+configure:13485: result: yes
+configure:13488: checking for working iconv
+configure:13583: gcc -o conftest -Wall -W -Wno-sign-compare -Wstrict-prototypes -Wmissing-declarations -Wwrite-strings -g -O2 -fno-strict-aliasing   conftest.c  >&5
 conftest.c:33:5: warning: function declaration isn't a prototype [-Wstrict-prototypes]
-configure:13250: $? = 0
-configure:13250: ./conftest
-configure:13250: $? = 0
-configure:13262: result: yes
-configure:13290: checking for iconv declaration
-configure:13319: gcc -c -Wall -W -Wno-sign-compare -Wstrict-prototypes -Wmissing-declarations -Wwrite-strings -g -O2 -fno-strict-aliasing  conftest.c >&5
+configure:13583: $? = 0
+configure:13583: ./conftest
+configure:13583: $? = 0
+configure:13595: result: yes
+configure:13623: checking for iconv declaration
+configure:13652: gcc -c -Wall -W -Wno-sign-compare -Wstrict-prototypes -Wmissing-declarations -Wwrite-strings -g -O2 -fno-strict-aliasing  conftest.c >&5
 conftest.c:45:1: warning: function declaration isn't a prototype [-Wstrict-prototypes]
-configure:13319: $? = 0
-configure:13330: result:
+configure:13652: $? = 0
+configure:13663: result:
          extern size_t iconv (iconv_t cd, char * *inbuf, size_t *inbytesleft, char * *outbuf, size_t *outbytesleft);
-configure:13393: checking if umount supports --fake --no-canonicalize
-configure:13398: result: yes
-configure:13560: creating ./config.status
+configure:13689: checking for clock_gettime
+configure:13689: gcc -o conftest -Wall -W -Wno-sign-compare -Wstrict-prototypes -Wmissing-declarations -Wwrite-strings -g -O2 -fno-strict-aliasing   conftest.c  >&5
+conftest.c:55:1: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+conftest.c:64:1: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+/tmp/ccDUe1Ry.o: In function `main':
+/mnt/hgfs/cs3411/final_project/OSFileSystem/conftest.c:66: undefined reference to `clock_gettime'
+collect2: ld returned 1 exit status
+configure:13689: $? = 1
+configure: failed program was:
+| /* confdefs.h */
+| #define PACKAGE_NAME "fuse"
+| #define PACKAGE_TARNAME "fuse"
+| #define PACKAGE_VERSION "2.9.0"
+| #define PACKAGE_STRING "fuse 2.9.0"
+| #define PACKAGE_BUGREPORT ""
+| #define PACKAGE_URL ""
+| #define PACKAGE "fuse"
+| #define VERSION "2.9.0"
+| #define STDC_HEADERS 1
+| #define HAVE_SYS_TYPES_H 1
+| #define HAVE_SYS_STAT_H 1
+| #define HAVE_STDLIB_H 1
+| #define HAVE_STRING_H 1
+| #define HAVE_MEMORY_H 1
+| #define HAVE_STRINGS_H 1
+| #define HAVE_INTTYPES_H 1
+| #define HAVE_STDINT_H 1
+| #define HAVE_UNISTD_H 1
+| #define HAVE_DLFCN_H 1
+| #define LT_OBJDIR ".libs/"
+| #define HAVE_FORK 1
+| #define HAVE_SETXATTR 1
+| #define HAVE_FDATASYNC 1
+| #define HAVE_SPLICE 1
+| #define HAVE_VMSPLICE 1
+| #define HAVE_UTIMENSAT 1
+| #define HAVE_STRUCT_STAT_ST_ATIM 1
+| #define HAVE_ICONV 1
+| #define ICONV_CONST 
+| /* end confdefs.h.  */
+| /* Define clock_gettime to an innocuous variant, in case <limits.h> declares clock_gettime.
+|    For example, HP-UX 11i <limits.h> declares gettimeofday.  */
+| #define clock_gettime innocuous_clock_gettime
+| 
+| /* System header to define __stub macros and hopefully few prototypes,
+|     which can conflict with char clock_gettime (); below.
+|     Prefer <limits.h> to <assert.h> if __STDC__ is defined, since
+|     <limits.h> exists even on freestanding compilers.  */
+| 
+| #ifdef __STDC__
+| # include <limits.h>
+| #else
+| # include <assert.h>
+| #endif
+| 
+| #undef clock_gettime
+| 
+| /* Override any GCC internal prototype to avoid an error.
+|    Use char because int might match the return type of a GCC
+|    builtin and then its argument prototype would still apply.  */
+| #ifdef __cplusplus
+| extern "C"
+| #endif
+| char clock_gettime ();
+| /* The GNU C library defines this for functions which it implements
+|     to always fail with ENOSYS.  Some functions are actually named
+|     something starting with __ and the normal name is an alias.  */
+| #if defined __stub_clock_gettime || defined __stub___clock_gettime
+| choke me
+| #endif
+| 
+| int
+| main ()
+| {
+| return clock_gettime ();
+|   ;
+|   return 0;
+| }
+configure:13689: result: no
+configure:13700: checking for dup2
+configure:13700: gcc -o conftest -Wall -W -Wno-sign-compare -Wstrict-prototypes -Wmissing-declarations -Wwrite-strings -g -O2 -fno-strict-aliasing   conftest.c  >&5
+conftest.c:55:1: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+conftest.c:64:1: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+configure:13700: $? = 0
+configure:13700: result: yes
+configure:13711: checking for ftruncate
+configure:13711: gcc -o conftest -Wall -W -Wno-sign-compare -Wstrict-prototypes -Wmissing-declarations -Wwrite-strings -g -O2 -fno-strict-aliasing   conftest.c  >&5
+conftest.c:56:1: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+conftest.c:65:1: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+configure:13711: $? = 0
+configure:13711: result: yes
+configure:13722: checking for getcwd
+configure:13722: gcc -o conftest -Wall -W -Wno-sign-compare -Wstrict-prototypes -Wmissing-declarations -Wwrite-strings -g -O2 -fno-strict-aliasing   conftest.c  >&5
+conftest.c:57:1: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+conftest.c:66:1: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+configure:13722: $? = 0
+configure:13722: result: yes
+configure:13733: checking for getmntent
+configure:13733: gcc -o conftest -Wall -W -Wno-sign-compare -Wstrict-prototypes -Wmissing-declarations -Wwrite-strings -g -O2 -fno-strict-aliasing   conftest.c  >&5
+conftest.c:58:1: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+conftest.c:67:1: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+configure:13733: $? = 0
+configure:13733: result: yes
+configure:13744: checking for getpagesize
+configure:13744: gcc -o conftest -Wall -W -Wno-sign-compare -Wstrict-prototypes -Wmissing-declarations -Wwrite-strings -g -O2 -fno-strict-aliasing   conftest.c  >&5
+conftest.c:59:1: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+conftest.c:68:1: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+configure:13744: $? = 0
+configure:13744: result: yes
+configure:13755: checking for gettimeofday
+configure:13755: gcc -o conftest -Wall -W -Wno-sign-compare -Wstrict-prototypes -Wmissing-declarations -Wwrite-strings -g -O2 -fno-strict-aliasing   conftest.c  >&5
+conftest.c:60:1: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+conftest.c:69:1: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+configure:13755: $? = 0
+configure:13755: result: yes
+configure:13766: checking for lchown
+configure:13766: gcc -o conftest -Wall -W -Wno-sign-compare -Wstrict-prototypes -Wmissing-declarations -Wwrite-strings -g -O2 -fno-strict-aliasing   conftest.c  >&5
+conftest.c:61:1: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+conftest.c:70:1: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+configure:13766: $? = 0
+configure:13766: result: yes
+configure:13777: checking for memmove
+configure:13777: gcc -o conftest -Wall -W -Wno-sign-compare -Wstrict-prototypes -Wmissing-declarations -Wwrite-strings -g -O2 -fno-strict-aliasing   conftest.c  >&5
+conftest.c:62:1: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+conftest.c:62:6: warning: conflicting types for built-in function 'memmove' [enabled by default]
+conftest.c:71:1: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+configure:13777: $? = 0
+configure:13777: result: yes
+configure:13788: checking for memset
+configure:13788: gcc -o conftest -Wall -W -Wno-sign-compare -Wstrict-prototypes -Wmissing-declarations -Wwrite-strings -g -O2 -fno-strict-aliasing   conftest.c  >&5
+conftest.c:63:1: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+conftest.c:63:6: warning: conflicting types for built-in function 'memset' [enabled by default]
+conftest.c:72:1: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+configure:13788: $? = 0
+configure:13788: result: yes
+configure:13799: checking for mkdir
+configure:13799: gcc -o conftest -Wall -W -Wno-sign-compare -Wstrict-prototypes -Wmissing-declarations -Wwrite-strings -g -O2 -fno-strict-aliasing   conftest.c  >&5
+conftest.c:64:1: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+conftest.c:73:1: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+configure:13799: $? = 0
+configure:13799: result: yes
+configure:13810: checking for mkfifo
+configure:13810: gcc -o conftest -Wall -W -Wno-sign-compare -Wstrict-prototypes -Wmissing-declarations -Wwrite-strings -g -O2 -fno-strict-aliasing   conftest.c  >&5
+conftest.c:65:1: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+conftest.c:74:1: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+configure:13810: $? = 0
+configure:13810: result: yes
+configure:13821: checking for munmap
+configure:13821: gcc -o conftest -Wall -W -Wno-sign-compare -Wstrict-prototypes -Wmissing-declarations -Wwrite-strings -g -O2 -fno-strict-aliasing   conftest.c  >&5
+conftest.c:66:1: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+conftest.c:75:1: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+configure:13821: $? = 0
+configure:13821: result: yes
+configure:13832: checking for nl_langinfo
+configure:13832: gcc -o conftest -Wall -W -Wno-sign-compare -Wstrict-prototypes -Wmissing-declarations -Wwrite-strings -g -O2 -fno-strict-aliasing   conftest.c  >&5
+conftest.c:67:1: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+conftest.c:76:1: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+configure:13832: $? = 0
+configure:13832: result: yes
+configure:13843: checking for realpath
+configure:13843: gcc -o conftest -Wall -W -Wno-sign-compare -Wstrict-prototypes -Wmissing-declarations -Wwrite-strings -g -O2 -fno-strict-aliasing   conftest.c  >&5
+conftest.c:68:1: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+conftest.c:77:1: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+configure:13843: $? = 0
+configure:13843: result: yes
+configure:13854: checking for rmdir
+configure:13854: gcc -o conftest -Wall -W -Wno-sign-compare -Wstrict-prototypes -Wmissing-declarations -Wwrite-strings -g -O2 -fno-strict-aliasing   conftest.c  >&5
+conftest.c:69:1: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+conftest.c:78:1: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+configure:13854: $? = 0
+configure:13854: result: yes
+configure:13865: checking for setenv
+configure:13865: gcc -o conftest -Wall -W -Wno-sign-compare -Wstrict-prototypes -Wmissing-declarations -Wwrite-strings -g -O2 -fno-strict-aliasing   conftest.c  >&5
+conftest.c:70:1: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+conftest.c:79:1: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+configure:13865: $? = 0
+configure:13865: result: yes
+configure:13876: checking for setlocale
+configure:13876: gcc -o conftest -Wall -W -Wno-sign-compare -Wstrict-prototypes -Wmissing-declarations -Wwrite-strings -g -O2 -fno-strict-aliasing   conftest.c  >&5
+conftest.c:71:1: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+conftest.c:80:1: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+configure:13876: $? = 0
+configure:13876: result: yes
+configure:13887: checking for strchr
+configure:13887: gcc -o conftest -Wall -W -Wno-sign-compare -Wstrict-prototypes -Wmissing-declarations -Wwrite-strings -g -O2 -fno-strict-aliasing   conftest.c  >&5
+conftest.c:72:1: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+conftest.c:72:6: warning: conflicting types for built-in function 'strchr' [enabled by default]
+conftest.c:81:1: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+configure:13887: $? = 0
+configure:13887: result: yes
+configure:13898: checking for strdup
+configure:13898: gcc -o conftest -Wall -W -Wno-sign-compare -Wstrict-prototypes -Wmissing-declarations -Wwrite-strings -g -O2 -fno-strict-aliasing   conftest.c  >&5
+conftest.c:73:1: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+conftest.c:73:6: warning: conflicting types for built-in function 'strdup' [enabled by default]
+conftest.c:82:1: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+configure:13898: $? = 0
+configure:13898: result: yes
+configure:13909: checking for strerror
+configure:13909: gcc -o conftest -Wall -W -Wno-sign-compare -Wstrict-prototypes -Wmissing-declarations -Wwrite-strings -g -O2 -fno-strict-aliasing   conftest.c  >&5
+conftest.c:74:1: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+conftest.c:83:1: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+configure:13909: $? = 0
+configure:13909: result: yes
+configure:13920: checking for strrchr
+configure:13920: gcc -o conftest -Wall -W -Wno-sign-compare -Wstrict-prototypes -Wmissing-declarations -Wwrite-strings -g -O2 -fno-strict-aliasing   conftest.c  >&5
+conftest.c:75:1: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+conftest.c:75:6: warning: conflicting types for built-in function 'strrchr' [enabled by default]
+conftest.c:84:1: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+configure:13920: $? = 0
+configure:13920: result: yes
+configure:13931: checking for strstr
+configure:13931: gcc -o conftest -Wall -W -Wno-sign-compare -Wstrict-prototypes -Wmissing-declarations -Wwrite-strings -g -O2 -fno-strict-aliasing   conftest.c  >&5
+conftest.c:76:1: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+conftest.c:76:6: warning: conflicting types for built-in function 'strstr' [enabled by default]
+conftest.c:85:1: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+configure:13931: $? = 0
+configure:13931: result: yes
+configure:13942: checking for strtol
+configure:13942: gcc -o conftest -Wall -W -Wno-sign-compare -Wstrict-prototypes -Wmissing-declarations -Wwrite-strings -g -O2 -fno-strict-aliasing   conftest.c  >&5
+conftest.c:77:1: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+conftest.c:86:1: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+configure:13942: $? = 0
+configure:13942: result: yes
+configure:13953: checking for strtoul
+configure:13953: gcc -o conftest -Wall -W -Wno-sign-compare -Wstrict-prototypes -Wmissing-declarations -Wwrite-strings -g -O2 -fno-strict-aliasing   conftest.c  >&5
+conftest.c:78:1: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+conftest.c:87:1: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+configure:13953: $? = 0
+configure:13953: result: yes
+configure:13964: checking for uname
+configure:13964: gcc -o conftest -Wall -W -Wno-sign-compare -Wstrict-prototypes -Wmissing-declarations -Wwrite-strings -g -O2 -fno-strict-aliasing   conftest.c  >&5
+conftest.c:79:1: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+conftest.c:88:1: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+configure:13964: $? = 0
+configure:13964: result: yes
+configure:13975: checking for utime
+configure:13975: gcc -o conftest -Wall -W -Wno-sign-compare -Wstrict-prototypes -Wmissing-declarations -Wwrite-strings -g -O2 -fno-strict-aliasing   conftest.c  >&5
+conftest.c:80:1: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+conftest.c:89:1: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+configure:13975: $? = 0
+configure:13975: result: yes
+configure:13986: checking fcntl.h usability
+configure:13986: gcc -c -Wall -W -Wno-sign-compare -Wstrict-prototypes -Wmissing-declarations -Wwrite-strings -g -O2 -fno-strict-aliasing  conftest.c >&5
+configure:13986: $? = 0
+configure:13986: result: yes
+configure:13986: checking fcntl.h presence
+configure:13986: gcc -E  conftest.c
+configure:13986: $? = 0
+configure:13986: result: yes
+configure:13986: checking for fcntl.h
+configure:13986: result: yes
+configure:13998: checking langinfo.h usability
+configure:13998: gcc -c -Wall -W -Wno-sign-compare -Wstrict-prototypes -Wmissing-declarations -Wwrite-strings -g -O2 -fno-strict-aliasing  conftest.c >&5
+configure:13998: $? = 0
+configure:13998: result: yes
+configure:13998: checking langinfo.h presence
+configure:13998: gcc -E  conftest.c
+configure:13998: $? = 0
+configure:13998: result: yes
+configure:13998: checking for langinfo.h
+configure:13998: result: yes
+configure:14010: checking limits.h usability
+configure:14010: gcc -c -Wall -W -Wno-sign-compare -Wstrict-prototypes -Wmissing-declarations -Wwrite-strings -g -O2 -fno-strict-aliasing  conftest.c >&5
+configure:14010: $? = 0
+configure:14010: result: yes
+configure:14010: checking limits.h presence
+configure:14010: gcc -E  conftest.c
+configure:14010: $? = 0
+configure:14010: result: yes
+configure:14010: checking for limits.h
+configure:14010: result: yes
+configure:14022: checking locale.h usability
+configure:14022: gcc -c -Wall -W -Wno-sign-compare -Wstrict-prototypes -Wmissing-declarations -Wwrite-strings -g -O2 -fno-strict-aliasing  conftest.c >&5
+configure:14022: $? = 0
+configure:14022: result: yes
+configure:14022: checking locale.h presence
+configure:14022: gcc -E  conftest.c
+configure:14022: $? = 0
+configure:14022: result: yes
+configure:14022: checking for locale.h
+configure:14022: result: yes
+configure:14034: checking mntent.h usability
+configure:14034: gcc -c -Wall -W -Wno-sign-compare -Wstrict-prototypes -Wmissing-declarations -Wwrite-strings -g -O2 -fno-strict-aliasing  conftest.c >&5
+configure:14034: $? = 0
+configure:14034: result: yes
+configure:14034: checking mntent.h presence
+configure:14034: gcc -E  conftest.c
+configure:14034: $? = 0
+configure:14034: result: yes
+configure:14034: checking for mntent.h
+configure:14034: result: yes
+configure:14046: checking paths.h usability
+configure:14046: gcc -c -Wall -W -Wno-sign-compare -Wstrict-prototypes -Wmissing-declarations -Wwrite-strings -g -O2 -fno-strict-aliasing  conftest.c >&5
+configure:14046: $? = 0
+configure:14046: result: yes
+configure:14046: checking paths.h presence
+configure:14046: gcc -E  conftest.c
+configure:14046: $? = 0
+configure:14046: result: yes
+configure:14046: checking for paths.h
+configure:14046: result: yes
+configure:14058: checking stddef.h usability
+configure:14058: gcc -c -Wall -W -Wno-sign-compare -Wstrict-prototypes -Wmissing-declarations -Wwrite-strings -g -O2 -fno-strict-aliasing  conftest.c >&5
+configure:14058: $? = 0
+configure:14058: result: yes
+configure:14058: checking stddef.h presence
+configure:14058: gcc -E  conftest.c
+configure:14058: $? = 0
+configure:14058: result: yes
+configure:14058: checking for stddef.h
+configure:14058: result: yes
+configure:14070: checking sys/mount.h usability
+configure:14070: gcc -c -Wall -W -Wno-sign-compare -Wstrict-prototypes -Wmissing-declarations -Wwrite-strings -g -O2 -fno-strict-aliasing  conftest.c >&5
+configure:14070: $? = 0
+configure:14070: result: yes
+configure:14070: checking sys/mount.h presence
+configure:14070: gcc -E  conftest.c
+configure:14070: $? = 0
+configure:14070: result: yes
+configure:14070: checking for sys/mount.h
+configure:14070: result: yes
+configure:14082: checking sys/param.h usability
+configure:14082: gcc -c -Wall -W -Wno-sign-compare -Wstrict-prototypes -Wmissing-declarations -Wwrite-strings -g -O2 -fno-strict-aliasing  conftest.c >&5
+configure:14082: $? = 0
+configure:14082: result: yes
+configure:14082: checking sys/param.h presence
+configure:14082: gcc -E  conftest.c
+configure:14082: $? = 0
+configure:14082: result: yes
+configure:14082: checking for sys/param.h
+configure:14082: result: yes
+configure:14094: checking sys/socket.h usability
+configure:14094: gcc -c -Wall -W -Wno-sign-compare -Wstrict-prototypes -Wmissing-declarations -Wwrite-strings -g -O2 -fno-strict-aliasing  conftest.c >&5
+configure:14094: $? = 0
+configure:14094: result: yes
+configure:14094: checking sys/socket.h presence
+configure:14094: gcc -E  conftest.c
+configure:14094: $? = 0
+configure:14094: result: yes
+configure:14094: checking for sys/socket.h
+configure:14094: result: yes
+configure:14106: checking sys/statfs.h usability
+configure:14106: gcc -c -Wall -W -Wno-sign-compare -Wstrict-prototypes -Wmissing-declarations -Wwrite-strings -g -O2 -fno-strict-aliasing  conftest.c >&5
+configure:14106: $? = 0
+configure:14106: result: yes
+configure:14106: checking sys/statfs.h presence
+configure:14106: gcc -E  conftest.c
+configure:14106: $? = 0
+configure:14106: result: yes
+configure:14106: checking for sys/statfs.h
+configure:14106: result: yes
+configure:14118: checking sys/statvfs.h usability
+configure:14118: gcc -c -Wall -W -Wno-sign-compare -Wstrict-prototypes -Wmissing-declarations -Wwrite-strings -g -O2 -fno-strict-aliasing  conftest.c >&5
+configure:14118: $? = 0
+configure:14118: result: yes
+configure:14118: checking sys/statvfs.h presence
+configure:14118: gcc -E  conftest.c
+configure:14118: $? = 0
+configure:14118: result: yes
+configure:14118: checking for sys/statvfs.h
+configure:14118: result: yes
+configure:14130: checking sys/time.h usability
+configure:14130: gcc -c -Wall -W -Wno-sign-compare -Wstrict-prototypes -Wmissing-declarations -Wwrite-strings -g -O2 -fno-strict-aliasing  conftest.c >&5
+configure:14130: $? = 0
+configure:14130: result: yes
+configure:14130: checking sys/time.h presence
+configure:14130: gcc -E  conftest.c
+configure:14130: $? = 0
+configure:14130: result: yes
+configure:14130: checking for sys/time.h
+configure:14130: result: yes
+configure:14142: checking utime.h usability
+configure:14142: gcc -c -Wall -W -Wno-sign-compare -Wstrict-prototypes -Wmissing-declarations -Wwrite-strings -g -O2 -fno-strict-aliasing  conftest.c >&5
+configure:14142: $? = 0
+configure:14142: result: yes
+configure:14142: checking utime.h presence
+configure:14142: gcc -E  conftest.c
+configure:14142: $? = 0
+configure:14142: result: yes
+configure:14142: checking for utime.h
+configure:14142: result: yes
+configure:14152: checking for struct stat.st_blksize
+configure:14152: gcc -c -Wall -W -Wno-sign-compare -Wstrict-prototypes -Wmissing-declarations -Wwrite-strings -g -O2 -fno-strict-aliasing  conftest.c >&5
+conftest.c:106:1: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+configure:14152: $? = 0
+configure:14152: result: yes
+configure:14162: checking for struct stat.st_rdev
+configure:14162: gcc -c -Wall -W -Wno-sign-compare -Wstrict-prototypes -Wmissing-declarations -Wwrite-strings -g -O2 -fno-strict-aliasing  conftest.c >&5
+conftest.c:107:1: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+configure:14162: $? = 0
+configure:14162: result: yes
+configure:14172: checking for inline
+configure:14188: gcc -c -Wall -W -Wno-sign-compare -Wstrict-prototypes -Wmissing-declarations -Wwrite-strings -g -O2 -fno-strict-aliasing  conftest.c >&5
+conftest.c:76:21: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+conftest.c:77:14: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+configure:14188: $? = 0
+configure:14196: result: inline
+configure:14214: checking for uid_t in sys/types.h
+configure:14233: result: yes
+configure:14246: checking for unistd.h
+configure:14246: result: yes
+configure:14256: checking for working chown
+configure:14289: gcc -o conftest -Wall -W -Wno-sign-compare -Wstrict-prototypes -Wmissing-declarations -Wwrite-strings -g -O2 -fno-strict-aliasing   conftest.c  >&5
+conftest.c:111:1: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+conftest.c: In function 'main':
+conftest.c:113:13: warning: initialization discards 'const' qualifier from pointer target type [enabled by default]
+configure:14289: $? = 0
+configure:14289: ./conftest
+configure:14289: $? = 0
+configure:14301: result: yes
+configure:14309: checking for pid_t
+configure:14309: gcc -c -Wall -W -Wno-sign-compare -Wstrict-prototypes -Wmissing-declarations -Wwrite-strings -g -O2 -fno-strict-aliasing  conftest.c >&5
+conftest.c:110:1: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+configure:14309: $? = 0
+configure:14309: gcc -c -Wall -W -Wno-sign-compare -Wstrict-prototypes -Wmissing-declarations -Wwrite-strings -g -O2 -fno-strict-aliasing  conftest.c >&5
+conftest.c:110:1: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+conftest.c: In function 'main':
+conftest.c:112:20: error: expected expression before ')' token
+configure:14309: $? = 1
+configure: failed program was:
+| /* confdefs.h */
+| #define PACKAGE_NAME "fuse"
+| #define PACKAGE_TARNAME "fuse"
+| #define PACKAGE_VERSION "2.9.0"
+| #define PACKAGE_STRING "fuse 2.9.0"
+| #define PACKAGE_BUGREPORT ""
+| #define PACKAGE_URL ""
+| #define PACKAGE "fuse"
+| #define VERSION "2.9.0"
+| #define STDC_HEADERS 1
+| #define HAVE_SYS_TYPES_H 1
+| #define HAVE_SYS_STAT_H 1
+| #define HAVE_STDLIB_H 1
+| #define HAVE_STRING_H 1
+| #define HAVE_MEMORY_H 1
+| #define HAVE_STRINGS_H 1
+| #define HAVE_INTTYPES_H 1
+| #define HAVE_STDINT_H 1
+| #define HAVE_UNISTD_H 1
+| #define HAVE_DLFCN_H 1
+| #define LT_OBJDIR ".libs/"
+| #define HAVE_FORK 1
+| #define HAVE_SETXATTR 1
+| #define HAVE_FDATASYNC 1
+| #define HAVE_SPLICE 1
+| #define HAVE_VMSPLICE 1
+| #define HAVE_UTIMENSAT 1
+| #define HAVE_STRUCT_STAT_ST_ATIM 1
+| #define HAVE_ICONV 1
+| #define ICONV_CONST 
+| #define HAVE_DUP2 1
+| #define HAVE_FTRUNCATE 1
+| #define HAVE_GETCWD 1
+| #define HAVE_GETMNTENT 1
+| #define HAVE_GETPAGESIZE 1
+| #define HAVE_GETTIMEOFDAY 1
+| #define HAVE_LCHOWN 1
+| #define HAVE_MEMMOVE 1
+| #define HAVE_MEMSET 1
+| #define HAVE_MKDIR 1
+| #define HAVE_MKFIFO 1
+| #define HAVE_MUNMAP 1
+| #define HAVE_NL_LANGINFO 1
+| #define HAVE_REALPATH 1
+| #define HAVE_RMDIR 1
+| #define HAVE_SETENV 1
+| #define HAVE_SETLOCALE 1
+| #define HAVE_STRCHR 1
+| #define HAVE_STRDUP 1
+| #define HAVE_STRERROR 1
+| #define HAVE_STRRCHR 1
+| #define HAVE_STRSTR 1
+| #define HAVE_STRTOL 1
+| #define HAVE_STRTOUL 1
+| #define HAVE_UNAME 1
+| #define HAVE_UTIME 1
+| #define HAVE_FCNTL_H 1
+| #define HAVE_LANGINFO_H 1
+| #define HAVE_LIMITS_H 1
+| #define HAVE_LOCALE_H 1
+| #define HAVE_MNTENT_H 1
+| #define HAVE_PATHS_H 1
+| #define HAVE_STDDEF_H 1
+| #define HAVE_SYS_MOUNT_H 1
+| #define HAVE_SYS_PARAM_H 1
+| #define HAVE_SYS_SOCKET_H 1
+| #define HAVE_SYS_STATFS_H 1
+| #define HAVE_SYS_STATVFS_H 1
+| #define HAVE_SYS_TIME_H 1
+| #define HAVE_UTIME_H 1
+| #define HAVE_STRUCT_STAT_ST_BLKSIZE 1
+| #define HAVE_STRUCT_STAT_ST_RDEV 1
+| #define HAVE_UNISTD_H 1
+| #define HAVE_CHOWN 1
+| /* end confdefs.h.  */
+| #include <stdio.h>
+| #ifdef HAVE_SYS_TYPES_H
+| # include <sys/types.h>
+| #endif
+| #ifdef HAVE_SYS_STAT_H
+| # include <sys/stat.h>
+| #endif
+| #ifdef STDC_HEADERS
+| # include <stdlib.h>
+| # include <stddef.h>
+| #else
+| # ifdef HAVE_STDLIB_H
+| #  include <stdlib.h>
+| # endif
+| #endif
+| #ifdef HAVE_STRING_H
+| # if !defined STDC_HEADERS && defined HAVE_MEMORY_H
+| #  include <memory.h>
+| # endif
+| # include <string.h>
+| #endif
+| #ifdef HAVE_STRINGS_H
+| # include <strings.h>
+| #endif
+| #ifdef HAVE_INTTYPES_H
+| # include <inttypes.h>
+| #endif
+| #ifdef HAVE_STDINT_H
+| # include <stdint.h>
+| #endif
+| #ifdef HAVE_UNISTD_H
+| # include <unistd.h>
+| #endif
+| int
+| main ()
+| {
+| if (sizeof ((pid_t)))
+| 	    return 0;
+|   ;
+|   return 0;
+| }
+configure:14309: result: yes
+configure:14322: checking vfork.h usability
+configure:14322: gcc -c -Wall -W -Wno-sign-compare -Wstrict-prototypes -Wmissing-declarations -Wwrite-strings -g -O2 -fno-strict-aliasing  conftest.c >&5
+conftest.c:109:19: fatal error: vfork.h: No such file or directory
+compilation terminated.
+configure:14322: $? = 1
+configure: failed program was:
+| /* confdefs.h */
+| #define PACKAGE_NAME "fuse"
+| #define PACKAGE_TARNAME "fuse"
+| #define PACKAGE_VERSION "2.9.0"
+| #define PACKAGE_STRING "fuse 2.9.0"
+| #define PACKAGE_BUGREPORT ""
+| #define PACKAGE_URL ""
+| #define PACKAGE "fuse"
+| #define VERSION "2.9.0"
+| #define STDC_HEADERS 1
+| #define HAVE_SYS_TYPES_H 1
+| #define HAVE_SYS_STAT_H 1
+| #define HAVE_STDLIB_H 1
+| #define HAVE_STRING_H 1
+| #define HAVE_MEMORY_H 1
+| #define HAVE_STRINGS_H 1
+| #define HAVE_INTTYPES_H 1
+| #define HAVE_STDINT_H 1
+| #define HAVE_UNISTD_H 1
+| #define HAVE_DLFCN_H 1
+| #define LT_OBJDIR ".libs/"
+| #define HAVE_FORK 1
+| #define HAVE_SETXATTR 1
+| #define HAVE_FDATASYNC 1
+| #define HAVE_SPLICE 1
+| #define HAVE_VMSPLICE 1
+| #define HAVE_UTIMENSAT 1
+| #define HAVE_STRUCT_STAT_ST_ATIM 1
+| #define HAVE_ICONV 1
+| #define ICONV_CONST 
+| #define HAVE_DUP2 1
+| #define HAVE_FTRUNCATE 1
+| #define HAVE_GETCWD 1
+| #define HAVE_GETMNTENT 1
+| #define HAVE_GETPAGESIZE 1
+| #define HAVE_GETTIMEOFDAY 1
+| #define HAVE_LCHOWN 1
+| #define HAVE_MEMMOVE 1
+| #define HAVE_MEMSET 1
+| #define HAVE_MKDIR 1
+| #define HAVE_MKFIFO 1
+| #define HAVE_MUNMAP 1
+| #define HAVE_NL_LANGINFO 1
+| #define HAVE_REALPATH 1
+| #define HAVE_RMDIR 1
+| #define HAVE_SETENV 1
+| #define HAVE_SETLOCALE 1
+| #define HAVE_STRCHR 1
+| #define HAVE_STRDUP 1
+| #define HAVE_STRERROR 1
+| #define HAVE_STRRCHR 1
+| #define HAVE_STRSTR 1
+| #define HAVE_STRTOL 1
+| #define HAVE_STRTOUL 1
+| #define HAVE_UNAME 1
+| #define HAVE_UTIME 1
+| #define HAVE_FCNTL_H 1
+| #define HAVE_LANGINFO_H 1
+| #define HAVE_LIMITS_H 1
+| #define HAVE_LOCALE_H 1
+| #define HAVE_MNTENT_H 1
+| #define HAVE_PATHS_H 1
+| #define HAVE_STDDEF_H 1
+| #define HAVE_SYS_MOUNT_H 1
+| #define HAVE_SYS_PARAM_H 1
+| #define HAVE_SYS_SOCKET_H 1
+| #define HAVE_SYS_STATFS_H 1
+| #define HAVE_SYS_STATVFS_H 1
+| #define HAVE_SYS_TIME_H 1
+| #define HAVE_UTIME_H 1
+| #define HAVE_STRUCT_STAT_ST_BLKSIZE 1
+| #define HAVE_STRUCT_STAT_ST_RDEV 1
+| #define HAVE_UNISTD_H 1
+| #define HAVE_CHOWN 1
+| /* end confdefs.h.  */
+| #include <stdio.h>
+| #ifdef HAVE_SYS_TYPES_H
+| # include <sys/types.h>
+| #endif
+| #ifdef HAVE_SYS_STAT_H
+| # include <sys/stat.h>
+| #endif
+| #ifdef STDC_HEADERS
+| # include <stdlib.h>
+| # include <stddef.h>
+| #else
+| # ifdef HAVE_STDLIB_H
+| #  include <stdlib.h>
+| # endif
+| #endif
+| #ifdef HAVE_STRING_H
+| # if !defined STDC_HEADERS && defined HAVE_MEMORY_H
+| #  include <memory.h>
+| # endif
+| # include <string.h>
+| #endif
+| #ifdef HAVE_STRINGS_H
+| # include <strings.h>
+| #endif
+| #ifdef HAVE_INTTYPES_H
+| # include <inttypes.h>
+| #endif
+| #ifdef HAVE_STDINT_H
+| # include <stdint.h>
+| #endif
+| #ifdef HAVE_UNISTD_H
+| # include <unistd.h>
+| #endif
+| #include <vfork.h>
+configure:14322: result: no
+configure:14322: checking vfork.h presence
+configure:14322: gcc -E  conftest.c
+conftest.c:76:19: fatal error: vfork.h: No such file or directory
+compilation terminated.
+configure:14322: $? = 1
+configure: failed program was:
+| /* confdefs.h */
+| #define PACKAGE_NAME "fuse"
+| #define PACKAGE_TARNAME "fuse"
+| #define PACKAGE_VERSION "2.9.0"
+| #define PACKAGE_STRING "fuse 2.9.0"
+| #define PACKAGE_BUGREPORT ""
+| #define PACKAGE_URL ""
+| #define PACKAGE "fuse"
+| #define VERSION "2.9.0"
+| #define STDC_HEADERS 1
+| #define HAVE_SYS_TYPES_H 1
+| #define HAVE_SYS_STAT_H 1
+| #define HAVE_STDLIB_H 1
+| #define HAVE_STRING_H 1
+| #define HAVE_MEMORY_H 1
+| #define HAVE_STRINGS_H 1
+| #define HAVE_INTTYPES_H 1
+| #define HAVE_STDINT_H 1
+| #define HAVE_UNISTD_H 1
+| #define HAVE_DLFCN_H 1
+| #define LT_OBJDIR ".libs/"
+| #define HAVE_FORK 1
+| #define HAVE_SETXATTR 1
+| #define HAVE_FDATASYNC 1
+| #define HAVE_SPLICE 1
+| #define HAVE_VMSPLICE 1
+| #define HAVE_UTIMENSAT 1
+| #define HAVE_STRUCT_STAT_ST_ATIM 1
+| #define HAVE_ICONV 1
+| #define ICONV_CONST 
+| #define HAVE_DUP2 1
+| #define HAVE_FTRUNCATE 1
+| #define HAVE_GETCWD 1
+| #define HAVE_GETMNTENT 1
+| #define HAVE_GETPAGESIZE 1
+| #define HAVE_GETTIMEOFDAY 1
+| #define HAVE_LCHOWN 1
+| #define HAVE_MEMMOVE 1
+| #define HAVE_MEMSET 1
+| #define HAVE_MKDIR 1
+| #define HAVE_MKFIFO 1
+| #define HAVE_MUNMAP 1
+| #define HAVE_NL_LANGINFO 1
+| #define HAVE_REALPATH 1
+| #define HAVE_RMDIR 1
+| #define HAVE_SETENV 1
+| #define HAVE_SETLOCALE 1
+| #define HAVE_STRCHR 1
+| #define HAVE_STRDUP 1
+| #define HAVE_STRERROR 1
+| #define HAVE_STRRCHR 1
+| #define HAVE_STRSTR 1
+| #define HAVE_STRTOL 1
+| #define HAVE_STRTOUL 1
+| #define HAVE_UNAME 1
+| #define HAVE_UTIME 1
+| #define HAVE_FCNTL_H 1
+| #define HAVE_LANGINFO_H 1
+| #define HAVE_LIMITS_H 1
+| #define HAVE_LOCALE_H 1
+| #define HAVE_MNTENT_H 1
+| #define HAVE_PATHS_H 1
+| #define HAVE_STDDEF_H 1
+| #define HAVE_SYS_MOUNT_H 1
+| #define HAVE_SYS_PARAM_H 1
+| #define HAVE_SYS_SOCKET_H 1
+| #define HAVE_SYS_STATFS_H 1
+| #define HAVE_SYS_STATVFS_H 1
+| #define HAVE_SYS_TIME_H 1
+| #define HAVE_UTIME_H 1
+| #define HAVE_STRUCT_STAT_ST_BLKSIZE 1
+| #define HAVE_STRUCT_STAT_ST_RDEV 1
+| #define HAVE_UNISTD_H 1
+| #define HAVE_CHOWN 1
+| /* end confdefs.h.  */
+| #include <vfork.h>
+configure:14322: result: no
+configure:14322: checking for vfork.h
+configure:14322: result: no
+configure:14335: checking for fork
+configure:14335: result: yes
+configure:14335: checking for vfork
+configure:14335: gcc -o conftest -Wall -W -Wno-sign-compare -Wstrict-prototypes -Wmissing-declarations -Wwrite-strings -g -O2 -fno-strict-aliasing   conftest.c  >&5
+conftest.c:100:1: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+conftest.c:109:1: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+configure:14335: $? = 0
+configure:14335: result: yes
+configure:14345: checking for working fork
+configure:14367: gcc -o conftest -Wall -W -Wno-sign-compare -Wstrict-prototypes -Wmissing-declarations -Wwrite-strings -g -O2 -fno-strict-aliasing   conftest.c  >&5
+conftest.c:112:1: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+configure:14367: $? = 0
+configure:14367: ./conftest
+configure:14367: $? = 0
+configure:14377: result: yes
+configure:14398: checking for working vfork
+configure:14508: result: yes
+configure:14535: checking for library containing getmntent
+configure:14566: gcc -o conftest -Wall -W -Wno-sign-compare -Wstrict-prototypes -Wmissing-declarations -Wwrite-strings -g -O2 -fno-strict-aliasing   conftest.c  >&5
+conftest.c:87:1: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+conftest.c:89:1: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+configure:14566: $? = 0
+configure:14583: result: none required
+configure:14597: checking whether lstat correctly handles trailing slash
+configure:14623: gcc -o conftest -Wall -W -Wno-sign-compare -Wstrict-prototypes -Wmissing-declarations -Wwrite-strings -g -O2 -fno-strict-aliasing   conftest.c  >&5
+conftest.c:115:1: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+configure:14623: $? = 0
+configure:14623: ./conftest
+configure:14623: $? = 0
+configure:14640: result: yes
+configure:14661: checking for stdlib.h
+configure:14661: result: yes
+configure:14671: checking for GNU libc compatible malloc
+configure:14695: gcc -o conftest -Wall -W -Wno-sign-compare -Wstrict-prototypes -Wmissing-declarations -Wwrite-strings -g -O2 -fno-strict-aliasing   conftest.c  >&5
+conftest.c:90:1: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+configure:14695: $? = 0
+configure:14695: ./conftest
+configure:14695: $? = 0
+configure:14705: result: yes
+configure:14732: checking for stdlib.h
+configure:14732: result: yes
+configure:14732: checking for unistd.h
+configure:14732: result: yes
+configure:14732: checking for sys/param.h
+configure:14732: result: yes
+configure:14752: checking for getpagesize
+configure:14752: result: yes
+configure:14761: checking for working mmap
+configure:14908: gcc -o conftest -Wall -W -Wno-sign-compare -Wstrict-prototypes -Wmissing-declarations -Wwrite-strings -g -O2 -fno-strict-aliasing   conftest.c  >&5
+conftest.c:186:1: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+configure:14908: $? = 0
+configure:14908: ./conftest
+configure:14908: $? = 0
+configure:14918: result: yes
+configure:14929: checking for stdlib.h
+configure:14929: result: yes
+configure:14939: checking for GNU libc compatible realloc
+configure:14963: gcc -o conftest -Wall -W -Wno-sign-compare -Wstrict-prototypes -Wmissing-declarations -Wwrite-strings -g -O2 -fno-strict-aliasing   conftest.c  >&5
+conftest.c:97:1: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+configure:14963: $? = 0
+configure:14963: ./conftest
+configure:14963: $? = 0
+configure:14973: result: yes
+configure:15052: checking for g++
+configure:15082: result: no
+configure:15052: checking for c++
+configure:15082: result: no
+configure:15052: checking for gpp
+configure:15082: result: no
+configure:15052: checking for aCC
+configure:15082: result: no
+configure:15052: checking for CC
+configure:15082: result: no
+configure:15052: checking for cxx
+configure:15082: result: no
+configure:15052: checking for cc++
+configure:15082: result: no
+configure:15052: checking for cl.exe
+configure:15082: result: no
+configure:15052: checking for FCC
+configure:15082: result: no
+configure:15052: checking for KCC
+configure:15082: result: no
+configure:15052: checking for RCC
+configure:15082: result: no
+configure:15052: checking for xlC_r
+configure:15082: result: no
+configure:15052: checking for xlC
+configure:15082: result: no
+configure:15106: checking for C++ compiler version
+configure:15115: g++ --version >&5
+./configure: line 15117: g++: command not found
+configure:15126: $? = 127
+configure:15115: g++ -v >&5
+./configure: line 15117: g++: command not found
+configure:15126: $? = 127
+configure:15115: g++ -V >&5
+./configure: line 15117: g++: command not found
+configure:15126: $? = 127
+configure:15115: g++ -qversion >&5
+./configure: line 15117: g++: command not found
+configure:15126: $? = 127
+configure:15130: checking whether we are using the GNU C++ compiler
+configure:15149: g++ -c   conftest.cpp >&5
+./configure: line 2004: g++: command not found
+configure:15149: $? = 127
+configure: failed program was:
+| /* confdefs.h */
+| #define PACKAGE_NAME "fuse"
+| #define PACKAGE_TARNAME "fuse"
+| #define PACKAGE_VERSION "2.9.0"
+| #define PACKAGE_STRING "fuse 2.9.0"
+| #define PACKAGE_BUGREPORT ""
+| #define PACKAGE_URL ""
+| #define PACKAGE "fuse"
+| #define VERSION "2.9.0"
+| #define STDC_HEADERS 1
+| #define HAVE_SYS_TYPES_H 1
+| #define HAVE_SYS_STAT_H 1
+| #define HAVE_STDLIB_H 1
+| #define HAVE_STRING_H 1
+| #define HAVE_MEMORY_H 1
+| #define HAVE_STRINGS_H 1
+| #define HAVE_INTTYPES_H 1
+| #define HAVE_STDINT_H 1
+| #define HAVE_UNISTD_H 1
+| #define HAVE_DLFCN_H 1
+| #define LT_OBJDIR ".libs/"
+| #define HAVE_FORK 1
+| #define HAVE_SETXATTR 1
+| #define HAVE_FDATASYNC 1
+| #define HAVE_SPLICE 1
+| #define HAVE_VMSPLICE 1
+| #define HAVE_UTIMENSAT 1
+| #define HAVE_STRUCT_STAT_ST_ATIM 1
+| #define HAVE_ICONV 1
+| #define ICONV_CONST 
+| #define HAVE_DUP2 1
+| #define HAVE_FTRUNCATE 1
+| #define HAVE_GETCWD 1
+| #define HAVE_GETMNTENT 1
+| #define HAVE_GETPAGESIZE 1
+| #define HAVE_GETTIMEOFDAY 1
+| #define HAVE_LCHOWN 1
+| #define HAVE_MEMMOVE 1
+| #define HAVE_MEMSET 1
+| #define HAVE_MKDIR 1
+| #define HAVE_MKFIFO 1
+| #define HAVE_MUNMAP 1
+| #define HAVE_NL_LANGINFO 1
+| #define HAVE_REALPATH 1
+| #define HAVE_RMDIR 1
+| #define HAVE_SETENV 1
+| #define HAVE_SETLOCALE 1
+| #define HAVE_STRCHR 1
+| #define HAVE_STRDUP 1
+| #define HAVE_STRERROR 1
+| #define HAVE_STRRCHR 1
+| #define HAVE_STRSTR 1
+| #define HAVE_STRTOL 1
+| #define HAVE_STRTOUL 1
+| #define HAVE_UNAME 1
+| #define HAVE_UTIME 1
+| #define HAVE_FCNTL_H 1
+| #define HAVE_LANGINFO_H 1
+| #define HAVE_LIMITS_H 1
+| #define HAVE_LOCALE_H 1
+| #define HAVE_MNTENT_H 1
+| #define HAVE_PATHS_H 1
+| #define HAVE_STDDEF_H 1
+| #define HAVE_SYS_MOUNT_H 1
+| #define HAVE_SYS_PARAM_H 1
+| #define HAVE_SYS_SOCKET_H 1
+| #define HAVE_SYS_STATFS_H 1
+| #define HAVE_SYS_STATVFS_H 1
+| #define HAVE_SYS_TIME_H 1
+| #define HAVE_UTIME_H 1
+| #define HAVE_STRUCT_STAT_ST_BLKSIZE 1
+| #define HAVE_STRUCT_STAT_ST_RDEV 1
+| #define HAVE_UNISTD_H 1
+| #define HAVE_CHOWN 1
+| #define HAVE_FORK 1
+| #define HAVE_VFORK 1
+| #define HAVE_WORKING_VFORK 1
+| #define HAVE_WORKING_FORK 1
+| #define HAVE_GETMNTENT 1
+| #define LSTAT_FOLLOWS_SLASHED_SYMLINK 1
+| #define HAVE_STDLIB_H 1
+| #define HAVE_MALLOC 1
+| #define HAVE_STDLIB_H 1
+| #define HAVE_UNISTD_H 1
+| #define HAVE_SYS_PARAM_H 1
+| #define HAVE_GETPAGESIZE 1
+| #define HAVE_MMAP 1
+| #define HAVE_STDLIB_H 1
+| #define HAVE_REALLOC 1
+| /* end confdefs.h.  */
+| 
+| int
+| main ()
+| {
+| #ifndef __GNUC__
+|        choke me
+| #endif
+| 
+|   ;
+|   return 0;
+| }
+configure:15158: result: no
+configure:15167: checking whether g++ accepts -g
+configure:15187: g++ -c -g  conftest.cpp >&5
+./configure: line 2004: g++: command not found
+configure:15187: $? = 127
+configure: failed program was:
+| /* confdefs.h */
+| #define PACKAGE_NAME "fuse"
+| #define PACKAGE_TARNAME "fuse"
+| #define PACKAGE_VERSION "2.9.0"
+| #define PACKAGE_STRING "fuse 2.9.0"
+| #define PACKAGE_BUGREPORT ""
+| #define PACKAGE_URL ""
+| #define PACKAGE "fuse"
+| #define VERSION "2.9.0"
+| #define STDC_HEADERS 1
+| #define HAVE_SYS_TYPES_H 1
+| #define HAVE_SYS_STAT_H 1
+| #define HAVE_STDLIB_H 1
+| #define HAVE_STRING_H 1
+| #define HAVE_MEMORY_H 1
+| #define HAVE_STRINGS_H 1
+| #define HAVE_INTTYPES_H 1
+| #define HAVE_STDINT_H 1
+| #define HAVE_UNISTD_H 1
+| #define HAVE_DLFCN_H 1
+| #define LT_OBJDIR ".libs/"
+| #define HAVE_FORK 1
+| #define HAVE_SETXATTR 1
+| #define HAVE_FDATASYNC 1
+| #define HAVE_SPLICE 1
+| #define HAVE_VMSPLICE 1
+| #define HAVE_UTIMENSAT 1
+| #define HAVE_STRUCT_STAT_ST_ATIM 1
+| #define HAVE_ICONV 1
+| #define ICONV_CONST 
+| #define HAVE_DUP2 1
+| #define HAVE_FTRUNCATE 1
+| #define HAVE_GETCWD 1
+| #define HAVE_GETMNTENT 1
+| #define HAVE_GETPAGESIZE 1
+| #define HAVE_GETTIMEOFDAY 1
+| #define HAVE_LCHOWN 1
+| #define HAVE_MEMMOVE 1
+| #define HAVE_MEMSET 1
+| #define HAVE_MKDIR 1
+| #define HAVE_MKFIFO 1
+| #define HAVE_MUNMAP 1
+| #define HAVE_NL_LANGINFO 1
+| #define HAVE_REALPATH 1
+| #define HAVE_RMDIR 1
+| #define HAVE_SETENV 1
+| #define HAVE_SETLOCALE 1
+| #define HAVE_STRCHR 1
+| #define HAVE_STRDUP 1
+| #define HAVE_STRERROR 1
+| #define HAVE_STRRCHR 1
+| #define HAVE_STRSTR 1
+| #define HAVE_STRTOL 1
+| #define HAVE_STRTOUL 1
+| #define HAVE_UNAME 1
+| #define HAVE_UTIME 1
+| #define HAVE_FCNTL_H 1
+| #define HAVE_LANGINFO_H 1
+| #define HAVE_LIMITS_H 1
+| #define HAVE_LOCALE_H 1
+| #define HAVE_MNTENT_H 1
+| #define HAVE_PATHS_H 1
+| #define HAVE_STDDEF_H 1
+| #define HAVE_SYS_MOUNT_H 1
+| #define HAVE_SYS_PARAM_H 1
+| #define HAVE_SYS_SOCKET_H 1
+| #define HAVE_SYS_STATFS_H 1
+| #define HAVE_SYS_STATVFS_H 1
+| #define HAVE_SYS_TIME_H 1
+| #define HAVE_UTIME_H 1
+| #define HAVE_STRUCT_STAT_ST_BLKSIZE 1
+| #define HAVE_STRUCT_STAT_ST_RDEV 1
+| #define HAVE_UNISTD_H 1
+| #define HAVE_CHOWN 1
+| #define HAVE_FORK 1
+| #define HAVE_VFORK 1
+| #define HAVE_WORKING_VFORK 1
+| #define HAVE_WORKING_FORK 1
+| #define HAVE_GETMNTENT 1
+| #define LSTAT_FOLLOWS_SLASHED_SYMLINK 1
+| #define HAVE_STDLIB_H 1
+| #define HAVE_MALLOC 1
+| #define HAVE_STDLIB_H 1
+| #define HAVE_UNISTD_H 1
+| #define HAVE_SYS_PARAM_H 1
+| #define HAVE_GETPAGESIZE 1
+| #define HAVE_MMAP 1
+| #define HAVE_STDLIB_H 1
+| #define HAVE_REALLOC 1
+| /* end confdefs.h.  */
+| 
+| int
+| main ()
+| {
+| 
+|   ;
+|   return 0;
+| }
+configure:15202: g++ -c   conftest.cpp >&5
+./configure: line 2004: g++: command not found
+configure:15202: $? = 127
+configure: failed program was:
+| /* confdefs.h */
+| #define PACKAGE_NAME "fuse"
+| #define PACKAGE_TARNAME "fuse"
+| #define PACKAGE_VERSION "2.9.0"
+| #define PACKAGE_STRING "fuse 2.9.0"
+| #define PACKAGE_BUGREPORT ""
+| #define PACKAGE_URL ""
+| #define PACKAGE "fuse"
+| #define VERSION "2.9.0"
+| #define STDC_HEADERS 1
+| #define HAVE_SYS_TYPES_H 1
+| #define HAVE_SYS_STAT_H 1
+| #define HAVE_STDLIB_H 1
+| #define HAVE_STRING_H 1
+| #define HAVE_MEMORY_H 1
+| #define HAVE_STRINGS_H 1
+| #define HAVE_INTTYPES_H 1
+| #define HAVE_STDINT_H 1
+| #define HAVE_UNISTD_H 1
+| #define HAVE_DLFCN_H 1
+| #define LT_OBJDIR ".libs/"
+| #define HAVE_FORK 1
+| #define HAVE_SETXATTR 1
+| #define HAVE_FDATASYNC 1
+| #define HAVE_SPLICE 1
+| #define HAVE_VMSPLICE 1
+| #define HAVE_UTIMENSAT 1
+| #define HAVE_STRUCT_STAT_ST_ATIM 1
+| #define HAVE_ICONV 1
+| #define ICONV_CONST 
+| #define HAVE_DUP2 1
+| #define HAVE_FTRUNCATE 1
+| #define HAVE_GETCWD 1
+| #define HAVE_GETMNTENT 1
+| #define HAVE_GETPAGESIZE 1
+| #define HAVE_GETTIMEOFDAY 1
+| #define HAVE_LCHOWN 1
+| #define HAVE_MEMMOVE 1
+| #define HAVE_MEMSET 1
+| #define HAVE_MKDIR 1
+| #define HAVE_MKFIFO 1
+| #define HAVE_MUNMAP 1
+| #define HAVE_NL_LANGINFO 1
+| #define HAVE_REALPATH 1
+| #define HAVE_RMDIR 1
+| #define HAVE_SETENV 1
+| #define HAVE_SETLOCALE 1
+| #define HAVE_STRCHR 1
+| #define HAVE_STRDUP 1
+| #define HAVE_STRERROR 1
+| #define HAVE_STRRCHR 1
+| #define HAVE_STRSTR 1
+| #define HAVE_STRTOL 1
+| #define HAVE_STRTOUL 1
+| #define HAVE_UNAME 1
+| #define HAVE_UTIME 1
+| #define HAVE_FCNTL_H 1
+| #define HAVE_LANGINFO_H 1
+| #define HAVE_LIMITS_H 1
+| #define HAVE_LOCALE_H 1
+| #define HAVE_MNTENT_H 1
+| #define HAVE_PATHS_H 1
+| #define HAVE_STDDEF_H 1
+| #define HAVE_SYS_MOUNT_H 1
+| #define HAVE_SYS_PARAM_H 1
+| #define HAVE_SYS_SOCKET_H 1
+| #define HAVE_SYS_STATFS_H 1
+| #define HAVE_SYS_STATVFS_H 1
+| #define HAVE_SYS_TIME_H 1
+| #define HAVE_UTIME_H 1
+| #define HAVE_STRUCT_STAT_ST_BLKSIZE 1
+| #define HAVE_STRUCT_STAT_ST_RDEV 1
+| #define HAVE_UNISTD_H 1
+| #define HAVE_CHOWN 1
+| #define HAVE_FORK 1
+| #define HAVE_VFORK 1
+| #define HAVE_WORKING_VFORK 1
+| #define HAVE_WORKING_FORK 1
+| #define HAVE_GETMNTENT 1
+| #define LSTAT_FOLLOWS_SLASHED_SYMLINK 1
+| #define HAVE_STDLIB_H 1
+| #define HAVE_MALLOC 1
+| #define HAVE_STDLIB_H 1
+| #define HAVE_UNISTD_H 1
+| #define HAVE_SYS_PARAM_H 1
+| #define HAVE_GETPAGESIZE 1
+| #define HAVE_MMAP 1
+| #define HAVE_STDLIB_H 1
+| #define HAVE_REALLOC 1
+| /* end confdefs.h.  */
+| 
+| int
+| main ()
+| {
+| 
+|   ;
+|   return 0;
+| }
+configure:15218: g++ -c -g  conftest.cpp >&5
+./configure: line 2004: g++: command not found
+configure:15218: $? = 127
+configure: failed program was:
+| /* confdefs.h */
+| #define PACKAGE_NAME "fuse"
+| #define PACKAGE_TARNAME "fuse"
+| #define PACKAGE_VERSION "2.9.0"
+| #define PACKAGE_STRING "fuse 2.9.0"
+| #define PACKAGE_BUGREPORT ""
+| #define PACKAGE_URL ""
+| #define PACKAGE "fuse"
+| #define VERSION "2.9.0"
+| #define STDC_HEADERS 1
+| #define HAVE_SYS_TYPES_H 1
+| #define HAVE_SYS_STAT_H 1
+| #define HAVE_STDLIB_H 1
+| #define HAVE_STRING_H 1
+| #define HAVE_MEMORY_H 1
+| #define HAVE_STRINGS_H 1
+| #define HAVE_INTTYPES_H 1
+| #define HAVE_STDINT_H 1
+| #define HAVE_UNISTD_H 1
+| #define HAVE_DLFCN_H 1
+| #define LT_OBJDIR ".libs/"
+| #define HAVE_FORK 1
+| #define HAVE_SETXATTR 1
+| #define HAVE_FDATASYNC 1
+| #define HAVE_SPLICE 1
+| #define HAVE_VMSPLICE 1
+| #define HAVE_UTIMENSAT 1
+| #define HAVE_STRUCT_STAT_ST_ATIM 1
+| #define HAVE_ICONV 1
+| #define ICONV_CONST 
+| #define HAVE_DUP2 1
+| #define HAVE_FTRUNCATE 1
+| #define HAVE_GETCWD 1
+| #define HAVE_GETMNTENT 1
+| #define HAVE_GETPAGESIZE 1
+| #define HAVE_GETTIMEOFDAY 1
+| #define HAVE_LCHOWN 1
+| #define HAVE_MEMMOVE 1
+| #define HAVE_MEMSET 1
+| #define HAVE_MKDIR 1
+| #define HAVE_MKFIFO 1
+| #define HAVE_MUNMAP 1
+| #define HAVE_NL_LANGINFO 1
+| #define HAVE_REALPATH 1
+| #define HAVE_RMDIR 1
+| #define HAVE_SETENV 1
+| #define HAVE_SETLOCALE 1
+| #define HAVE_STRCHR 1
+| #define HAVE_STRDUP 1
+| #define HAVE_STRERROR 1
+| #define HAVE_STRRCHR 1
+| #define HAVE_STRSTR 1
+| #define HAVE_STRTOL 1
+| #define HAVE_STRTOUL 1
+| #define HAVE_UNAME 1
+| #define HAVE_UTIME 1
+| #define HAVE_FCNTL_H 1
+| #define HAVE_LANGINFO_H 1
+| #define HAVE_LIMITS_H 1
+| #define HAVE_LOCALE_H 1
+| #define HAVE_MNTENT_H 1
+| #define HAVE_PATHS_H 1
+| #define HAVE_STDDEF_H 1
+| #define HAVE_SYS_MOUNT_H 1
+| #define HAVE_SYS_PARAM_H 1
+| #define HAVE_SYS_SOCKET_H 1
+| #define HAVE_SYS_STATFS_H 1
+| #define HAVE_SYS_STATVFS_H 1
+| #define HAVE_SYS_TIME_H 1
+| #define HAVE_UTIME_H 1
+| #define HAVE_STRUCT_STAT_ST_BLKSIZE 1
+| #define HAVE_STRUCT_STAT_ST_RDEV 1
+| #define HAVE_UNISTD_H 1
+| #define HAVE_CHOWN 1
+| #define HAVE_FORK 1
+| #define HAVE_VFORK 1
+| #define HAVE_WORKING_VFORK 1
+| #define HAVE_WORKING_FORK 1
+| #define HAVE_GETMNTENT 1
+| #define LSTAT_FOLLOWS_SLASHED_SYMLINK 1
+| #define HAVE_STDLIB_H 1
+| #define HAVE_MALLOC 1
+| #define HAVE_STDLIB_H 1
+| #define HAVE_UNISTD_H 1
+| #define HAVE_SYS_PARAM_H 1
+| #define HAVE_GETPAGESIZE 1
+| #define HAVE_MMAP 1
+| #define HAVE_STDLIB_H 1
+| #define HAVE_REALLOC 1
+| /* end confdefs.h.  */
+| 
+| int
+| main ()
+| {
+| 
+|   ;
+|   return 0;
+| }
+configure:15228: result: no
+configure:15253: checking dependency style of g++
+configure:15364: result: none
+configure:18636: checking for ranlib
+configure:18663: result: ranlib
+configure:18685: checking for struct stat.st_blocks
+configure:18685: gcc -c -Wall -W -Wno-sign-compare -Wstrict-prototypes -Wmissing-declarations -Wwrite-strings -g -O2 -fno-strict-aliasing  conftest.c >&5
+conftest.c:125:1: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+configure:18685: $? = 0
+configure:18685: result: yes
+configure:18705: checking for mode_t
+configure:18705: gcc -c -Wall -W -Wno-sign-compare -Wstrict-prototypes -Wmissing-declarations -Wwrite-strings -g -O2 -fno-strict-aliasing  conftest.c >&5
+conftest.c:127:1: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+configure:18705: $? = 0
+configure:18705: gcc -c -Wall -W -Wno-sign-compare -Wstrict-prototypes -Wmissing-declarations -Wwrite-strings -g -O2 -fno-strict-aliasing  conftest.c >&5
+conftest.c:127:1: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+conftest.c: In function 'main':
+conftest.c:129:21: error: expected expression before ')' token
+configure:18705: $? = 1
+configure: failed program was:
+| /* confdefs.h */
+| #define PACKAGE_NAME "fuse"
+| #define PACKAGE_TARNAME "fuse"
+| #define PACKAGE_VERSION "2.9.0"
+| #define PACKAGE_STRING "fuse 2.9.0"
+| #define PACKAGE_BUGREPORT ""
+| #define PACKAGE_URL ""
+| #define PACKAGE "fuse"
+| #define VERSION "2.9.0"
+| #define STDC_HEADERS 1
+| #define HAVE_SYS_TYPES_H 1
+| #define HAVE_SYS_STAT_H 1
+| #define HAVE_STDLIB_H 1
+| #define HAVE_STRING_H 1
+| #define HAVE_MEMORY_H 1
+| #define HAVE_STRINGS_H 1
+| #define HAVE_INTTYPES_H 1
+| #define HAVE_STDINT_H 1
+| #define HAVE_UNISTD_H 1
+| #define HAVE_DLFCN_H 1
+| #define LT_OBJDIR ".libs/"
+| #define HAVE_FORK 1
+| #define HAVE_SETXATTR 1
+| #define HAVE_FDATASYNC 1
+| #define HAVE_SPLICE 1
+| #define HAVE_VMSPLICE 1
+| #define HAVE_UTIMENSAT 1
+| #define HAVE_STRUCT_STAT_ST_ATIM 1
+| #define HAVE_ICONV 1
+| #define ICONV_CONST 
+| #define HAVE_DUP2 1
+| #define HAVE_FTRUNCATE 1
+| #define HAVE_GETCWD 1
+| #define HAVE_GETMNTENT 1
+| #define HAVE_GETPAGESIZE 1
+| #define HAVE_GETTIMEOFDAY 1
+| #define HAVE_LCHOWN 1
+| #define HAVE_MEMMOVE 1
+| #define HAVE_MEMSET 1
+| #define HAVE_MKDIR 1
+| #define HAVE_MKFIFO 1
+| #define HAVE_MUNMAP 1
+| #define HAVE_NL_LANGINFO 1
+| #define HAVE_REALPATH 1
+| #define HAVE_RMDIR 1
+| #define HAVE_SETENV 1
+| #define HAVE_SETLOCALE 1
+| #define HAVE_STRCHR 1
+| #define HAVE_STRDUP 1
+| #define HAVE_STRERROR 1
+| #define HAVE_STRRCHR 1
+| #define HAVE_STRSTR 1
+| #define HAVE_STRTOL 1
+| #define HAVE_STRTOUL 1
+| #define HAVE_UNAME 1
+| #define HAVE_UTIME 1
+| #define HAVE_FCNTL_H 1
+| #define HAVE_LANGINFO_H 1
+| #define HAVE_LIMITS_H 1
+| #define HAVE_LOCALE_H 1
+| #define HAVE_MNTENT_H 1
+| #define HAVE_PATHS_H 1
+| #define HAVE_STDDEF_H 1
+| #define HAVE_SYS_MOUNT_H 1
+| #define HAVE_SYS_PARAM_H 1
+| #define HAVE_SYS_SOCKET_H 1
+| #define HAVE_SYS_STATFS_H 1
+| #define HAVE_SYS_STATVFS_H 1
+| #define HAVE_SYS_TIME_H 1
+| #define HAVE_UTIME_H 1
+| #define HAVE_STRUCT_STAT_ST_BLKSIZE 1
+| #define HAVE_STRUCT_STAT_ST_RDEV 1
+| #define HAVE_UNISTD_H 1
+| #define HAVE_CHOWN 1
+| #define HAVE_FORK 1
+| #define HAVE_VFORK 1
+| #define HAVE_WORKING_VFORK 1
+| #define HAVE_WORKING_FORK 1
+| #define HAVE_GETMNTENT 1
+| #define LSTAT_FOLLOWS_SLASHED_SYMLINK 1
+| #define HAVE_STDLIB_H 1
+| #define HAVE_MALLOC 1
+| #define HAVE_STDLIB_H 1
+| #define HAVE_UNISTD_H 1
+| #define HAVE_SYS_PARAM_H 1
+| #define HAVE_GETPAGESIZE 1
+| #define HAVE_MMAP 1
+| #define HAVE_STDLIB_H 1
+| #define HAVE_REALLOC 1
+| #define HAVE_STRUCT_STAT_ST_BLOCKS 1
+| #define HAVE_ST_BLOCKS 1
+| /* end confdefs.h.  */
+| #include <stdio.h>
+| #ifdef HAVE_SYS_TYPES_H
+| # include <sys/types.h>
+| #endif
+| #ifdef HAVE_SYS_STAT_H
+| # include <sys/stat.h>
+| #endif
+| #ifdef STDC_HEADERS
+| # include <stdlib.h>
+| # include <stddef.h>
+| #else
+| # ifdef HAVE_STDLIB_H
+| #  include <stdlib.h>
+| # endif
+| #endif
+| #ifdef HAVE_STRING_H
+| # if !defined STDC_HEADERS && defined HAVE_MEMORY_H
+| #  include <memory.h>
+| # endif
+| # include <string.h>
+| #endif
+| #ifdef HAVE_STRINGS_H
+| # include <strings.h>
+| #endif
+| #ifdef HAVE_INTTYPES_H
+| # include <inttypes.h>
+| #endif
+| #ifdef HAVE_STDINT_H
+| # include <stdint.h>
+| #endif
+| #ifdef HAVE_UNISTD_H
+| # include <unistd.h>
+| #endif
+| int
+| main ()
+| {
+| if (sizeof ((mode_t)))
+| 	    return 0;
+|   ;
+|   return 0;
+| }
+configure:18705: result: yes
+configure:18716: checking for off_t
+configure:18716: gcc -c -Wall -W -Wno-sign-compare -Wstrict-prototypes -Wmissing-declarations -Wwrite-strings -g -O2 -fno-strict-aliasing  conftest.c >&5
+conftest.c:127:1: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+configure:18716: $? = 0
+configure:18716: gcc -c -Wall -W -Wno-sign-compare -Wstrict-prototypes -Wmissing-declarations -Wwrite-strings -g -O2 -fno-strict-aliasing  conftest.c >&5
+conftest.c:127:1: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+conftest.c: In function 'main':
+conftest.c:129:20: error: expected expression before ')' token
+configure:18716: $? = 1
+configure: failed program was:
+| /* confdefs.h */
+| #define PACKAGE_NAME "fuse"
+| #define PACKAGE_TARNAME "fuse"
+| #define PACKAGE_VERSION "2.9.0"
+| #define PACKAGE_STRING "fuse 2.9.0"
+| #define PACKAGE_BUGREPORT ""
+| #define PACKAGE_URL ""
+| #define PACKAGE "fuse"
+| #define VERSION "2.9.0"
+| #define STDC_HEADERS 1
+| #define HAVE_SYS_TYPES_H 1
+| #define HAVE_SYS_STAT_H 1
+| #define HAVE_STDLIB_H 1
+| #define HAVE_STRING_H 1
+| #define HAVE_MEMORY_H 1
+| #define HAVE_STRINGS_H 1
+| #define HAVE_INTTYPES_H 1
+| #define HAVE_STDINT_H 1
+| #define HAVE_UNISTD_H 1
+| #define HAVE_DLFCN_H 1
+| #define LT_OBJDIR ".libs/"
+| #define HAVE_FORK 1
+| #define HAVE_SETXATTR 1
+| #define HAVE_FDATASYNC 1
+| #define HAVE_SPLICE 1
+| #define HAVE_VMSPLICE 1
+| #define HAVE_UTIMENSAT 1
+| #define HAVE_STRUCT_STAT_ST_ATIM 1
+| #define HAVE_ICONV 1
+| #define ICONV_CONST 
+| #define HAVE_DUP2 1
+| #define HAVE_FTRUNCATE 1
+| #define HAVE_GETCWD 1
+| #define HAVE_GETMNTENT 1
+| #define HAVE_GETPAGESIZE 1
+| #define HAVE_GETTIMEOFDAY 1
+| #define HAVE_LCHOWN 1
+| #define HAVE_MEMMOVE 1
+| #define HAVE_MEMSET 1
+| #define HAVE_MKDIR 1
+| #define HAVE_MKFIFO 1
+| #define HAVE_MUNMAP 1
+| #define HAVE_NL_LANGINFO 1
+| #define HAVE_REALPATH 1
+| #define HAVE_RMDIR 1
+| #define HAVE_SETENV 1
+| #define HAVE_SETLOCALE 1
+| #define HAVE_STRCHR 1
+| #define HAVE_STRDUP 1
+| #define HAVE_STRERROR 1
+| #define HAVE_STRRCHR 1
+| #define HAVE_STRSTR 1
+| #define HAVE_STRTOL 1
+| #define HAVE_STRTOUL 1
+| #define HAVE_UNAME 1
+| #define HAVE_UTIME 1
+| #define HAVE_FCNTL_H 1
+| #define HAVE_LANGINFO_H 1
+| #define HAVE_LIMITS_H 1
+| #define HAVE_LOCALE_H 1
+| #define HAVE_MNTENT_H 1
+| #define HAVE_PATHS_H 1
+| #define HAVE_STDDEF_H 1
+| #define HAVE_SYS_MOUNT_H 1
+| #define HAVE_SYS_PARAM_H 1
+| #define HAVE_SYS_SOCKET_H 1
+| #define HAVE_SYS_STATFS_H 1
+| #define HAVE_SYS_STATVFS_H 1
+| #define HAVE_SYS_TIME_H 1
+| #define HAVE_UTIME_H 1
+| #define HAVE_STRUCT_STAT_ST_BLKSIZE 1
+| #define HAVE_STRUCT_STAT_ST_RDEV 1
+| #define HAVE_UNISTD_H 1
+| #define HAVE_CHOWN 1
+| #define HAVE_FORK 1
+| #define HAVE_VFORK 1
+| #define HAVE_WORKING_VFORK 1
+| #define HAVE_WORKING_FORK 1
+| #define HAVE_GETMNTENT 1
+| #define LSTAT_FOLLOWS_SLASHED_SYMLINK 1
+| #define HAVE_STDLIB_H 1
+| #define HAVE_MALLOC 1
+| #define HAVE_STDLIB_H 1
+| #define HAVE_UNISTD_H 1
+| #define HAVE_SYS_PARAM_H 1
+| #define HAVE_GETPAGESIZE 1
+| #define HAVE_MMAP 1
+| #define HAVE_STDLIB_H 1
+| #define HAVE_REALLOC 1
+| #define HAVE_STRUCT_STAT_ST_BLOCKS 1
+| #define HAVE_ST_BLOCKS 1
+| /* end confdefs.h.  */
+| #include <stdio.h>
+| #ifdef HAVE_SYS_TYPES_H
+| # include <sys/types.h>
+| #endif
+| #ifdef HAVE_SYS_STAT_H
+| # include <sys/stat.h>
+| #endif
+| #ifdef STDC_HEADERS
+| # include <stdlib.h>
+| # include <stddef.h>
+| #else
+| # ifdef HAVE_STDLIB_H
+| #  include <stdlib.h>
+| # endif
+| #endif
+| #ifdef HAVE_STRING_H
+| # if !defined STDC_HEADERS && defined HAVE_MEMORY_H
+| #  include <memory.h>
+| # endif
+| # include <string.h>
+| #endif
+| #ifdef HAVE_STRINGS_H
+| # include <strings.h>
+| #endif
+| #ifdef HAVE_INTTYPES_H
+| # include <inttypes.h>
+| #endif
+| #ifdef HAVE_STDINT_H
+| # include <stdint.h>
+| #endif
+| #ifdef HAVE_UNISTD_H
+| # include <unistd.h>
+| #endif
+| int
+| main ()
+| {
+| if (sizeof ((off_t)))
+| 	    return 0;
+|   ;
+|   return 0;
+| }
+configure:18716: result: yes
+configure:18727: checking for pid_t
+configure:18727: result: yes
+configure:18738: checking for size_t
+configure:18738: gcc -c -Wall -W -Wno-sign-compare -Wstrict-prototypes -Wmissing-declarations -Wwrite-strings -g -O2 -fno-strict-aliasing  conftest.c >&5
+conftest.c:127:1: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+configure:18738: $? = 0
+configure:18738: gcc -c -Wall -W -Wno-sign-compare -Wstrict-prototypes -Wmissing-declarations -Wwrite-strings -g -O2 -fno-strict-aliasing  conftest.c >&5
+conftest.c:127:1: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+conftest.c: In function 'main':
+conftest.c:129:21: error: expected expression before ')' token
+configure:18738: $? = 1
+configure: failed program was:
+| /* confdefs.h */
+| #define PACKAGE_NAME "fuse"
+| #define PACKAGE_TARNAME "fuse"
+| #define PACKAGE_VERSION "2.9.0"
+| #define PACKAGE_STRING "fuse 2.9.0"
+| #define PACKAGE_BUGREPORT ""
+| #define PACKAGE_URL ""
+| #define PACKAGE "fuse"
+| #define VERSION "2.9.0"
+| #define STDC_HEADERS 1
+| #define HAVE_SYS_TYPES_H 1
+| #define HAVE_SYS_STAT_H 1
+| #define HAVE_STDLIB_H 1
+| #define HAVE_STRING_H 1
+| #define HAVE_MEMORY_H 1
+| #define HAVE_STRINGS_H 1
+| #define HAVE_INTTYPES_H 1
+| #define HAVE_STDINT_H 1
+| #define HAVE_UNISTD_H 1
+| #define HAVE_DLFCN_H 1
+| #define LT_OBJDIR ".libs/"
+| #define HAVE_FORK 1
+| #define HAVE_SETXATTR 1
+| #define HAVE_FDATASYNC 1
+| #define HAVE_SPLICE 1
+| #define HAVE_VMSPLICE 1
+| #define HAVE_UTIMENSAT 1
+| #define HAVE_STRUCT_STAT_ST_ATIM 1
+| #define HAVE_ICONV 1
+| #define ICONV_CONST 
+| #define HAVE_DUP2 1
+| #define HAVE_FTRUNCATE 1
+| #define HAVE_GETCWD 1
+| #define HAVE_GETMNTENT 1
+| #define HAVE_GETPAGESIZE 1
+| #define HAVE_GETTIMEOFDAY 1
+| #define HAVE_LCHOWN 1
+| #define HAVE_MEMMOVE 1
+| #define HAVE_MEMSET 1
+| #define HAVE_MKDIR 1
+| #define HAVE_MKFIFO 1
+| #define HAVE_MUNMAP 1
+| #define HAVE_NL_LANGINFO 1
+| #define HAVE_REALPATH 1
+| #define HAVE_RMDIR 1
+| #define HAVE_SETENV 1
+| #define HAVE_SETLOCALE 1
+| #define HAVE_STRCHR 1
+| #define HAVE_STRDUP 1
+| #define HAVE_STRERROR 1
+| #define HAVE_STRRCHR 1
+| #define HAVE_STRSTR 1
+| #define HAVE_STRTOL 1
+| #define HAVE_STRTOUL 1
+| #define HAVE_UNAME 1
+| #define HAVE_UTIME 1
+| #define HAVE_FCNTL_H 1
+| #define HAVE_LANGINFO_H 1
+| #define HAVE_LIMITS_H 1
+| #define HAVE_LOCALE_H 1
+| #define HAVE_MNTENT_H 1
+| #define HAVE_PATHS_H 1
+| #define HAVE_STDDEF_H 1
+| #define HAVE_SYS_MOUNT_H 1
+| #define HAVE_SYS_PARAM_H 1
+| #define HAVE_SYS_SOCKET_H 1
+| #define HAVE_SYS_STATFS_H 1
+| #define HAVE_SYS_STATVFS_H 1
+| #define HAVE_SYS_TIME_H 1
+| #define HAVE_UTIME_H 1
+| #define HAVE_STRUCT_STAT_ST_BLKSIZE 1
+| #define HAVE_STRUCT_STAT_ST_RDEV 1
+| #define HAVE_UNISTD_H 1
+| #define HAVE_CHOWN 1
+| #define HAVE_FORK 1
+| #define HAVE_VFORK 1
+| #define HAVE_WORKING_VFORK 1
+| #define HAVE_WORKING_FORK 1
+| #define HAVE_GETMNTENT 1
+| #define LSTAT_FOLLOWS_SLASHED_SYMLINK 1
+| #define HAVE_STDLIB_H 1
+| #define HAVE_MALLOC 1
+| #define HAVE_STDLIB_H 1
+| #define HAVE_UNISTD_H 1
+| #define HAVE_SYS_PARAM_H 1
+| #define HAVE_GETPAGESIZE 1
+| #define HAVE_MMAP 1
+| #define HAVE_STDLIB_H 1
+| #define HAVE_REALLOC 1
+| #define HAVE_STRUCT_STAT_ST_BLOCKS 1
+| #define HAVE_ST_BLOCKS 1
+| /* end confdefs.h.  */
+| #include <stdio.h>
+| #ifdef HAVE_SYS_TYPES_H
+| # include <sys/types.h>
+| #endif
+| #ifdef HAVE_SYS_STAT_H
+| # include <sys/stat.h>
+| #endif
+| #ifdef STDC_HEADERS
+| # include <stdlib.h>
+| # include <stddef.h>
+| #else
+| # ifdef HAVE_STDLIB_H
+| #  include <stdlib.h>
+| # endif
+| #endif
+| #ifdef HAVE_STRING_H
+| # if !defined STDC_HEADERS && defined HAVE_MEMORY_H
+| #  include <memory.h>
+| # endif
+| # include <string.h>
+| #endif
+| #ifdef HAVE_STRINGS_H
+| # include <strings.h>
+| #endif
+| #ifdef HAVE_INTTYPES_H
+| # include <inttypes.h>
+| #endif
+| #ifdef HAVE_STDINT_H
+| # include <stdint.h>
+| #endif
+| #ifdef HAVE_UNISTD_H
+| # include <unistd.h>
+| #endif
+| int
+| main ()
+| {
+| if (sizeof ((size_t)))
+| 	    return 0;
+|   ;
+|   return 0;
+| }
+configure:18738: result: yes
+configure:18749: checking for ssize_t
+configure:18749: gcc -c -Wall -W -Wno-sign-compare -Wstrict-prototypes -Wmissing-declarations -Wwrite-strings -g -O2 -fno-strict-aliasing  conftest.c >&5
+conftest.c:127:1: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+configure:18749: $? = 0
+configure:18749: gcc -c -Wall -W -Wno-sign-compare -Wstrict-prototypes -Wmissing-declarations -Wwrite-strings -g -O2 -fno-strict-aliasing  conftest.c >&5
+conftest.c:127:1: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+conftest.c: In function 'main':
+conftest.c:129:22: error: expected expression before ')' token
+configure:18749: $? = 1
+configure: failed program was:
+| /* confdefs.h */
+| #define PACKAGE_NAME "fuse"
+| #define PACKAGE_TARNAME "fuse"
+| #define PACKAGE_VERSION "2.9.0"
+| #define PACKAGE_STRING "fuse 2.9.0"
+| #define PACKAGE_BUGREPORT ""
+| #define PACKAGE_URL ""
+| #define PACKAGE "fuse"
+| #define VERSION "2.9.0"
+| #define STDC_HEADERS 1
+| #define HAVE_SYS_TYPES_H 1
+| #define HAVE_SYS_STAT_H 1
+| #define HAVE_STDLIB_H 1
+| #define HAVE_STRING_H 1
+| #define HAVE_MEMORY_H 1
+| #define HAVE_STRINGS_H 1
+| #define HAVE_INTTYPES_H 1
+| #define HAVE_STDINT_H 1
+| #define HAVE_UNISTD_H 1
+| #define HAVE_DLFCN_H 1
+| #define LT_OBJDIR ".libs/"
+| #define HAVE_FORK 1
+| #define HAVE_SETXATTR 1
+| #define HAVE_FDATASYNC 1
+| #define HAVE_SPLICE 1
+| #define HAVE_VMSPLICE 1
+| #define HAVE_UTIMENSAT 1
+| #define HAVE_STRUCT_STAT_ST_ATIM 1
+| #define HAVE_ICONV 1
+| #define ICONV_CONST 
+| #define HAVE_DUP2 1
+| #define HAVE_FTRUNCATE 1
+| #define HAVE_GETCWD 1
+| #define HAVE_GETMNTENT 1
+| #define HAVE_GETPAGESIZE 1
+| #define HAVE_GETTIMEOFDAY 1
+| #define HAVE_LCHOWN 1
+| #define HAVE_MEMMOVE 1
+| #define HAVE_MEMSET 1
+| #define HAVE_MKDIR 1
+| #define HAVE_MKFIFO 1
+| #define HAVE_MUNMAP 1
+| #define HAVE_NL_LANGINFO 1
+| #define HAVE_REALPATH 1
+| #define HAVE_RMDIR 1
+| #define HAVE_SETENV 1
+| #define HAVE_SETLOCALE 1
+| #define HAVE_STRCHR 1
+| #define HAVE_STRDUP 1
+| #define HAVE_STRERROR 1
+| #define HAVE_STRRCHR 1
+| #define HAVE_STRSTR 1
+| #define HAVE_STRTOL 1
+| #define HAVE_STRTOUL 1
+| #define HAVE_UNAME 1
+| #define HAVE_UTIME 1
+| #define HAVE_FCNTL_H 1
+| #define HAVE_LANGINFO_H 1
+| #define HAVE_LIMITS_H 1
+| #define HAVE_LOCALE_H 1
+| #define HAVE_MNTENT_H 1
+| #define HAVE_PATHS_H 1
+| #define HAVE_STDDEF_H 1
+| #define HAVE_SYS_MOUNT_H 1
+| #define HAVE_SYS_PARAM_H 1
+| #define HAVE_SYS_SOCKET_H 1
+| #define HAVE_SYS_STATFS_H 1
+| #define HAVE_SYS_STATVFS_H 1
+| #define HAVE_SYS_TIME_H 1
+| #define HAVE_UTIME_H 1
+| #define HAVE_STRUCT_STAT_ST_BLKSIZE 1
+| #define HAVE_STRUCT_STAT_ST_RDEV 1
+| #define HAVE_UNISTD_H 1
+| #define HAVE_CHOWN 1
+| #define HAVE_FORK 1
+| #define HAVE_VFORK 1
+| #define HAVE_WORKING_VFORK 1
+| #define HAVE_WORKING_FORK 1
+| #define HAVE_GETMNTENT 1
+| #define LSTAT_FOLLOWS_SLASHED_SYMLINK 1
+| #define HAVE_STDLIB_H 1
+| #define HAVE_MALLOC 1
+| #define HAVE_STDLIB_H 1
+| #define HAVE_UNISTD_H 1
+| #define HAVE_SYS_PARAM_H 1
+| #define HAVE_GETPAGESIZE 1
+| #define HAVE_MMAP 1
+| #define HAVE_STDLIB_H 1
+| #define HAVE_REALLOC 1
+| #define HAVE_STRUCT_STAT_ST_BLOCKS 1
+| #define HAVE_ST_BLOCKS 1
+| /* end confdefs.h.  */
+| #include <stdio.h>
+| #ifdef HAVE_SYS_TYPES_H
+| # include <sys/types.h>
+| #endif
+| #ifdef HAVE_SYS_STAT_H
+| # include <sys/stat.h>
+| #endif
+| #ifdef STDC_HEADERS
+| # include <stdlib.h>
+| # include <stddef.h>
+| #else
+| # ifdef HAVE_STDLIB_H
+| #  include <stdlib.h>
+| # endif
+| #endif
+| #ifdef HAVE_STRING_H
+| # if !defined STDC_HEADERS && defined HAVE_MEMORY_H
+| #  include <memory.h>
+| # endif
+| # include <string.h>
+| #endif
+| #ifdef HAVE_STRINGS_H
+| # include <strings.h>
+| #endif
+| #ifdef HAVE_INTTYPES_H
+| # include <inttypes.h>
+| #endif
+| #ifdef HAVE_STDINT_H
+| # include <stdint.h>
+| #endif
+| #ifdef HAVE_UNISTD_H
+| # include <unistd.h>
+| #endif
+| int
+| main ()
+| {
+| if (sizeof ((ssize_t)))
+| 	    return 0;
+|   ;
+|   return 0;
+| }
+configure:18749: result: yes
+configure:18760: checking for uid_t in sys/types.h
+configure:18779: result: yes
+configure:18790: checking for uint32_t
+configure:18790: gcc -c -Wall -W -Wno-sign-compare -Wstrict-prototypes -Wmissing-declarations -Wwrite-strings -g -O2 -fno-strict-aliasing  conftest.c >&5
+conftest.c:127:1: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+conftest.c: In function 'main':
+conftest.c:129:12: warning: variable 'test_array' set but not used [-Wunused-but-set-variable]
+configure:18790: $? = 0
+configure:18790: result: yes
+configure:18804: checking for uint64_t
+configure:18804: gcc -c -Wall -W -Wno-sign-compare -Wstrict-prototypes -Wmissing-declarations -Wwrite-strings -g -O2 -fno-strict-aliasing  conftest.c >&5
+conftest.c:127:1: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+conftest.c: In function 'main':
+conftest.c:129:12: warning: variable 'test_array' set but not used [-Wunused-but-set-variable]
+configure:18804: $? = 0
+configure:18804: result: yes
+configure:18864: checking if umount supports --fake --no-canonicalize
+configure:18869: result: yes
+configure:19035: creating ./config.status
 
 ## ---------------------- ##
 ## Running config.status. ##
@@ -821,15 +2679,16 @@ generated by GNU Autoconf 2.68.  Invocation command line was
 
 on ubuntu
 
-config.status:1126: creating fuse.pc
-config.status:1126: creating Makefile
-config.status:1126: creating lib/Makefile
-config.status:1126: creating util/Makefile
-config.status:1126: creating src/Makefile
-config.status:1126: creating include/Makefile
-config.status:1126: creating include/config.h
-config.status:1355: executing depfiles commands
-config.status:1355: executing libtool commands
+config.status:1250: creating fuse.pc
+config.status:1250: creating Makefile
+config.status:1250: creating lib/Makefile
+config.status:1250: creating util/Makefile
+config.status:1250: creating src/Makefile
+config.status:1250: creating include/Makefile
+config.status:1250: creating include/config.h
+config.status:1431: include/config.h is unchanged
+config.status:1479: executing depfiles commands
+config.status:1479: executing libtool commands
 
 ## ---------------- ##
 ## Cache variables. ##
@@ -837,6 +2696,12 @@ config.status:1355: executing libtool commands
 
 ac_cv_build=i686-pc-linux-gnu
 ac_cv_c_compiler_gnu=yes
+ac_cv_c_inline=inline
+ac_cv_c_uint32_t=yes
+ac_cv_c_uint64_t=yes
+ac_cv_cxx_compiler_gnu=no
+ac_cv_env_CCC_set=
+ac_cv_env_CCC_value=
 ac_cv_env_CC_set=
 ac_cv_env_CC_value=
 ac_cv_env_CFLAGS_set=
@@ -845,6 +2710,12 @@ ac_cv_env_CPPFLAGS_set=
 ac_cv_env_CPPFLAGS_value=
 ac_cv_env_CPP_set=
 ac_cv_env_CPP_value=
+ac_cv_env_CXXCPP_set=
+ac_cv_env_CXXCPP_value=
+ac_cv_env_CXXFLAGS_set=
+ac_cv_env_CXXFLAGS_value=
+ac_cv_env_CXX_set=
+ac_cv_env_CXX_value=
 ac_cv_env_LDFLAGS_set=
 ac_cv_env_LDFLAGS_value=
 ac_cv_env_LIBS_set=
@@ -855,26 +2726,79 @@ ac_cv_env_host_alias_set=
 ac_cv_env_host_alias_value=
 ac_cv_env_target_alias_set=
 ac_cv_env_target_alias_value=
+ac_cv_func_chown_works=yes
+ac_cv_func_clock_gettime=no
+ac_cv_func_dup2=yes
 ac_cv_func_fdatasync=yes
 ac_cv_func_fork=yes
+ac_cv_func_fork_works=yes
+ac_cv_func_ftruncate=yes
+ac_cv_func_getcwd=yes
+ac_cv_func_getmntent=yes
+ac_cv_func_getpagesize=yes
+ac_cv_func_gettimeofday=yes
+ac_cv_func_lchown=yes
+ac_cv_func_lstat_dereferences_slashed_symlink=yes
+ac_cv_func_malloc_0_nonnull=yes
+ac_cv_func_memmove=yes
+ac_cv_func_memset=yes
+ac_cv_func_mkdir=yes
+ac_cv_func_mkfifo=yes
+ac_cv_func_mmap_fixed_mapped=yes
+ac_cv_func_munmap=yes
+ac_cv_func_nl_langinfo=yes
+ac_cv_func_realloc_0_nonnull=yes
+ac_cv_func_realpath=yes
+ac_cv_func_rmdir=yes
+ac_cv_func_setenv=yes
+ac_cv_func_setlocale=yes
 ac_cv_func_setxattr=yes
 ac_cv_func_splice=yes
+ac_cv_func_strchr=yes
+ac_cv_func_strdup=yes
+ac_cv_func_strerror=yes
+ac_cv_func_strrchr=yes
+ac_cv_func_strstr=yes
+ac_cv_func_strtol=yes
+ac_cv_func_strtoul=yes
+ac_cv_func_uname=yes
+ac_cv_func_utime=yes
 ac_cv_func_utimensat=yes
+ac_cv_func_vfork=yes
+ac_cv_func_vfork_works=yes
 ac_cv_func_vmsplice=yes
 ac_cv_header_dlfcn_h=yes
+ac_cv_header_fcntl_h=yes
 ac_cv_header_inttypes_h=yes
+ac_cv_header_langinfo_h=yes
+ac_cv_header_limits_h=yes
+ac_cv_header_locale_h=yes
 ac_cv_header_memory_h=yes
+ac_cv_header_mntent_h=yes
+ac_cv_header_paths_h=yes
 ac_cv_header_stdc=yes
+ac_cv_header_stddef_h=yes
 ac_cv_header_stdint_h=yes
 ac_cv_header_stdlib_h=yes
 ac_cv_header_string_h=yes
 ac_cv_header_strings_h=yes
+ac_cv_header_sys_mount_h=yes
+ac_cv_header_sys_param_h=yes
+ac_cv_header_sys_socket_h=yes
 ac_cv_header_sys_stat_h=yes
+ac_cv_header_sys_statfs_h=yes
+ac_cv_header_sys_statvfs_h=yes
+ac_cv_header_sys_time_h=yes
 ac_cv_header_sys_types_h=yes
 ac_cv_header_unistd_h=yes
+ac_cv_header_utime_h=yes
+ac_cv_header_vfork_h=no
 ac_cv_host=i686-pc-linux-gnu
 ac_cv_member_struct_stat_st_atim=yes
 ac_cv_member_struct_stat_st_atimespec=no
+ac_cv_member_struct_stat_st_blksize=yes
+ac_cv_member_struct_stat_st_blocks=yes
+ac_cv_member_struct_stat_st_rdev=yes
 ac_cv_objext=o
 ac_cv_path_EGREP='/bin/grep -E'
 ac_cv_path_FGREP='/bin/grep -F'
@@ -893,10 +2817,18 @@ ac_cv_prog_ac_ct_STRIP=strip
 ac_cv_prog_cc_c89=
 ac_cv_prog_cc_g=yes
 ac_cv_prog_cc_gcc_c_o=yes
+ac_cv_prog_cxx_g=no
 ac_cv_prog_make_make_set=yes
 ac_cv_search_clock_gettime=-lrt
 ac_cv_search_dlopen=-ldl
+ac_cv_search_getmntent='none required'
 ac_cv_target=i686-pc-linux-gnu
+ac_cv_type_mode_t=yes
+ac_cv_type_off_t=yes
+ac_cv_type_pid_t=yes
+ac_cv_type_size_t=yes
+ac_cv_type_ssize_t=yes
+ac_cv_type_uid_t=yes
 acl_cv_hardcode_direct=no
 acl_cv_hardcode_libdir_flag_spec='${wl}-rpath ${wl}$libdir'
 acl_cv_hardcode_libdir_separator=
@@ -910,6 +2842,7 @@ acl_cv_rpath=done
 acl_cv_shlibext=so
 acl_cv_wl=-Wl,
 am_cv_CC_dependencies_compiler_type=gcc3
+am_cv_CXX_dependencies_compiler_type=none
 am_cv_func_iconv=yes
 am_cv_func_iconv_works=yes
 am_cv_lib_iconv=no
@@ -968,6 +2901,10 @@ CCDEPMODE='depmode=gcc3'
 CFLAGS='-Wall -W -Wno-sign-compare -Wstrict-prototypes -Wmissing-declarations -Wwrite-strings -g -O2 -fno-strict-aliasing'
 CPP='gcc -E'
 CPPFLAGS=''
+CXX='g++'
+CXXCPP=''
+CXXDEPMODE='depmode=none'
+CXXFLAGS=''
 CYGPATH_W='echo'
 DEFS='-DHAVE_CONFIG_H'
 DEPDIR='.deps'
@@ -1029,11 +2966,14 @@ UDEV_RULES_PATH='/etc/udev/rules.d'
 VERSION='2.9.0'
 ac_ct_AR='ar'
 ac_ct_CC='gcc'
+ac_ct_CXX=''
 ac_ct_DUMPBIN=''
 am__EXEEXT_FALSE=''
 am__EXEEXT_TRUE='#'
 am__fastdepCC_FALSE='#'
 am__fastdepCC_TRUE=''
+am__fastdepCXX_FALSE=''
+am__fastdepCXX_TRUE='#'
 am__include='include'
 am__isrc=''
 am__leading_dot='.'
@@ -1076,7 +3016,7 @@ program_transform_name='s,x,x,'
 psdir='${docdir}'
 sbindir='${exec_prefix}/sbin'
 sharedstatedir='${prefix}/com'
-subdirs2='include lib util example'
+subdirs2='include lib util src'
 sysconfdir='${prefix}/etc'
 target='i686-pc-linux-gnu'
 target_alias=''
@@ -1118,5 +3058,66 @@ target_vendor='pc'
 #define HAVE_STRUCT_STAT_ST_ATIM 1
 #define HAVE_ICONV 1
 #define ICONV_CONST 
+#define HAVE_DUP2 1
+#define HAVE_FTRUNCATE 1
+#define HAVE_GETCWD 1
+#define HAVE_GETMNTENT 1
+#define HAVE_GETPAGESIZE 1
+#define HAVE_GETTIMEOFDAY 1
+#define HAVE_LCHOWN 1
+#define HAVE_MEMMOVE 1
+#define HAVE_MEMSET 1
+#define HAVE_MKDIR 1
+#define HAVE_MKFIFO 1
+#define HAVE_MUNMAP 1
+#define HAVE_NL_LANGINFO 1
+#define HAVE_REALPATH 1
+#define HAVE_RMDIR 1
+#define HAVE_SETENV 1
+#define HAVE_SETLOCALE 1
+#define HAVE_STRCHR 1
+#define HAVE_STRDUP 1
+#define HAVE_STRERROR 1
+#define HAVE_STRRCHR 1
+#define HAVE_STRSTR 1
+#define HAVE_STRTOL 1
+#define HAVE_STRTOUL 1
+#define HAVE_UNAME 1
+#define HAVE_UTIME 1
+#define HAVE_FCNTL_H 1
+#define HAVE_LANGINFO_H 1
+#define HAVE_LIMITS_H 1
+#define HAVE_LOCALE_H 1
+#define HAVE_MNTENT_H 1
+#define HAVE_PATHS_H 1
+#define HAVE_STDDEF_H 1
+#define HAVE_SYS_MOUNT_H 1
+#define HAVE_SYS_PARAM_H 1
+#define HAVE_SYS_SOCKET_H 1
+#define HAVE_SYS_STATFS_H 1
+#define HAVE_SYS_STATVFS_H 1
+#define HAVE_SYS_TIME_H 1
+#define HAVE_UTIME_H 1
+#define HAVE_STRUCT_STAT_ST_BLKSIZE 1
+#define HAVE_STRUCT_STAT_ST_RDEV 1
+#define HAVE_UNISTD_H 1
+#define HAVE_CHOWN 1
+#define HAVE_FORK 1
+#define HAVE_VFORK 1
+#define HAVE_WORKING_VFORK 1
+#define HAVE_WORKING_FORK 1
+#define HAVE_GETMNTENT 1
+#define LSTAT_FOLLOWS_SLASHED_SYMLINK 1
+#define HAVE_STDLIB_H 1
+#define HAVE_MALLOC 1
+#define HAVE_STDLIB_H 1
+#define HAVE_UNISTD_H 1
+#define HAVE_SYS_PARAM_H 1
+#define HAVE_GETPAGESIZE 1
+#define HAVE_MMAP 1
+#define HAVE_STDLIB_H 1
+#define HAVE_REALLOC 1
+#define HAVE_STRUCT_STAT_ST_BLOCKS 1
+#define HAVE_ST_BLOCKS 1
 
 configure: exit 0

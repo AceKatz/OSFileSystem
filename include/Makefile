@@ -104,6 +104,10 @@ CCDEPMODE = depmode=gcc3
 CFLAGS = -Wall -W -Wno-sign-compare -Wstrict-prototypes -Wmissing-declarations -Wwrite-strings -g -O2 -fno-strict-aliasing
 CPP = gcc -E
 CPPFLAGS = 
+CXX = g++
+CXXCPP = 
+CXXDEPMODE = depmode=none
+CXXFLAGS = 
 CYGPATH_W = echo
 DEFS = -DHAVE_CONFIG_H
 DEPDIR = .deps
@@ -164,6 +168,7 @@ abs_top_builddir = /mnt/hgfs/cs3411/final_project/OSFileSystem
 abs_top_srcdir = /mnt/hgfs/cs3411/final_project/OSFileSystem
 ac_ct_AR = ar
 ac_ct_CC = gcc
+ac_ct_CXX = 
 ac_ct_DUMPBIN = 
 am__include = include
 am__leading_dot = .
@@ -207,7 +212,7 @@ psdir = ${docdir}
 sbindir = ${exec_prefix}/sbin
 sharedstatedir = ${prefix}/com
 srcdir = .
-subdirs2 = include lib util example
+subdirs2 = include lib util src
 sysconfdir = ${prefix}/etc
 target = i686-pc-linux-gnu
 target_alias = 

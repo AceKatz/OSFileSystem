@@ -66,9 +66,13 @@ AUTOMAKE = ${SHELL} /mnt/hgfs/cs3411/final_project/OSFileSystem/missing --run au
 AWK = mawk
 CC = gcc
 CCDEPMODE = depmode=gcc3
-CFLAGS = -Wall -W -Wno-sign-compare -Wstrict-prototypes -Wmissing-declarations -Wwrite-strings -g -O2 -fno-strict-aliasing
+CFLAGS = -g -Wall
 CPP = gcc -E
 CPPFLAGS = 
+CXX = g++
+CXXCPP = 
+CXXDEPMODE = depmode=none
+CXXFLAGS = 
 CYGPATH_W = echo
 DEFS = -DHAVE_CONFIG_H
 DEPDIR = .deps
@@ -129,6 +133,7 @@ abs_top_builddir = /mnt/hgfs/cs3411/final_project/OSFileSystem
 abs_top_srcdir = /mnt/hgfs/cs3411/final_project/OSFileSystem
 ac_ct_AR = ar
 ac_ct_CC = gcc
+ac_ct_CXX = 
 ac_ct_DUMPBIN = 
 am__include = include
 am__leading_dot = .
@@ -172,7 +177,7 @@ psdir = ${docdir}
 sbindir = ${exec_prefix}/sbin
 sharedstatedir = ${prefix}/com
 srcdir = .
-subdirs2 = include lib util example
+subdirs2 = include lib util src
 sysconfdir = ${prefix}/etc
 target = i686-pc-linux-gnu
 target_alias = 
@@ -183,8 +188,6 @@ top_build_prefix = ../
 top_builddir = ..
 top_srcdir = ..
 AM_CPPFLAGS = -I$(top_srcdir)/include -D_FILE_OFFSET_BITS=64 -D_REENTRANT
-#noinst_HEADERS = fioc.h
-#noinst_PROGRAMS = 
 LDADD = ../lib/libfuse.la
 all: all-am
 
@@ -375,7 +378,6 @@ uninstall-am:
 	maintainer-clean-generic mostlyclean mostlyclean-generic \
 	mostlyclean-libtool pdf pdf-am ps ps-am uninstall uninstall-am
 
-#fusexmp_fh_LDADD = ../lib/libfuse.la ../lib/libulockmgr.la
 
 # Tell versions [3.59,3.63) of GNU make to not export all variables.
 # Otherwise a system limit (for SysV at least) may be exceeded.
