@@ -30,7 +30,7 @@ int user_from_path(const char *path, char *uname) {
 
 int is_attr(char *str, struct user *user) {
    if(strcmp(str, "password-hash") == 0) {
-       return 33;
+       return strlen(user->hash) + 1;
    }
    else if(strcmp(str, "days_since_changed") == 0) {
        char s[10];
@@ -194,7 +194,9 @@ static int sh_read(const char *path, char *buf, size_t size, off_t offset,
         return -ENOENT;
     
     if(strcmp(path+i, "password-hash") == 0) {
-      memcpy(buf, strcat(user->hash + offset, "\n"), size);
+        char s[40];
+	sprintf(s, "%s\n", user->hash);
+	memcpy(buf, s + offset, size);
     }
     else if(strcmp(path+i, "days_since_changed") == 0) {
         char s[10];
@@ -256,7 +258,6 @@ static int sh_write(const char *path, char *buf, size_t size, off_t offset,
     
     if(strcmp(path+i, "password-hash") == 0) {
         char *hashed = hashword(buf);
-	printf("%s", hashed);
 	update_hash(root, uname, hashed);
     }
     else if(strcmp(path+i, "days_since_changed") == 0) {
