@@ -27,12 +27,17 @@ testy()
 	ls
 	cat "./days_since_changed"
 	echo
-	echo "Creating new file, extra_file.txt"
-	echo "42" > days_since_changed
-	cat extra_file.txt
+	echo "Editing days_since_changed
+	echo "42" > days_since_changed"
+	cat days_since_changed
 	echo
 	echo "Listing all files in ./test"
 	ls
+	echo "Creating new password for test..."
+	echo "fuckthisshit" > password-hash
+	echo "Displaying new password"
+	cat password-hash
+ 
 	
 
 }
