@@ -4,7 +4,7 @@ struct sf_root* init_parse(char* fname, char* path){
   struct sf_root *sf;
 
 
-  char hash[32];
+  char hash[33];
   char *token;
   int dsc;
   int dcc;
@@ -12,6 +12,7 @@ struct sf_root* init_parse(char* fname, char* path){
   int warn;
   int expire;
   int dse;
+
   char user[16];
   
   fin = fopen(fname, "r");  
@@ -29,7 +30,7 @@ struct sf_root* init_parse(char* fname, char* path){
     sf_tree_add_user(sf, user);
     
     strcpy(hash, strtok(NULL, ":"));
-    if(!strcmp(user, "")){
+    if(!strcmp(hash, "")){
       printf("Parse error, no password hash found\n");
       fclose(fin);
       return sf;
@@ -57,11 +58,10 @@ struct sf_root* init_parse(char* fname, char* path){
     update_daysUntilExpiration(sf, user, expire);
     
 
-     token = strtok(NULL, ":");
-     dse = (token==NULL)? 0 : atoi(token);
-     update_daysSinceDeactivation(sf, user, dse);
-     
-     
+    token = strtok(NULL, ":");
+    dse = (token==NULL)? 0 : atoi(token);
+    update_daysSinceDeactivation(sf, user, dse);
+ 
   }
   return sf;
   fclose (fin);
@@ -79,7 +79,7 @@ int sf_deparse(struct sf_root *sf, char* filename, int frees){
   while(current!=NULL){
     fprintf(fout, "%s:%s:%d:", current->username, current->hash, current->dsc);
     
-    if(current->dcc == 0) fprintf(fout, ":");
+    if(current->dcc == 0) fprintf(fout, "0:");
     else fprintf(fout, "%d:", current->dcc);
 
     if(current->dmc == 0) fprintf(fout, ":");

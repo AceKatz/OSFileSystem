@@ -11,7 +11,7 @@
 #include "shadowTree.h"
 #include "parse.h"
 #include "md5.h"
-#include "shadow_time.h"
+
 
 struct sf_root* root;
 char backing_path[PATH_MAX];
@@ -94,7 +94,7 @@ static int sh_getattr(const char *path, struct stat *stbuf) {
     else if(user2 != NULL) {              //get attr of file
         int size = is_attr(path+i, user2);
 	if(size > -1) {
-	    stbuf->st_mode = S_IFREG | 0444;
+	    stbuf->st_mode = S_IFREG | 0666;
 	    stbuf->st_nlink = 1;
 	    stbuf->st_size = size;
 	}
@@ -336,7 +336,7 @@ static int sh_unlink(const char *path) {
         return -ENOENT;
     
     if(strcmp(path+i, "password-hash") == 0) {
-        update_hash(root, uname, "");
+        update_hash(root, uname, "!");
     }
     else if(strcmp(path+i, "days_since_changed") == 0) {
         update_daysSinceChanged(root, uname, shadow_time());
