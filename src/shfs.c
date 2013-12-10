@@ -387,17 +387,28 @@ static struct fuse_operations sh_oper = {
 };
 
 int main(int argc, char *argv[]) {
-    filename = malloc(strlen(argv[argc-2]));
-    strcpy(filename, argv[argc-2]);
-    //printf("%s\n", filename);
+    if(argc!=3 && argc!=4){
+        printf("Usage: ./shfs <mountpoint> <backing file> <flags> \n"); 
+        return 0;
+    }
+    int flag=(argc==4)?1:0;
+    printf("args: %d\n", argc);
+    
+    filename = malloc(strlen(argv[argc-1-flag]));
+    printf("arrived\n");
+    strcpy(filename, argv[argc-1-flag]);
+    printf("%s\n", filename);
     root = init_parse(filename, "blank");
     
     char *ptr = realpath(filename, backing_path);
-    //printf("%s\n", backing_path);
-    
-    argv[argc-2] = argv[argc-1];
+    printf("%s\n", backing_path);
+    if(argc==4){
+      argv[argc-2] = argv[argc-1];
+    }
     argv[argc-1] = NULL;
     argc--;
+    
+    
     
     int f = fuse_main(argc, argv, &sh_oper, NULL);
     int d = sf_deparse(root, "shadow.out");
