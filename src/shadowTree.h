@@ -1,5 +1,5 @@
 #include <string.h>
-
+#include "shadow_time.h"
 struct sf_root{
   char path[30];
   struct user *head;
@@ -55,12 +55,15 @@ int sf_tree_add_user(struct sf_root *sf, char* username){
   }
   u = (struct user *)malloc(sizeof(struct user));
   if(u==NULL) return -1; // not able to allocate memory
-  if(strlen(username)>8) return -2; // name too long 
+  if(strlen(username)>16) return -2; // name too long 
   strcpy(u->username, username);
-  u->dsc = 0;
+  strcpy(u->hash, "*");
+  u->dsc = shadow_time();
   u->dcc = 0;
   u->dmc = 99999;
   u->dw = 7;
+  u->de = 0;
+  u->dd = 0;
   u->next = NULL;
   u->reserved = NULL;
   if(sf->head){
