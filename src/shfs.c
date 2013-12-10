@@ -9,6 +9,7 @@
 #include <fcntl.h>
 #include "shadowTree.h"
 #include "parse.h"
+#include "md5.h"
 
 struct sf_root* root;
 
@@ -23,13 +24,42 @@ int user_from_path(const char *path, char *uname) {
     return i-1;
 }
 
+int is_attr(char *str) {
+   if(strcmp(str, "hash") == 0) {
+       return 1;
+   }
+   else if(strcmp(str, "days_since_changed") == 0) {
+       return 1;
+   }
+   else if(strcmp(str, "days_until_can_change") == 0) {
+       return 1;
+   }
+   else if(strcmp(str, "days_until_must_change") == 0) {
+       return 1;
+   }
+   else if(strcmp(str, "days_before_warning") == 0) {
+       return 1;
+   }
+   else if(strcmp(str, "days_until_expiration") == 0) {
+       return 1;
+   }
+   else if(strcmp(str, "days_since_account_deactivated") == 0) {
+       return 1;
+   }
+   else if(strcmp(str, "reserved") == 0) {
+       return 1;
+   }
+   return 0;
+}
+
 //gets file, directory attributes
 static int sh_getattr(const char *path, struct stat *stbuf) {
     int res = 0;
     struct user* user = find_user(root, path+1);
     
     char uname[9];
-    user_from_path(path, uname);
+    int i = user_from_path(path, uname);
+    i+=2;
     struct user* user2 = find_user(root, uname);
     
     printf("getattr\n");
@@ -44,13 +74,16 @@ static int sh_getattr(const char *path, struct stat *stbuf) {
 	stbuf->st_nlink = 1;
     }
     else if(user2 != NULL) {              //get attr of file
-        stbuf->st_mode = S_IFREG | 0444;
-	stbuf->st_nlink = 1;
-	stbuf->st_size = 15;
+        if(is_attr(path+i)) {
+            stbuf->st_mode = S_IFREG | 0444;
+	    stbuf->st_nlink = 1;
+	    stbuf->st_size = 15;
+	}
+	else res = -ENOENT;
     }
-    else
+    else {
         res = -ENOENT;
-    
+    }
     return res;
 }
 
@@ -190,37 +223,29 @@ static int sh_write(const char *path, char *buf, size_t size, off_t offset,
         return -ENOENT;
     
     if(strcmp(path+i, "hash") == 0) {
-		char* hashed = hashword(buf);
-		update_hash(root, uname, hashed);
-
+        char *hashed = hashword(buf);
+	update_hash(root, uname, hashed);
     }
     else if(strcmp(path+i, "days_since_changed") == 0) {
-      //user->dsc = atoi(buf);
-	update_daysSinceChanged(root, uname, atoi(buf));
+        update_daysSinceChanged(root, uname, atoi(buf));
     }
     else if(strcmp(path+i, "days_until_can_change") == 0) {
-      //user->dcc = atoi(buf);
-	update_daysUntilCanChange(root, uname, atoi(buf));
+        update_daysUntilCanChange(root, uname, atoi(buf));
     }
     else if(strcmp(path+i, "days_until_must_change") == 0) {
-      //user->dmc = atoi(buf);
-      update_daysUntilMustChange(root, uname, atoi(buf));
+        update_daysUntilMustChange(root, uname, atoi(buf));
     }
     else if(strcmp(path+i, "days_before_warning") == 0) {
-      //user->dw = atoi(buf);
-	update_daysBeforeWarning(root, uname, atoi(buf));
+      	update_daysBeforeWarning(root, uname, atoi(buf));
     }
     else if(strcmp(path+i, "days_until_expiration") == 0) {
-      //user->de = atoi(buf);
-	update_daysUntilExpiration(root, uname, atoi(buf));
+      	update_daysUntilExpiration(root, uname, atoi(buf));
     }
     else if(strcmp(path+i, "days_since_account_deactivated") == 0) {
-      //user->dd = atoi(buf);
-	update_daysSinceDeactivation(root, uname, atoi(buf));
+      	update_daysSinceDeactivation(root, uname, atoi(buf));
     }
     else if(strcmp(path+i, "reserved") == 0) {
-      //strcpy(user->reserved, buf);
-	update_reserved(root, uname, atoi(buf));
+      	update_reserved(root, uname, buf);
     }
     return size;
 }
@@ -314,16 +339,12 @@ static int sh_mknod(const char *path, mode_t mode, dev_t rdev) {
     int i = user_from_path(path, uname);
     user = find_user(root, uname);
     i+=2;
-    
-    user->reserved = malloc(50);
-    strcpy(user->reserved, path+i);
-    printf("%s\n\n", user->reserved);
-    
-    return 0;
-}
-
-static int sh_utimens(const char *path, const struct timespec ts[2]) {
-    printf("utimens\n");
+    if(user != NULL) {
+        user->reserved = malloc(50);
+	strcpy(user->reserved, path+i);
+    }
+    else
+        return -EACCES;
     return 0;
 }
 
@@ -337,9 +358,8 @@ static struct fuse_operations sh_oper = {
     .mkdir      = sh_mkdir,
     .rmdir      = sh_rmdir,
     .rename     = sh_rename,
-    .unlink     = sh_unlink,
     .mknod      = sh_mknod,
-    .utimens    = sh_utimens,
+    .unlink     = sh_unlink,
 };
 
 int main(int argc, char *argv[]) {
