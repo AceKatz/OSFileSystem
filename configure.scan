@@ -1,7 +1,7 @@
 #                                               -*- Autoconf -*-
 # Process this file with autoconf to produce a configure script.
 
-AC_PREREQ([2.68])
+AC_PREREQ([2.69])
 AC_INIT([FULL-PACKAGE-NAME], [VERSION], [BUG-REPORT-ADDRESS])
 AC_CONFIG_SRCDIR([src/shadowFilesystem.c])
 AC_CONFIG_HEADERS([config.h])
@@ -38,6 +38,7 @@ AC_STRUCT_ST_BLOCKS
 AC_CHECK_MEMBERS([struct stat.st_rdev])
 AC_TYPE_UINT32_T
 AC_TYPE_UINT64_T
+AC_TYPE_UINT8_T
 
 # Checks for library functions.
 AC_FUNC_CHOWN
@@ -47,7 +48,7 @@ AC_FUNC_LSTAT_FOLLOWS_SLASHED_SYMLINK
 AC_FUNC_MALLOC
 AC_FUNC_MMAP
 AC_FUNC_REALLOC
-AC_CHECK_FUNCS([clock_gettime dup2 ftruncate getcwd getmntent getpagesize gettimeofday lchown memmove memset mkdir mkfifo munmap nl_langinfo realpath rmdir setenv setlocale strchr strdup strerror strrchr strstr strtol strtoul uname utime])
+AC_CHECK_FUNCS([clock_gettime dup2 ftruncate getcwd getmntent getpagesize gettimeofday memmove memset mkdir munmap nl_langinfo realpath rmdir setenv setlocale strchr strdup strerror strrchr strstr strtol strtoul uname utime])
 
 AC_CONFIG_FILES([Makefile
                  include/Makefile
