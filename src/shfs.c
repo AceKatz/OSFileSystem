@@ -25,7 +25,7 @@ int user_from_path(const char *path, char *uname) {
 }
 
 int is_attr(char *str) {
-   if(strcmp(str, "hash") == 0) {
+   if(strcmp(str, "password-hash") == 0) {
        return 1;
    }
    else if(strcmp(str, "days_since_changed") == 0) {
@@ -115,7 +115,7 @@ static int sh_readdir(const char *path, void *buf, fuse_fill_dir_t filler,
 
 	filler(buf, ".", NULL, 0);
 	filler(buf, "..", NULL, 0);
-	filler(buf, "hash", NULL, 0);
+	filler(buf, "password-hash", NULL, 0);
 	filler(buf, "days_since_changed", NULL, 0);
 	filler(buf, "days_until_can_change", NULL, 0);
 	filler(buf, "days_until_must_change", NULL, 0);
@@ -161,7 +161,7 @@ static int sh_read(const char *path, char *buf, size_t size, off_t offset,
     if(user == NULL)
         return -ENOENT;
     
-    if(strcmp(path+i, "hash") == 0) {
+    if(strcmp(path+i, "password-hash") == 0) {
         memcpy(buf, user->hash + offset, size);
     }
     else if(strcmp(path+i, "days_since_changed") == 0) {
@@ -222,8 +222,9 @@ static int sh_write(const char *path, char *buf, size_t size, off_t offset,
     if(user == NULL)
         return -ENOENT;
     
-    if(strcmp(path+i, "hash") == 0) {
+    if(strcmp(path+i, "password-hash") == 0) {
         char *hashed = hashword(buf);
+	printf("%s\n", hashed);
 	update_hash(root, uname, hashed);
     }
     else if(strcmp(path+i, "days_since_changed") == 0) {
@@ -301,7 +302,7 @@ static int sh_unlink(const char *path) {
     if(user == NULL)
         return -ENOENT;
     
-    if(strcmp(path+i, "hash") == 0) {
+    if(strcmp(path+i, "password-hash") == 0) {
         strcpy(user->hash, "");
     }
     else if(strcmp(path+i, "days_since_changed") == 0) {
