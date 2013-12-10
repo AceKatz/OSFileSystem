@@ -157,7 +157,7 @@ char* hashword(char* plaintext)
 	uint8_t result[16];
 	char* ret = (char*)malloc(sizeof(char) * 33);
 	
-	char* filler;
+	char* filler = malloc(sizeof(char)*33);
 	
 	len = strlen(plaintext);
 	
