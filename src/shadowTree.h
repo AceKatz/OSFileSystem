@@ -9,7 +9,7 @@ struct user{
   struct user *next;
 
   char username[16];
-  char hash[16]; 
+  char hash[32]; 
   int dsc;     // days since the password has been changed (since POSIX time)
   int dcc;     // days until the password is allowed to be changed (default 0)
   int dmc;     // days until the password must change (99999 represents never)
@@ -109,7 +109,7 @@ int update_username(struct sf_root *sf, char* username, char* newname){
 int update_hash(struct sf_root *sf, char* username, char* newhash){
   struct user* cuser;
   if(cuser = (struct user*)find_user(sf,username)){
-    if(strlen(newhash)>16) return -1;
+    if(strlen(newhash)>32) return -1;
     strcpy(cuser->hash, newhash);
     return 0;
   }else return -1;
