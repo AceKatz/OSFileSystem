@@ -27,32 +27,34 @@ int user_from_path(const char *path, char *uname) {
     return i-1;
 }
 
-int is_attr(char *str) {
+int is_attr(char *str, struct user *user) {
    if(strcmp(str, "password-hash") == 0) {
-       return 1;
+       return 32;
    }
    else if(strcmp(str, "days_since_changed") == 0) {
-       return 1;
+       return sizeof(int);
    }
    else if(strcmp(str, "days_until_can_change") == 0) {
-       return 1;
+       return sizeof(int);
    }
    else if(strcmp(str, "days_until_must_change") == 0) {
-       return 1;
+       return sizeof(int);
    }
    else if(strcmp(str, "days_before_warning") == 0) {
-       return 1;
+       return sizeof(int);
    }
    else if(strcmp(str, "days_until_expiration") == 0) {
-       return 1;
+       return sizeof(int);
    }
    else if(strcmp(str, "days_since_account_deactivated") == 0) {
-       return 1;
+       return sizeof(int);
    }
    else if(strcmp(str, "reserved") == 0) {
-       return 1;
+       if(user->reserved)
+	   return strlen(user->reserved);
+       else return 0;
    }
-   return 0;
+   return -1;
 }
 
 //gets file, directory attributes
@@ -77,10 +79,11 @@ static int sh_getattr(const char *path, struct stat *stbuf) {
 	stbuf->st_nlink = 1;
     }
     else if(user2 != NULL) {              //get attr of file
-        if(is_attr(path+i)) {
-            stbuf->st_mode = S_IFREG | 0444;
+        int size = is_attr(path+i, user2);
+	if(size > -1) {
+	    stbuf->st_mode = S_IFREG | 0444;
 	    stbuf->st_nlink = 1;
-	    stbuf->st_size = 32;
+	    stbuf->st_size = size;
 	}
 	else res = -ENOENT;
     }
@@ -158,12 +161,12 @@ static int sh_read(const char *path, char *buf, size_t size, off_t offset,
     char uname[9];
     
     if(strcmp(path+1, "sh_file") == 0) {
-       int d = sf_deparse(root, filename, 0);
-      int fd = open(backing_path, O_RDONLY);
-      int res = pread(fd, buf, size, offset);
-      close(fd);
-      //printf("%d\n", res);
-      return res;
+        int d = sf_deparse(root, filename, 0);
+	int fd = open(backing_path, O_RDONLY);
+	int res = pread(fd, buf, size, offset);
+	close(fd);
+	
+	return res;
     }
     
     //only want to read if in a user directory
@@ -178,13 +181,13 @@ static int sh_read(const char *path, char *buf, size_t size, off_t offset,
         return -ENOENT;
     
     if(strcmp(path+i, "password-hash") == 0) {
-        memcpy(buf, user->hash + offset, size);
+      memcpy(buf, strcat(user->hash + offset, "\n"), size);
     }
     else if(strcmp(path+i, "days_since_changed") == 0) {
         char s[10];
-	sprintf(s, "%d", user->dsc);
-	memcpy(buf, s + offset, sizeof(int));
-	size = sizeof(int);
+	sprintf(s, "%d\n", user->dsc);
+	size = strlen(s);
+	memcpy(buf, s + offset, size);
     }
     else if(strcmp(path+i, "days_until_can_change") == 0) {
         char s[10];
@@ -242,27 +245,35 @@ static int sh_write(const char *path, char *buf, size_t size, off_t offset,
         char *hashed = hashword(buf);
 	printf("%s\n", hashed);
 	update_hash(root, uname, hashed);
+	size = strlen(hashed);
     }
     else if(strcmp(path+i, "days_since_changed") == 0) {
         update_daysSinceChanged(root, uname, atoi(buf));
+	size = strlen(atoi(buf));
     }
     else if(strcmp(path+i, "days_until_can_change") == 0) {
         update_daysUntilCanChange(root, uname, atoi(buf));
+	size = strlen(atoi(buf));
     }
     else if(strcmp(path+i, "days_until_must_change") == 0) {
         update_daysUntilMustChange(root, uname, atoi(buf));
+	size = strlen(atoi(buf));
     }
     else if(strcmp(path+i, "days_before_warning") == 0) {
       	update_daysBeforeWarning(root, uname, atoi(buf));
+	size = strlen(atoi(buf));
     }
     else if(strcmp(path+i, "days_until_expiration") == 0) {
       	update_daysUntilExpiration(root, uname, atoi(buf));
+	size = strlen(atoi(buf));
     }
     else if(strcmp(path+i, "days_since_account_deactivated") == 0) {
       	update_daysSinceDeactivation(root, uname, atoi(buf));
+	size = strlen(atoi(buf));
     }
     else if(strcmp(path+i, "reserved") == 0) {
       	update_reserved(root, uname, buf);
+	size = strlen(user->reserved);
     }
     return size;
 }
@@ -390,7 +401,7 @@ int main(int argc, char *argv[]) {
     filename = malloc(strlen(argv[argc-1-flag]));
 
     strcpy(filename, argv[argc-1-flag]);
-    //    printf("%s\n", filename);
+    printf("%s\n", filename);
     root = init_parse(filename, backing_path);
     
     char *ptr = realpath(filename, backing_path);
