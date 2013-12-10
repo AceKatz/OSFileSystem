@@ -156,7 +156,8 @@ char* hashword(char* plaintext)
 	int i;
 	uint8_t result[16];
 	char* ret = (char*)malloc(sizeof(char) * 33);
-	
+	memset(ret, '\0', 33);
+
 	char* filler = malloc(sizeof(char)*33);
 	
 	len = strlen(plaintext);
@@ -167,8 +168,10 @@ char* hashword(char* plaintext)
 	for (i = 0 ; i < 16 ; i++)
 	{
 		sprintf(filler, "%2.2x", result[i]);
-		strcat(ret, filler);
+		strncat(ret, filler, 33);
+		printf("current hash: %s\n", ret);
 	}	
+
 	return ret;
 }
 
