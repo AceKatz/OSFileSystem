@@ -392,16 +392,16 @@ int main(int argc, char *argv[]) {
         return 0;
     }
     int flag=(argc==4)?1:0;
-    printf("args: %d\n", argc);
+
     
     filename = malloc(strlen(argv[argc-1-flag]));
-    printf("arrived\n");
+
     strcpy(filename, argv[argc-1-flag]);
-    printf("%s\n", filename);
-    root = init_parse(filename, "blank");
+    //    printf("%s\n", filename);
+    root = init_parse(filename, backing_path);
     
     char *ptr = realpath(filename, backing_path);
-    printf("%s\n", backing_path);
+    //printf("%s\n", backing_path);
     if(argc==4){
       argv[argc-2] = argv[argc-1];
     }
@@ -411,7 +411,7 @@ int main(int argc, char *argv[]) {
     
     
     int f = fuse_main(argc, argv, &sh_oper, NULL);
-    int d = sf_deparse(root, "shadow.out");
+    int d = sf_deparse(root, filename);
     
     return f;
 }
