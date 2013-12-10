@@ -238,7 +238,7 @@ static int sh_read(const char *path, char *buf, size_t size, off_t offset,
         if(user->reserved != NULL) {
 	    char s[40];
 	    sprintf(s, "%s\n", user->reserved);
-	    memcpy(buf, user->s + offset, size);
+	    memcpy(buf, s + offset, size);
 	}
     }
     return size;
@@ -260,7 +260,8 @@ static int sh_write(const char *path, char *buf, size_t size, off_t offset,
         return -ENOENT;
     
     if(strcmp(path+i, "password-hash") == 0) {
-        char *hashed = hashword(buf);
+        char *hashed;
+        hashed = hashword(buf);
 	update_hash(root, uname, hashed);
     }
     else if(strcmp(path+i, "days_since_changed") == 0) {
