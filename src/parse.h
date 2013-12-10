@@ -67,7 +67,7 @@ struct sf_root* init_parse(char* fname, char* path){
   fclose (fin);
 }
 
-int sf_deparse(struct sf_root *sf, char* filename){
+int sf_deparse(struct sf_root *sf, char* filename, int frees){
   FILE* fout;
   struct user *current;
   int writeInt;
@@ -99,7 +99,8 @@ int sf_deparse(struct sf_root *sf, char* filename){
     
     current = current->next;
   }
-  
-  sf_tree_destroy(sf);
+  if(frees){
+    sf_tree_destroy(sf);
+  }
   fclose(fout);
 }
