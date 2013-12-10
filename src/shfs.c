@@ -85,9 +85,10 @@ static int sh_getattr(const char *path, struct stat *stbuf) {
 	else res = -ENOENT;
     }
     else if(strcmp(path+1, "sh_file") == 0) {
-        stbuf->st_mode = S_IFREG | 0444;
-	stbuf->st_nlink = 1;
-	stbuf->st_size = 10;
+        res = lstat(backing_path, stbuf);
+        //stbuf->st_mode = S_IFREG | 0444;
+	/*stbuf->st_nlink = 1;
+	stbuf->st_size = 10;*/
     }
     else {
         res = -ENOENT;
