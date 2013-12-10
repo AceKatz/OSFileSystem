@@ -3,6 +3,7 @@
 
 AM_CPPFLAGS = -I$(top_srcdir)/include -D_FILE_OFFSET_BITS=64 -D_REENTRANT
 
-CFLAGS= -g -Wall
+noinst_PROGRAMS = shfs
+AM_CFLAGS= -g -Wall
 
 LDADD = ../lib/libfuse.la
