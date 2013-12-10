@@ -7,11 +7,14 @@
 #include <string.h>
 #include <errno.h>
 #include <fcntl.h>
+#include <linux/limits.h>
 #include "shadowTree.h"
 #include "parse.h"
 #include "md5.h"
 
 struct sf_root* root;
+char backing_path[PATH_MAX];
+char *filename;
 
 //extracts username from path, returns length of username
 int user_from_path(const char *path, char *uname) {
@@ -77,9 +80,14 @@ static int sh_getattr(const char *path, struct stat *stbuf) {
         if(is_attr(path+i)) {
             stbuf->st_mode = S_IFREG | 0444;
 	    stbuf->st_nlink = 1;
-	    stbuf->st_size = 15;
+	    stbuf->st_size = 32;
 	}
 	else res = -ENOENT;
+    }
+    else if(strcmp(path+1, "sh_file") == 0) {
+        stbuf->st_mode = S_IFREG | 0444;
+	stbuf->st_nlink = 1;
+	stbuf->st_size = 10;
     }
     else {
         res = -ENOENT;
@@ -99,6 +107,7 @@ static int sh_readdir(const char *path, void *buf, fuse_fill_dir_t filler,
     if (strcmp(path, "/") == 0) {
         filler(buf, ".", NULL, 0);
 	filler(buf, "..", NULL, 0);
+	filler(buf, "sh_file", NULL, 0);
 	
 	while(user) {
 	  filler(buf, user->username, NULL, 0);
@@ -149,6 +158,20 @@ static int sh_read(const char *path, char *buf, size_t size, off_t offset,
     
     struct user* user = find_user(root, path+1);
     char uname[9];
+    
+    if(strcmp(path+1, "sh_file") == 0) {
+      //printf("SHADOW\n");
+      //char shpath[40];
+      //strcat(shpath, "../");
+      //strcat(shpath, filename);
+      //printf("%s\n", shpath);
+      //int d = sf_deparse(root, filename);
+      int fd = open(backing_path, O_RDONLY);
+      int res = pread(fd, buf, size, offset);
+      close(fd);
+      //printf("%d\n", res);
+      return res;
+    }
     
     //only want to read if in a user directory
     if(user != NULL || strcmp(path, "/") == 0)
@@ -364,7 +387,13 @@ static struct fuse_operations sh_oper = {
 };
 
 int main(int argc, char *argv[]) {
-    root = init_parse(argv[argc-2], "blank");
+    filename = malloc(strlen(argv[argc-2]));
+    strcpy(filename, argv[argc-2]);
+    //printf("%s\n", filename);
+    root = init_parse(filename, "blank");
+    
+    char *ptr = realpath(filename, backing_path);
+    //printf("%s\n", backing_path);
     
     argv[argc-2] = argv[argc-1];
     argv[argc-1] = NULL;
