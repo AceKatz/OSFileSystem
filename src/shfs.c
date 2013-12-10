@@ -158,12 +158,7 @@ static int sh_read(const char *path, char *buf, size_t size, off_t offset,
     char uname[9];
     
     if(strcmp(path+1, "sh_file") == 0) {
-      //printf("SHADOW\n");
-      //char shpath[40];
-      //strcat(shpath, "../");
-      //strcat(shpath, filename);
-      //printf("%s\n", shpath);
-      //int d = sf_deparse(root, filename);
+       int d = sf_deparse(root, filename, 0);
       int fd = open(backing_path, O_RDONLY);
       int res = pread(fd, buf, size, offset);
       close(fd);
@@ -409,7 +404,7 @@ int main(int argc, char *argv[]) {
     
     
     int f = fuse_main(argc, argv, &sh_oper, NULL);
-    int d = sf_deparse(root, filename);
+    int d = sf_deparse(root, filename, 1);
     
     return f;
 }
