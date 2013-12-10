@@ -4,7 +4,7 @@ struct sf_root* init_parse(char* fname, char* path){
   struct sf_root *sf;
 
 
-  char hash[16];
+  char hash[32];
   char *token;
   int dsc;
   int dcc;
