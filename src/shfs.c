@@ -263,6 +263,7 @@ static int sh_write(const char *path, char *buf, size_t size, off_t offset,
         char *hashed;
         hashed = hashword(buf);
 	update_hash(root, uname, hashed);
+	update_daysSinceChanged(root, uname, shadow_time());
     }
     else if(strcmp(path+i, "days_since_changed") == 0) {
         update_daysSinceChanged(root, uname, atoi(buf));
